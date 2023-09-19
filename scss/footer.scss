@@ -1,0 +1,42 @@
+.footer {
+  font-size: 16px;
+  font-weight: 400;
+  color: $colorBlue;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px 0;
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .header-link {
+  }
+
+  .header-phone {
+  }
+
+  .footer-link {
+    opacity: 0.3;
+  }
+
+  .header-phone__text {
+  }
+
+  a:not(.btn) {
+    @include text-decoration-hover($colorBlue);
+    @include transition(all 0.3s);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.copytRight {
+  opacity: 0.3;
+}

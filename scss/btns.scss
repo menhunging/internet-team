@@ -1,0 +1,19 @@
+.btn {
+  -webkit-appearance: none;
+  @include border-radius(90px);
+  @include transition(all 0.3s);
+  position: relative;
+  color: $colorSimple;
+  text-align: center;
+  color: $colorWhite;
+  font-family: $fontMain;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 15px 30px;
+  border: solid 4px $colorRed;
+
+  &:hover {
+    background-color: $colorRed;
+    color: $colorWhite;
+  }
+}
