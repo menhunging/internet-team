@@ -32,7 +32,8 @@
 
             <div class="logo">
                 <a href="#"></a>
-                <img src="img/svg/logo.svg" alt="logo">
+                <img class="logo-pic--static" src="img/svg/logo.svg" alt="logo">
+                <img class="logo-pic--fixed" src="img/svg/logo-black.svg" alt="logo">
             </div>
 
             <nav class="menu">
@@ -82,7 +83,7 @@
                         <div class="grettings__content">
                             <ul class="social">
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="link-social">
                                         <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -92,7 +93,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="link-social">
                                         <svg width="22" height="14" viewBox="0 0 22 14" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -102,7 +103,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="link-social">
                                         <svg width="8" height="18" viewBox="0 0 8 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_2_13759)">
@@ -119,7 +120,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="link-social">
                                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -287,9 +288,6 @@
                             <a href="#" class="link-site">посмотреть все услуги</a>
                         </div>
                     </div>
-                </section>
-
-                <section class="fullpage-section section fullpage-example">
                     <div class="example-section">
                         <div class="section-title">
                             <h2 class="caption">уже сделали</h2>
@@ -683,7 +681,7 @@
                         </div>
                     </section>
 
-                    <section class="contact-form">
+                    <section class="contact-form form-default">
 
                         <form action="" class="contact-form__block">
                             <div class="contact-form__content">
@@ -737,15 +735,10 @@
                                 <div class="submit-form">
                                     <button class="link-site link-site--white">отправить</button>
 
-                                    <span class="submit-form__text">
-
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="4" />
-                                            <circle cx="12" cy="12" r="2" stroke="white" stroke-width="4" />
-                                        </svg>
-
-                                        Я согласен на обработку персональных данных</span>
+                                    <div class="submit-form__text">
+                                        <input type="checkbox" id="personal">
+                                        <label for="personal"> Я согласен на обработку персональных данных</label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -759,7 +752,7 @@
 
                         <ul class="social">
                             <li>
-                                <a href="#">
+                                <a href="#" class="link-social">
                                     <svg width="17" height="15" viewBox="0 0 17 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -769,7 +762,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="link-social">
                                     <svg width="22" height="15" viewBox="0 0 22 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -780,7 +773,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="link-social">
                                     <svg width="8" height="19" viewBox="0 0 8 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_282_857)">
@@ -798,7 +791,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="link-social">
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -836,6 +829,7 @@
                         <a href="#" class="footer-link">Политика конфидициальности</a>
                     </footer>
                 </section>
+            </section>
         </main>
     </div>
 

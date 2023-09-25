@@ -280,4 +280,99 @@
       order: 5;
     }
   }
+
+  .grettings-page {
+    min-height: 300px;
+
+    .caption {
+      font-size: 80px;
+      line-height: 60px;
+    }
+  }
+
+  .grettings-page::before {
+    width: 278px;
+    height: 278px;
+    top: calc(100% - 115px);
+    left: calc(0% - 100px);
+  }
+
+  .contacts-page {
+    flex-direction: column;
+  }
+
+  .contacts-page__map {
+    height: 500px;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .contacts-page__item + .contacts-page__item {
+    margin-top: 50px;
+  }
+
+  .contacts-page {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  .contacts-page__caption {
+    font-size: 25px;
+    line-height: 26px;
+  }
+
+  .form-question__left {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form-question__right {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .form-question__text {
+    display: none;
+  }
+
+  .form-question__submit {
+    width: 100%;
+    align-items: center;
+  }
+
+  .form-question .submit-form__text {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+
+  .submit-form__text label::before {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+  }
+
+  .submit-form__text label::after {
+    width: 4px;
+    height: 4px;
+    min-width: 4px;
+    margin-right: -18px;
+  }
+
+  .form-question__bottom {
+    padding: 20px;
+  }
+
+  .form-question__inner {
+    @include border-radius(36px);
+  }
+
+  .form-question__content {
+    .form-question__text {
+      display: block;
+      max-width: 50%;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
 }

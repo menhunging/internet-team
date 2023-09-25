@@ -1,7 +1,7 @@
 addEventListener("scroll", (event) => {
-  let currentScroll = $("#fullpage").scrollTop();
+  let currentScroll = $("#fullpage")?.scrollTop();
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
 });
 
 $(document).ready(function () {
@@ -49,7 +49,6 @@ $(document).ready(function () {
         el: ".swiper-pagination",
       },
       breakpoints: {
-        // when window width is >= 320px
         0: {
           slidesPerView: 1,
           spaceBetween: 10,
@@ -68,8 +67,6 @@ $(document).ready(function () {
         },
       },
     });
-
-    console.log(stateSwiper);
   }
 
   if ($("select").length > 0) {
@@ -80,56 +77,6 @@ $(document).ready(function () {
         onClose: function (element) {},
       });
     });
-  }
-
-  if ($(".slider-simple").length > 0) {
-    const sliders = document.querySelectorAll(".slider-simple");
-    let mySwipers = [];
-
-    function sliderinit() {
-      sliders.forEach((slider, index) => {
-        if (!slider.swiper) {
-          mySwipers[index] = new Swiper(slider, {
-            slidesPerView: 5,
-            spaceBetween: 40,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-              el: ".swiper-pagination",
-            },
-            on: {
-              init: function (swiper) {},
-              slideChange: function (swiper) {},
-            },
-            breakpoints: {
-              0: {
-                slidesPerView: 1,
-              },
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 16,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-              },
-              1600: {
-                slidesPerView: 4,
-              },
-            },
-          });
-        } else {
-          return;
-        }
-      });
-    }
-
-    sliders.length && sliderinit();
   }
 
   if ($(".phone-input").length > 0) {
@@ -202,29 +149,97 @@ $(document).ready(function () {
     });
   }
 
-  if ($("#fullpage").length > 0) {
+  if ($(".marquee-page-error").length > 0) {
+    $(".marquee-page-error").marquee({
+      duration: 12000,
+      delayBeforeStart: 0,
+      gap: 0,
+      direction: "left",
+      duplicated: true,
+    });
+  }
+
+  if ($(".slider-simple").length > 0) {
+    const sliders = document.querySelectorAll(".slider-simple");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        if (!slider.swiper) {
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 5,
+            spaceBetween: 40,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+            },
+            on: {
+              init: function (swiper) {},
+              slideChange: function (swiper) {},
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+              1600: {
+                slidesPerView: 4,
+              },
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".header").length > 0) {
     if ($(window).width() > 1200) {
-      $("#fullpage").fullpage({
-        autoScrolling: true,
-        scrollOverflow: true,
-        // onLeave: function (origin, destination, direction, trigger) {
-        //   console.log("origin", origin);
-        //   console.log("destination", destination);
-        //   console.log("direction", direction);
-        //   console.log("trigger", trigger);
-        // },
-      });
-
-      $(".fullpage-grettings .fp-overflow").on("scroll", function () {
-        setStylesHeader($(this).scrollTop());
-      });
-
-      $(".grettings-btn__next").on("click", function () {
-        $(".fullpage-grettings .fp-overflow").animate({
-          scrollTop: window.innerHeight,
+      if ($("#fullpage").length > 0) {
+        $("#fullpage").fullpage({
+          autoScrolling: true,
+          scrollOverflow: true,
+          // onLeave: function (origin, destination, direction, trigger) {
+          //   console.log("origin", origin);
+          //   console.log("destination", destination);
+          //   console.log("direction", direction);
+          //   console.log("trigger", trigger);
+          // },
         });
-      });
+
+        $(".fullpage-grettings .fp-overflow").on("scroll", function () {
+          setStylesHeader($(this).scrollTop());
+        });
+
+        $(".grettings-btn__next").on("click", function () {
+          $(".fullpage-grettings .fp-overflow").animate({
+            scrollTop: window.innerHeight,
+          });
+        });
+      } else {
+        setHeaderScroll();
+      }
     } else {
+      setHeaderScroll();
+    }
+
+    function setHeaderScroll() {
       $(window).on("scroll", function () {
         setStylesHeader($(window).scrollTop());
       });

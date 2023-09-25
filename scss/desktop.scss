@@ -25,6 +25,14 @@
     padding-left: 70px;
     padding-right: 70px;
   }
+
+  .example-section {
+    background-color: $colorWhite;
+    position: relative;
+    padding-bottom: 150px;
+    padding: 0 70px 150px;
+    overflow: hidden;
+  }
 }
 
 .grettings {
@@ -183,7 +191,7 @@
 
 .link-site {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 30px;
   color: $colorBlue;
   font-size: 30px;
@@ -752,16 +760,7 @@
   }
 
   input {
-    color: $colorBlue-a3;
-    font-size: 27px;
-    font-weight: 400;
-    line-height: 60px;
-    width: 100%;
     max-width: 800px;
-    border: 0;
-    border-bottom: solid 4px $colorBlue;
-    @include border-radius(0);
-    text-align: center;
   }
 
   .selectric-wrapper {
@@ -778,6 +777,52 @@
   .toh {
     margin-left: -20px;
     pointer-events: none;
+  }
+}
+
+.form-default {
+  input {
+    color: $colorBlue-a3;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 60px;
+    width: 100%;
+    border: 0;
+    border-bottom: solid 4px $colorBlue;
+    @include border-radius(0);
+    text-align: center;
+  }
+
+  .submit-form__text {
+    label {
+      color: $colorWhite-a5;
+    }
+
+    input {
+      &:checked {
+        & + label {
+          color: $colorWhite;
+
+          &::before {
+            border-color: $colorWhite;
+          }
+        }
+      }
+    }
+
+    label {
+      &:hover {
+        color: $colorWhite;
+      }
+
+      &:before {
+        border: solid 2px $colorWhite;
+      }
+
+      &:after {
+        background-color: $colorWhite;
+      }
+    }
   }
 }
 
@@ -843,12 +888,301 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  color: #000;
   color: $colorWhite-a5;
   @include transition(color 0.3s);
   margin-left: auto;
+
+  input {
+    display: none;
+
+    &:checked {
+      & + label {
+        &::before {
+          border-color: $colorBlue;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include transition(color 0.3s);
+
+    @include before {
+      width: 24px;
+      height: 24px;
+      @include border-radius(50%);
+      position: relative;
+      border: solid 2px $colorBlue;
+    }
+
+    @include after {
+      width: 10px;
+      height: 10px;
+      @include border-radius(50%);
+      position: relative;
+      background-color: $colorBlue;
+      order: -1;
+      margin-right: -27px;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    color: $colorBlue;
+  }
 }
 
 .mobile-visible-section {
   display: none;
+}
+
+.grettings-page {
+  background-color: $colorBlue;
+  width: 100%;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+
+  @include before {
+    width: 478px;
+    height: 478px;
+    background-color: $colorRed;
+    @include border-radius(50%);
+    z-index: -1;
+    top: calc(100% - 145px);
+    left: calc(0% - 110px);
+  }
+
+  .caption {
+    color: $colorWhite;
+    font-size: 140px;
+    font-weight: 900;
+    line-height: 100px;
+  }
+}
+
+.contacts-page {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-page__info {
+}
+
+.contacts-page__list {
+  padding-bottom: 23px;
+}
+
+.contacts-page__item {
+  color: $colorBlue;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 27px;
+
+  & + .contacts-page__item {
+    margin-top: 90px;
+  }
+}
+
+.contacts-page__title {
+  margin-bottom: 40px;
+  opacity: 0.5;
+  display: block;
+}
+
+.contacts-page__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & + .contacts-page__row {
+    margin-top: 30px;
+  }
+}
+
+.contacts-page__caption {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 40px;
+}
+
+a.contacts-page__caption {
+  @include text-decoration-hover($colorBlue);
+}
+
+.contacts-page__text {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.contacts-page__social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 66px;
+  margin-left: 82px;
+}
+
+.contacts-page__map {
+  position: relative;
+  width: calc(50% + 12px);
+  border: solid 4px $colorBlue;
+  @include border-radius(60px);
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-question {
+  display: flex;
+  flex-wrap: wrap;
+  color: $colorBlue;
+  margin-bottom: 70px;
+
+  .caption {
+    line-height: 90px;
+  }
+
+  .input-row {
+    & + .input-row {
+      margin-top: 15px;
+    }
+  }
+
+  input {
+    height: 100px;
+  }
+
+  .submit-form__text {
+    font-size: 18px;
+    margin-top: auto;
+  }
+}
+
+.form-question__inner {
+  width: 100%;
+  border: solid 4px $colorBlue;
+  @include border-radius(50px);
+  overflow: hidden;
+}
+
+.form-question__content {
+  padding: 54px 90px 89px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .form-question__text {
+    display: none;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.form-question__left {
+  width: 50%;
+  max-width: 590px;
+}
+
+.form-question__right {
+  width: 50%;
+  max-width: 768px;
+}
+
+.form-question__bottom {
+  background-color: $colorRed;
+  color: $colorWhite;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 37px;
+  padding: 69px 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-question__text {
+  opacity: 0.5;
+  width: 45%;
+}
+
+.form-question__submit {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .link-site {
+  }
+}
+
+.not-page {
+  color: $colorBlue;
+  padding-top: 290px;
+  padding-bottom: 200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .caption {
+    width: 100%;
+    font-size: 140px;
+    line-height: 140px;
+    font-weight: 900;
+  }
+
+  .marquee-block {
+    margin-top: 70px;
+    margin-bottom: 140px;
+    border-top: solid 4px $colorBlue;
+    padding-top: 10px;
+  }
+}
+
+.not-page__icon {
+}
+
+.page-error {
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.page-error__text {
+  max-width: 530px;
+}
+
+.link-site {
+  margin-left: auto;
 }

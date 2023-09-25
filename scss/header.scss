@@ -28,6 +28,12 @@
   }
 }
 
+.icon {
+  path {
+    @include transition(all 0.3s);
+  }
+}
+
 .menu {
   margin-left: 60px;
   margin-right: auto;
@@ -55,6 +61,13 @@
   letter-spacing: 0.06em;
 }
 
+.logo-pic--static {
+}
+
+.logo-pic--fixed {
+  display: none;
+}
+
 header.fixed {
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
@@ -79,5 +92,45 @@ header.fixed {
 
   .burger-line {
     background-color: $colorBlue;
+  }
+
+  .logo-pic--static {
+    display: none;
+  }
+
+  .logo-pic--fixed {
+    display: block;
+  }
+}
+
+.inner-page--error {
+  .header {
+    color: $colorBlue;
+
+    .icon {
+      path {
+        fill: $colorBlue;
+      }
+    }
+
+    a:not(.btn):hover {
+      text-decoration-color: $colorBlue;
+    }
+
+    .btn:not(:hover) {
+      color: $colorBlue;
+    }
+
+    .burger-line {
+      background-color: $colorBlue;
+    }
+
+    .logo-pic--static {
+      display: none;
+    }
+
+    .logo-pic--fixed {
+      display: block;
+    }
   }
 }

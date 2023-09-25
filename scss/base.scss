@@ -673,3 +673,27 @@ section {
     transform: rotate(360deg);
   }
 }
+
+.inner-page {
+  footer,
+  section {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.link-social {
+  svg {
+    path {
+      @include transition(all 0.3s);
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: $colorRed;
+      }
+    }
+  }
+}
