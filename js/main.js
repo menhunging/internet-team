@@ -69,6 +69,69 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".task-slider").length > 0) {
+    const stateSwiper = new Swiper(".task-slider", {
+      slidesPerView: 5,
+      spaceBetween: 47,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.25,
+          spaceBetween: 30,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        1400: {
+          slidesPerView: 5,
+          spaceBetween: 47,
+        },
+      },
+    });
+  }
+
+  if ($(".certificates-slider").length > 0) {
+    const stateSwiper = new Swiper(".certificates-slider", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".certificates-section .swiper-pagination",
+        type: "fraction",
+        formatFractionCurrent: function (current) {
+          return `0${current}`;
+        },
+        formatFractionTotal: function (number) {
+          return `0${number}`;
+        },
+      },
+      navigation: {
+        nextEl: ".certificates-section .swiper-button-next",
+        prevEl: ".certificates-section .swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+      },
+    });
+  }
+
   if ($("select").length > 0) {
     $("select").map(function () {
       $(this).selectric({

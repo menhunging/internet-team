@@ -478,4 +478,173 @@
   .not-page .marquee-block {
     border-width: 3px;
   }
+
+  .about-section__left {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .about-section__right .caption {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .about-section__right .caption::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-section__right {
+    padding: 40px 20px;
+  }
+
+  .about-section__right ul li {
+    padding-left: 25px;
+  }
+
+  .about-section__right .caption::before {
+    left: -36px;
+    top: 0px;
+  }
+
+  .about-section__left .caption {
+    margin-bottom: 30px;
+  }
+
+  .task-section__inner {
+    padding: 50px 0 100px;
+    border-width: 3px;
+  }
+
+  .task-slider {
+    margin-top: 40px;
+    left: -15px;
+    width: calc(100% + 30px);
+
+    .swiper-wrapper {
+      padding: 0 15px;
+    }
+
+    .swiper-slide {
+      padding-right: 25px;
+    }
+
+    .swiper-pagination {
+      left: 15px;
+    }
+  }
+
+  .task-slider__name {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .task-section .caption {
+    line-height: 30px;
+  }
+
+  .structure-company__caption {
+    gap: 20px;
+
+    svg {
+      min-width: 30px;
+    }
+  }
+
+  .structure-company__line {
+    .caption {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .structure-company__item ul {
+    margin-top: 10px;
+  }
+
+  .structure-company__item li + li {
+    margin-top: 5px;
+  }
+
+  .structure-company__name {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .structure-company__bl {
+    width: 100%;
+  }
+
+  .structure-company__item {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .structure-company__line + .structure-company__line {
+    margin-top: 40px;
+  }
+
+  .structure-company .section-title .caption {
+    line-height: 34px;
+  }
+
+  .structure-company__col + .structure-company__col {
+    margin-top: 40px;
+  }
+
+  .structure-company .section-title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .certificates-section__inner {
+    padding: 30px 20px;
+  }
+
+  .certificates-slider__controls {
+    width: 100%;
+    position: relative;
+    right: auto;
+    top: auto;
+    justify-content: center;
+  }
+
+  .certificates-slider {
+    .swiper-slide {
+      flex-direction: column;
+    }
+  }
+
+  .certificates-slider__picture {
+    @include border-radius(20px);
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .certificates-slider__content {
+    width: 100%;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 15px 0;
+  }
+
+  .certificates-slider__link {
+    margin-top: 20px;
+  }
+
+  .certificates-slider
+    .swiper-slide.swiper-slide-next
+    .certificates-slider__picture {
+    @include transform(translateX(-44px));
+  }
+
+  .certificates-slider__content {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }

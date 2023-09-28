@@ -106,6 +106,14 @@
       padding-right: 30px;
     }
   }
+
+  .about-section__right {
+    padding: 100px 50px;
+  }
+
+  .certificates-slider__picture img {
+    width: 600px;
+  }
 }
 
 @media (max-width: 1499px) {
@@ -391,5 +399,116 @@
   .not-page .marquee-block {
     margin-top: 50px;
     margin-bottom: 100px;
+  }
+
+  .about-section__left {
+    max-width: 535px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .about-section__right {
+    padding: 70px 30px;
+    font-size: 16px;
+    line-height: 20px;
+
+    .caption {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .about-section__right .caption::before {
+    left: -47px;
+    top: 3px;
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+  }
+
+  .about-section {
+    padding-top: 80px;
+  }
+
+  .task-slider {
+    margin-top: 100px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .task-slider__name {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .task-section .caption {
+    line-height: 60px;
+  }
+
+  .task-section__inner {
+    padding: 100px 0;
+  }
+
+  .about-page {
+    .about-main {
+      padding-top: 150px;
+    }
+
+    .state-section {
+      padding: 150px 0;
+    }
+  }
+
+  .structure-company__col {
+    padding: 50px;
+  }
+
+  .structure-company .section-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .structure-company .section-title .caption {
+    line-height: 60px;
+  }
+
+  .structure-company__row {
+    margin-top: 100px;
+  }
+
+  .certificates-section__inner {
+    padding: 50px;
+  }
+
+  .certificates-slider__picture img {
+    width: 500px;
+  }
+
+  .certificates-slider__name {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .certificates-slider__content {
+    width: calc(100% - 633px);
+    padding-left: 50px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .certificates-slider {
+    margin-top: 50px;
+  }
+
+  .certificates-slider__controls {
+    top: 70px;
+    right: 60px;
+  }
+
+  .certificates-section {
+    padding: 150px 0;
   }
 }
