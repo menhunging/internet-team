@@ -114,6 +114,25 @@
   .certificates-slider__picture img {
     width: 600px;
   }
+
+  .job-slider__pictures .picture {
+    width: 400px;
+  }
+
+  .job-slider__pictures {
+    width: 695px;
+    height: 600px;
+  }
+
+  .job-slider {
+    .swiper-slide {
+      height: 700px;
+    }
+  }
+
+  .other-letters__slider {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 1499px) {
@@ -509,6 +528,55 @@
   }
 
   .certificates-section {
+    padding: 150px 0;
+  }
+
+  .job-slider__pictures .picture {
+    width: 250px;
+    @include border-radius(36px);
+  }
+
+  .job-slider__pictures {
+    width: 500px;
+    height: 400px;
+  }
+
+  .job-slider__pictures .picture:nth-child(1) {
+    right: 100px;
+  }
+
+  .job-slider__pictures .picture:nth-child(2) {
+    right: 50px;
+  }
+
+  .job-slider__pictures .picture:nth-child(3) {
+    right: 0;
+  }
+
+  .job-slider__content {
+    width: calc(50% - 50px);
+  }
+
+  .letters-client__controls {
+    margin-left: 0;
+  }
+
+  .job-slider {
+    margin-top: -320px;
+  }
+
+  .other-letters__content {
+    font-size: 16px;
+    line-height: 24px;
+    gap: 20px;
+    width: calc(100% - 272px - 20px);
+  }
+
+  .other-letters__item {
+    gap: 20px;
+  }
+
+  .other-letters {
     padding: 150px 0;
   }
 }

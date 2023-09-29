@@ -475,12 +475,15 @@
   .certificates-slider__controls {
     top: 50px;
     right: 30px;
+  }
+
+  .swiper-controls-fraction {
     font-size: 20px;
     line-height: 24px;
     gap: 15px;
   }
 
-  .certificates-slider__controls .swiper-button-next {
+  .swiper-controls-fraction .swiper-button-next {
     width: 24px;
     height: 24px;
   }
@@ -529,5 +532,62 @@
 
   .certificates-section__inner {
     @include border-radius(36px);
+  }
+
+  .job-slider {
+    margin-top: 0;
+
+    .swiper-slide {
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .job-slider__content {
+    width: 100%;
+  }
+
+  .job-slider__pictures {
+    position: relative;
+  }
+
+  .letters-client .caption:not(.job-name) {
+    max-width: 100%;
+  }
+
+  .job-slider__pictures .picture:nth-child(2) {
+    right: 60px;
+  }
+
+  .job-slider__pictures .picture:nth-child(1) {
+    right: 120px;
+  }
+
+  .job-slider__pictures {
+    width: 370px;
+    height: 400px;
+    margin: 0;
+  }
+
+  .job-slider__content {
+    margin-top: 30px;
+  }
+
+  .letters-client__controls {
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 0;
+    margin-top: 40px;
+
+    .swiper-pagination {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  .job-slider {
+    margin-top: 40px;
   }
 }

@@ -117,7 +117,6 @@ $(document).ready(function () {
       },
       navigation: {
         nextEl: ".certificates-section .swiper-button-next",
-        prevEl: ".certificates-section .swiper-button-prev",
       },
       breakpoints: {
         0: {
@@ -130,6 +129,65 @@ $(document).ready(function () {
         },
       },
     });
+  }
+
+  if ($(".job-slider").length > 0) {
+    const stateSwiper = new Swiper(".job-slider", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      speed: 2000,
+      pagination: {
+        el: ".job-slider .swiper-pagination",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+          return (
+            '<span class="' +
+            currentClass +
+            '"></span>' +
+            " \\ " +
+            '<span class="' +
+            totalClass +
+            '"></span>'
+          );
+        },
+      },
+      navigation: {
+        nextEl: ".job-slider .swiper-button-next",
+        prevEl: ".job-slider .swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+          speed: 500,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+      },
+    });
+  }
+
+  if ($(".other-letters__slider").length > 0) {
+    if ($(window).width() < 768) {
+      const stateSwiper = new Swiper(".other-letters__slider", {
+        slidesPerView: 1,
+        spaceBetween: 47,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+          0: {
+            // slidesPerView: 1.25,
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+        },
+      });
+    }
   }
 
   if ($("select").length > 0) {
