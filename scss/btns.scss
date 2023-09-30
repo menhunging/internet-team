@@ -16,4 +16,60 @@
     background-color: $colorRed;
     color: $colorWhite;
   }
+
+  svg {
+    path {
+      @include transition(all 0.3s);
+    }
+  }
+
+  &--blue {
+    background-color: $colorBlue;
+    border: solid 3px $colorBlue;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--white {
+    background-color: $colorWhite;
+    border: solid 3px #e6e9eb;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: $colorBlue;
+
+    &:hover {
+      svg {
+        path {
+          stroke: $colorWhite;
+        }
+      }
+    }
+  }
+
+  &--gray {
+    background-color: #e6e9eb;
+    color: $colorBlue-a5;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    border-color: #e6e9eb;
+
+    &:hover {
+      color: $colorBlue;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        ),
+        #e6e9eb;
+    }
+
+    &:active {
+      background-color: #e6e9eb;
+    }
+  }
 }

@@ -366,6 +366,16 @@ $(document).ready(function () {
       });
     }
   }
+
+  if ($(".js-open-filter").length > 0) {
+    $(".js-open-filter").on("click", function () {
+      $(".tabs-block").addClass("opened");
+    });
+
+    $(".tabs-block__close").on("click", function () {
+      $(".tabs-block").removeClass("opened");
+    });
+  }
 });
 
 $(window).on("resize", function () {});

@@ -20,3 +20,14 @@
 
 @media (max-width: 389px) {
 }
+
+// height
+@media (max-height: 350px) {
+  .tabs-block__close {
+    margin-bottom: -30px;
+  }
+
+  .tabs-list {
+    min-height: 59px;
+  }
+}

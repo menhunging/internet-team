@@ -951,8 +951,8 @@
   width: 100%;
   min-height: 460px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
   padding-top: 90px;
   padding-bottom: 90px;
   position: relative;
@@ -1302,8 +1302,16 @@ a.contacts-page__caption {
   margin-bottom: 50px;
 }
 
-.about-page {
+.task-wrapper {
   overflow: hidden;
+  width: 100%;
+  position: relative;
+  left: -10px;
+  width: calc(100% + 20px);
+  padding: 0 10px;
+}
+
+.about-page {
   color: $colorBlue;
 
   .about-main {
@@ -1787,6 +1795,7 @@ a.contacts-page__caption {
   height: 380px;
   position: relative;
   @include border-radius(36px);
+  @include invisLink;
   overflow: hidden;
 
   @include before {
@@ -1824,5 +1833,101 @@ a.contacts-page__caption {
     pointer-events: none;
     width: calc(100% - 5px);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  }
+}
+
+.grettings-state {
+  display: flex;
+  align-items: flex-start;
+  margin-left: auto;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 30px;
+  color: $colorWhite;
+  gap: 100px;
+}
+
+.grettings-state__data {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 60px;
+  letter-spacing: -1.8px;
+  display: block;
+}
+
+.grettings-state__title {
+  display: block;
+}
+
+.tabs-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tabs-list__count {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 20px;
+  opacity: 0.5;
+}
+
+.tabs-link {
+  color: $colorBlue;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 30px 35px;
+  border: solid 4px #e6e9eb;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include border-radius(100px);
+  @include transition(all 0.3s);
+
+  &--active {
+    border-color: $colorBlue;
+    background-color: $colorBlue;
+    color: $colorWhite;
+  }
+
+  &:hover {
+    border-color: $colorBlue;
+  }
+}
+
+.projects-page {
+  color: $colorBlue;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  overflow: hidden;
+
+  .example-section {
+    padding: 100px 0;
+  }
+}
+
+.tabs-block {
+  .mobile {
+    display: none;
+  }
+}
+
+.tabs-block__controls {
+  display: none;
+}
+
+.tabs-mobile-filter {
+  display: none;
+}
+
+.tabs-block__close {
+  display: none;
+}
+
+.example-list {
+  .btn {
+    width: 100%;
   }
 }
