@@ -69,6 +69,35 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".other-projects__slider").length > 0) {
+    const stateSwiper = new Swiper(".other-projects__slider", {
+      slidesPerView: 3,
+      spaceBetween: 140,
+      autoHeight: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.1,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 1.2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+        1500: {
+          slidesPerView: 3,
+          spaceBetween: 140,
+        },
+      },
+    });
+  }
+
   if ($(".task-slider").length > 0) {
     const stateSwiper = new Swiper(".task-slider", {
       slidesPerView: 5,

@@ -10,11 +10,19 @@
     top: calc(100% - 53px);
     left: calc(0% - 20px);
   }
+
+  .thanks-block {
+    background-position: calc(50% - 90px) center;
+  }
 }
 
 @media (max-width: 479px) {
   .contacts-page__social {
     margin-right: 0;
+  }
+
+  .thanks-block {
+    background-position: calc(50% - 150px) center;
   }
 }
 
