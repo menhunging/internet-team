@@ -461,4 +461,29 @@
   .thanks-block {
     height: 800px;
   }
+
+  .scheme-section__item {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+  }
+
+  .scheme-section__list {
+    gap: 25px;
+    padding: 40px 0px 20px;
+  }
+
+  .scheme-section__item::before {
+    background-size: contain;
+    width: 15px;
+    height: 25px;
+  }
+
+  .scheme-section::before {
+    top: calc(50% + 62px);
+  }
+
+  .scheme-section {
+    padding: 100px 0;
+  }
 }

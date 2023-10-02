@@ -1082,4 +1082,41 @@
   .other-projects {
     padding-top: 50px;
   }
+
+  .project-images {
+    left: -10px;
+    width: calc(100% + 20px);
+  }
+
+  .dino {
+    width: 50px;
+    height: 50px;
+  }
+
+  .scheme-section__end .butterflie-1 {
+    width: 85px;
+    height: 93px;
+    left: -80px;
+    top: -70px;
+  }
+
+  .scheme-section__end .butterflie-2 {
+    left: calc(50% + 153px);
+    bottom: 35px;
+    width: 48px;
+    height: 45px;
+    background-size: contain;
+  }
+
+  .scheme-section__end .butterflie-3 {
+    left: calc(50% + 146px);
+    top: 10px;
+    width: 26px;
+    height: 26px;
+    background-size: contain;
+  }
+
+  .scheme-section__item {
+    border-width: 3px;
+  }
 }
