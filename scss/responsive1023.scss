@@ -483,9 +483,15 @@
     gap: 15px;
   }
 
+  .swiper-controls-fraction .swiper-button-prev,
   .swiper-controls-fraction .swiper-button-next {
     width: 24px;
     height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .certificates-slider__picture {
@@ -809,5 +815,61 @@
 
   .scheme-section .caption {
     max-width: 100%;
+  }
+
+  .serv-list {
+    grid-template-columns: 1fr;
+  }
+
+  .serv-item__big img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .serv-item__big {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .serv-list {
+    gap: 30px;
+  }
+
+  .services-head {
+    flex-direction: column;
+  }
+
+  .services-head__left {
+    width: 100%;
+  }
+
+  .services-head__right {
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 30px;
+
+    .services-head__icon {
+      margin-left: 0;
+    }
+
+    strong {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  .service-step .services-head__left {
+    width: 100%;
+  }
+
+  .services-head__title {
+    font-size: 24px;
+    line-height: 30px;
+    display: block;
+    margin-bottom: 10px;
   }
 }

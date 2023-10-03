@@ -486,4 +486,79 @@
   .scheme-section {
     padding: 100px 0;
   }
+
+  .current-business {
+    padding: 100px 0;
+  }
+
+  .serv-item__big strong {
+    max-width: 100%;
+  }
+
+  .invis-anchor .tabs-link {
+    padding: 20px 30px;
+  }
+
+  .info-slider .info-slider__content {
+    padding: 50px;
+  }
+
+  .info-slider__picture {
+    position: relative;
+    top: auto;
+    left: auto;
+    order: -1;
+    transform: translateY(0);
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: -45px;
+  }
+
+  .info-slider .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-slider .info-slider__content {
+    height: auto;
+    padding: 100px 50px 49px;
+  }
+
+  .info-slider .swiper-slide h2,
+  .info-slider .swiper-slide p {
+    max-width: 100%;
+  }
+
+  .info-slider__controls {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 20px;
+  }
+
+  .service-step__links {
+    gap: 10px;
+  }
+
+  .service-content {
+    margin-top: 100px;
+  }
+
+  .text-step {
+    margin-bottom: 100px;
+
+    &__text {
+      padding: 20px;
+      font-size: 20px;
+      line-height: 20px;
+      gap: 15px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

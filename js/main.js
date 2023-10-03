@@ -4,6 +4,16 @@ addEventListener("scroll", (event) => {
   // console.log(currentScroll);
 });
 
+let swiperSliders = [];
+let observer = () => {
+  if (swiperSliders.length) {
+    swiperSliders.map(function (element, index) {
+      swiperSliders[index].slider.destroy(true, true);
+      swiperSliders[index].destroy();
+    });
+  }
+};
+
 $(document).ready(function () {
   if ($(".burger").length > 0) {
     let menu = $(".menu");
@@ -405,9 +415,43 @@ $(document).ready(function () {
       $(".tabs-block").removeClass("opened");
     });
   }
+
+  if ($(".serv-slider").length > 0) {
+    if ($(window).width() < 768) {
+      initServ();
+    }
+  }
+
+  if ($(".info-slider").length > 0) {
+    const infoSwiper = new Swiper(".info-slider", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      spaceBetween: 0,
+      pagination: {
+        el: ".info-slider .swiper-pagination",
+        type: "fraction",
+        formatFractionCurrent: function (current) {
+          return `0${current}`;
+        },
+        formatFractionTotal: function (number) {
+          return `0${number}`;
+        },
+      },
+      navigation: {
+        prevEl: ".info-slider .swiper-button-prev",
+        nextEl: ".info-slider .swiper-button-next",
+      },
+    });
+  }
 });
 
-$(window).on("resize", function () {});
+$(window).on("resize", function () {
+  if ($(window).width() < 768) {
+    initServ();
+  } else {
+    observer();
+  }
+});
 
 function openModal(modal) {
   MicroModal.show(modal);
@@ -430,4 +474,28 @@ function setStylesHeader(window) {
   } else {
     $("header").removeClass("fixed");
   }
+}
+
+function initServ() {
+  if ($(".serv-slider").hasClass("init-serv")) return false;
+
+  const swiper = new Swiper(".serv-slider", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  let destroy = () => {
+    $(".serv-slider").removeClass("init-serv");
+  };
+
+  let swiperElements = {
+    slider: swiper,
+    destroy,
+  };
+
+  swiperSliders.push(swiperElements);
 }

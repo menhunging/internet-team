@@ -1119,4 +1119,162 @@
   .scheme-section__item {
     border-width: 3px;
   }
+
+  .services-head__right .services-head__icon {
+    margin-left: auto;
+  }
+
+  .services-head__right {
+    gap: 10px;
+
+    strong {
+      text-align: right;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 16px;
+    }
+  }
+
+  .services-head__icon {
+    width: 95px;
+    height: 60px;
+  }
+
+  .services-head__left .caption img {
+    display: none;
+  }
+
+  .current-business {
+    padding: 50px 0;
+  }
+
+  .serv-list {
+    display: flex;
+    gap: 0;
+  }
+
+  .serv-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+
+  .serv__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .serv__caption {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 20px;
+  }
+
+  .serv-item__big {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+
+  .serv-slider {
+    .swiper-controls {
+      position: relative;
+      margin-top: 40px;
+
+      .swiper-pagination-bullets {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .serv-item__big {
+    align-items: flex-start;
+  }
+
+  .serv__caption {
+    min-height: inherit;
+  }
+
+  .serv-slider .swiper-controls {
+    display: block;
+  }
+
+  .invis-anchor {
+    padding: 20px 0 0;
+  }
+
+  .invis-anchor-section {
+    top: 75px;
+  }
+
+  .serv-list {
+    margin-top: 40px;
+  }
+
+  .info-slider .info-slider__content {
+    padding: 80px 30px 30px;
+    border-radius: 36px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .info-slider .caption {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .info-slider__picture {
+    max-width: 90%;
+  }
+
+  .service-step__links {
+    overflow: auto;
+    display: block;
+    white-space: nowrap;
+
+    scrollbar-color: $colorBlue transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      @include border-radius(20px);
+      background-color: $colorBlue-a3;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      height: 4px;
+      @include border-radius(20px);
+      background-color: $colorBlue;
+    }
+
+    .tabs-link {
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+
+  .info-slider {
+    left: -10px;
+    width: calc(100% + 20px);
+    padding: 0 10px;
+  }
+
+  .text-step {
+    margin-bottom: 50px;
+    
+    &__text {
+      padding: 16px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
 }

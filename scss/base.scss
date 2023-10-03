@@ -478,8 +478,6 @@ div {
     background-color: $colorBlue;
     @include border-radius(20px);
   }
-  scrollbar-color: rgba(255, 255, 255, 0.33) transparent;
-  scrollbar-width: thin;
 }
 
 @media (min-width: 1200px) {
