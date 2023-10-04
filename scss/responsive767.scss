@@ -1081,6 +1081,7 @@
 
   .other-projects {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .project-images {
@@ -1270,11 +1271,102 @@
 
   .text-step {
     margin-bottom: 50px;
-    
+
     &__text {
       padding: 16px;
       font-size: 16px;
       line-height: 16px;
     }
+  }
+
+  .service-step .services-head__right {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .service-content__list {
+    display: flex;
+    align-items: inherit;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .service-content__item {
+    font-size: 14px;
+    line-height: 16px;
+    gap: 20px;
+  }
+
+  .service-content__slider .swiper-controls {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  .service-content__slider {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    overflow: hidden;
+  }
+
+  .service-content {
+    margin-top: 50px;
+  }
+
+  .step-work__grid {
+    .desktop-vivisble {
+      display: none;
+    }
+
+    .mobile-visible {
+      display: block;
+    }
+  }
+
+  .step-work__grid{
+    overflow: hidden;
+  }
+
+  .step-work__slider {
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: inherit;
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+
+    .swiper-controls {
+      margin-top: 40px;
+      display: flex;
+    }
+  }
+
+  .step-work__item {
+    padding: 30px;
+    min-height: 330px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14px;
+
+    .caption {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    p {
+      height: auto;
+    }
+  }
+
+  .step-work__item .num {
+    font-size: 20px;
+    line-height: 20px;
+    width: 35px;
+    height: 35px;
+    border-width: 3px;
+    right: 10px;
+    top: -10px;
   }
 }

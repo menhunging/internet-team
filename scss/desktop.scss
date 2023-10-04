@@ -2533,6 +2533,12 @@ a.contacts-page__caption {
   left: 0;
   background-color: $colorWhite;
   z-index: 10;
+
+  &.fixed {
+    .invis-anchor {
+      padding: 10px 0;
+    }
+  }
 }
 
 .invis-anchor {
@@ -2545,6 +2551,7 @@ a.contacts-page__caption {
   gap: 10px;
   scrollbar-color: $colorBlue transparent;
   scrollbar-width: thin;
+  transition: all 0.3s;
 
   &::-webkit-scrollbar {
     width: 4px;
@@ -2862,4 +2869,110 @@ a.contacts-page__caption {
   font-weight: 900;
   line-height: 27px;
   color: $colorWhite;
+}
+
+.form-question + .other-projects .other-projects__slider {
+  border-bottom: 0;
+}
+
+.service-content__list {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  width: 100%;
+}
+
+.service-content__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 50px;
+}
+
+.service-content__item p {
+  width: 100%;
+}
+
+.service-content__item {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-content__icon {
+  min-height: 70px;
+  min-width: 70px;
+}
+
+.service-content__slider {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 200px;
+}
+
+.service-content__slider .swiper-controls {
+  display: none;
+}
+
+.step-work__grid {
+  .mobile-visible {
+    display: none;
+  }
+
+  .desktop-vivisble {
+    display: block;
+  }
+}
+
+.step-work__slider {
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+  }
+
+  .swiper-slide {
+  }
+
+  .swiper-controls {
+    display: none;
+  }
+}
+
+.step-work__item {
+  padding: 50px;
+  border: solid 4px $colorBlue;
+  border-radius: 60px;
+  position: relative;
+
+  .num {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+    color: $colorWhite;
+    border: solid 4px $colorBlue;
+    border-radius: 50%;
+    background-color: $colorRed;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .caption {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+  }
+
+  p {
+    margin-top: 70px;
+    height: 77px;
+    overflow: hidden;
+  }
 }

@@ -443,6 +443,87 @@ $(document).ready(function () {
       },
     });
   }
+
+  if ($(".invis-anchor-section").length > 0) {
+    let blockPosition = $(".invis-anchor-section").offset().top;
+
+    $(window).scroll(function () {
+      let windowPostition = $(window).scrollTop();
+
+      if (windowPostition >= blockPosition - 100) {
+        $(".invis-anchor-section").addClass("fixed");
+      } else {
+        $(".invis-anchor-section").removeClass("fixed");
+      }
+    });
+  }
+
+  if ($(".service-content__slider").length > 0) {
+    if ($(window).width() < 768) {
+      const sliders = document.querySelectorAll(".service-content__slider");
+      let mySwipers = [];
+
+      function sliderinit() {
+        sliders.forEach((slider, index) => {
+          if (!slider.swiper) {
+            mySwipers[index] = new Swiper(slider, {
+              slidesPerView: 1.15,
+              spaceBetween: 20,
+              autoHeight: true,
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+              },
+              breakpoints: {
+                0: {
+                  slidesPerView: 1.15,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 6,
+                  spaceBetween: 0,
+                },
+              },
+            });
+          } else {
+            return;
+          }
+        });
+      }
+
+      sliders.length && sliderinit();
+    }
+  }
+
+  if ($(".step-work__slider").length > 0) {
+    if ($(window).width() < 768) {
+      const infoSwiper = new Swiper(".step-work__slider", {
+        slidesPerView: 1.15,
+        spaceBetween: 12,
+        autoHeight: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.15,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 6,
+            spaceBetween: 0,
+          },
+        },
+      });
+    }
+  }
 });
 
 $(window).on("resize", function () {

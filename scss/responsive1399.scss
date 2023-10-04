@@ -195,6 +195,25 @@
     width: calc(100% + 60px);
     padding: 0 30px;
   }
+
+  .service-content__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .service-content__slider {
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+
+  .step-work__item {
+    padding: 50px 20px 40px;
+  }
+
+  .step-work__item p {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 1499px) {
@@ -806,5 +825,9 @@
 
   .info-slider__controls {
     left: 80px;
+  }
+
+  .step-work__slider .swiper-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
