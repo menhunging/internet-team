@@ -415,6 +415,7 @@
 
   .form-question .caption {
     line-height: 32px;
+    font-size: 28px;
   }
 
   .form-question__content {
@@ -1300,11 +1301,18 @@
   .service-content__slider .swiper-controls {
     margin-top: 40px;
     display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .swiper-pagination {
+      width: auto;
+    }
   }
 
   .service-content__slider {
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     overflow: hidden;
   }
 
@@ -1322,7 +1330,7 @@
     }
   }
 
-  .step-work__grid{
+  .step-work__grid {
     overflow: hidden;
   }
 
@@ -1368,5 +1376,119 @@
     border-width: 3px;
     right: 10px;
     top: -10px;
+  }
+
+  .whatCanDo {
+    display: flex;
+    align-items: inherit;
+  }
+
+  .service-content__item .caption {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .service-content__head {
+    gap: 15px;
+  }
+
+  .services-head__right {
+    margin-top: 0;
+  }
+
+  .certificates-section {
+    padding: 50px 0;
+  }
+
+  .result-service {
+    margin-bottom: 40px;
+    margin-top: 0;
+
+    li {
+      gap: 20px;
+      font-size: 16px;
+      line-height: 16px;
+
+      & + li {
+        margin-top: 20px;
+      }
+
+      svg {
+        min-width: 50px;
+        min-height: 50px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .invis-anchor-section {
+    top: 70px;
+    background-color: #fdfdfd;
+  }
+
+  .invis-anchor {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% + 20px);
+    left: -10px;
+    padding: 0 10px;
+  }
+
+  .invis-anchor .tabs-link {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 14px;
+    border-color: transparent;
+    background-color: transparent;
+    font-weight: 300;
+  }
+
+  .invis-anchor .tabs-link.active {
+    background: transparent;
+    border-color: transparent;
+    color: $colorBlue;
+    font-weight: 800;
+  }
+
+  .invis-anchor-section.fixed .invis-anchor {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .our-cases__list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .our-cases__graf {
+    border-radius: 36px;
+  }
+
+  .our-cases__graf ul {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    li + li {
+      margin: 0;
+    }
+  }
+
+  .our-cases {
+    padding: 50px 0;
+  }
+
+  .menu {
+    padding: 70px 10px 20px;
+
+    ul li {
+      font-size: 27px;
+      line-height: 27px;
+
+      & + li {
+        margin-top: 30px;
+      }
+    }
   }
 }

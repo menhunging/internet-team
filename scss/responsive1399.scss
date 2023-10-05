@@ -214,6 +214,30 @@
   .step-work__item p {
     margin-top: 50px;
   }
+
+  .whatCanDo {
+    gap: 30px;
+  }
+
+  .result-service {
+    margin-bottom: 150px;
+    font-size: 24px;
+    line-height: 26px;
+    max-width: 80%;
+    margin-left: auto;
+  }
+
+  .invis-anchor {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: calc(100% + 60px);
+    left: -30px;
+  }
+
+  .our-cases__graf {
+    padding: 50px;
+    max-width: 775px;
+  }
 }
 
 @media (max-width: 1499px) {
@@ -829,5 +853,51 @@
 
   .step-work__slider .swiper-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-content .service-content__desc {
+    max-width: 35%;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .whatCanDo {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+  }
+
+  .invis-anchor-section {
+    top: 70px;
+  }
+
+  .invis-anchor {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: calc(100% + 40px);
+    padding-top: 20px;
+    left: -20px;
+  }
+
+  .invis-anchor .tabs-link {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 20px;
+  }
+
+  .our-cases__content{
+    align-items: center;
+    margin-top: 0;
+  }
+
+  
+  .our-cases__graf {
+    padding: 30px;
+    max-width: 675px;
+    gap: 30px;
+  }
+
+  .our-cases{
+    padding: 100px 0;
   }
 }

@@ -1,10 +1,45 @@
+@media (min-width: 1200px) {
+  .menu {
+    display: block !important;
+  }
+}
 @media (max-width: 1199px) {
   .burger {
     display: flex;
+
+    &.burger--opened .burger-line {
+      background-color: rgb(5, 38, 54) !important;
+    }
   }
 
   .menu {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $colorWhite;
+    color: $colorBlue;
+    width: 100%;
+    padding: 110px 15px;
+    text-align: center;
+    z-index: 10;
+    max-height: 100vh;
+    overflow: auto;
+
+    ul {
+      display: block;
+
+      li {
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 40px;
+        text-align: center;
+      }
+
+      li + li {
+        margin-top: 100px;
+      }
+    }
   }
 
   .grettings {
@@ -559,6 +594,61 @@
     svg {
       width: 24px;
       height: 24px;
+    }
+  }
+
+  .service-step .services-head__left {
+    width: 100%;
+  }
+
+  .services-head {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .service-step .services-head__right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .result-service {
+    margin-bottom: 100px;
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 100%;
+    margin-left: 0;
+
+    svg {
+      max-width: 70px;
+    }
+  }
+
+  .our-cases__list {
+    width: 100%;
+  }
+
+  .our-cases__graf {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px !important;
+
+    .copytRight {
+      order: 5;
+    }
+
+    ul {
+      li + li {
+        margin-top: 0 !important;
+      }
     }
   }
 }

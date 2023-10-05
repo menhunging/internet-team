@@ -18,13 +18,10 @@ $(document).ready(function () {
   if ($(".burger").length > 0) {
     let menu = $(".menu");
     let burger = $(".burger");
-    let buttonClose = $(".menu-close");
-    let overlay = $(".menu-overlay");
 
     burger.on("click", function () {
-      burger.addClass("burger--opened");
-      // overlay.addClass("menu-overlay--opened");
-      menu.stop().slideDown();
+      burger.toggleClass("burger--opened");
+      menu.stop().slideToggle();
     });
 
     // overlay.on("click", function () {
@@ -471,11 +468,11 @@ $(document).ready(function () {
               spaceBetween: 20,
               autoHeight: true,
               navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".service-content__slider .swiper-button-next",
+                prevEl: ".service-content__slider .swiper-button-prev",
               },
               pagination: {
-                el: ".swiper-pagination",
+                el: ".service-content__slider .swiper-pagination",
               },
               breakpoints: {
                 0: {

@@ -594,12 +594,14 @@ picture {
   height: 21px;
   cursor: pointer;
   position: relative;
-  z-index: 5;
+  z-index: 11;
 
   &--opened {
     .burger-line {
+      pointer-events: none;
+      
       &:nth-child(1) {
-        @include transform(rotate(45deg) translate(5px, 9px));
+        @include transform(rotate(45deg) translate(4px, 9px));
       }
 
       &:nth-child(2) {
@@ -607,7 +609,7 @@ picture {
       }
 
       &:nth-child(3) {
-        @include transform(rotate(-45deg) translate(11px, -1px));
+        @include transform(rotate(-45deg) translate(12px, -1px));
       }
     }
   }
