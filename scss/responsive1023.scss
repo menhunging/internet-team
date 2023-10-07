@@ -311,11 +311,6 @@
     margin-top: 50px;
   }
 
-  .contacts-page {
-    padding-top: 50px;
-    padding-bottom: 100px;
-  }
-
   .contacts-page__caption {
     font-size: 25px;
     line-height: 26px;
@@ -701,7 +696,6 @@
 
   .other-projects__slider {
     border-bottom: solid 4px $colorBlue;
-    padding-bottom: 200px;
     padding-top: 120px;
     left: -20px;
     width: calc(100% + 40px);
@@ -956,5 +950,20 @@
 
   .whatCanDo {
     margin-top: 0;
+  }
+
+  .modal__inner {
+    padding: 40px;
+  }
+
+  .modal__inner .input-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .modal__inner .text-tow {
+    white-space: normal;
+    font-size: 20px;
+    line-height: 24px;
   }
 }

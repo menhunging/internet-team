@@ -1,38 +1,5 @@
-.fullpage-section {
-  .fp-overflow {
-    padding: 0 70px;
-  }
-}
-
-.fullpage-grettings {
-  .fp-overflow {
-    padding: 0;
-    width: calc(100% + 17px);
-  }
-
-  @include before {
-    background-image: url("../img/bg-lines.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: $colorBlue;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .service-section {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-
-  .example-section {
-    background-color: $colorWhite;
-    position: relative;
-    padding-bottom: 150px;
-    padding: 0 70px 150px;
-    overflow: hidden;
-  }
+section {
+  padding: 100px 70px;
 }
 
 .grettings {
@@ -44,6 +11,12 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-image: url("../img/bg-lines.png");
+  background-color: $colorBlue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
 
   .caption {
     font-size: 68.386px;
@@ -185,7 +158,7 @@
   background-color: $colorWhite;
   position: relative;
   z-index: 5;
-  padding: 200px 0;
+  padding-top: 200px;
   color: $colorBlue;
 }
 
@@ -244,8 +217,13 @@
 
     .service-item__center {
       a {
-        color: $colorWhite;
+        color: $colorWhite-a8;
         background-color: rgba(255, 255, 255, 0.2);
+
+        &:hover {
+          color: $colorWhite;
+          background-color: #5b717b;
+        }
       }
     }
   }
@@ -267,6 +245,11 @@
       a {
         color: $colorWhite;
         background-color: rgba(255, 255, 255, 0.2);
+
+        &:hover {
+          color: $colorWhite;
+          background-color: rgba(255, 255, 255, 0.4);
+        }
       }
     }
   }
@@ -324,10 +307,10 @@
     @include border-radius(100px);
     @include transition(all 0.3s);
     display: inline-block;
+    color: $colorBlue-a8;
 
     &:hover {
       color: $colorBlue;
-      font-weight: 800;
     }
   }
 }
@@ -345,7 +328,6 @@
 }
 
 .example-section {
-  padding-top: 200px;
   color: $colorBlue;
 
   .section-title {
@@ -693,6 +675,8 @@
 }
 
 .brands-section {
+  color: $colorBlue;
+
   .section-title {
   }
 }
@@ -988,8 +972,6 @@
 }
 
 .contacts-page {
-  padding-top: 150px;
-  padding-bottom: 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -1072,7 +1054,6 @@ a.contacts-page__caption {
   display: flex;
   flex-wrap: wrap;
   color: $colorBlue;
-  margin-bottom: 70px;
 
   .caption {
     line-height: 90px;
@@ -1161,6 +1142,12 @@ a.contacts-page__caption {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  .marquee-block a {
+    &:hover {
+      color: $colorWhite;
+    }
+  }
 
   .caption {
     width: 100%;
@@ -1328,6 +1315,10 @@ a.contacts-page__caption {
     padding-top: 200px;
   }
 
+  .about-section {
+    padding-top: 0;
+  }
+
   .state-section {
     padding: 200px 0;
   }
@@ -1464,7 +1455,6 @@ a.contacts-page__caption {
 }
 
 .certificates-section {
-  padding: 200px 0;
   overflow: hidden;
 }
 
@@ -1566,6 +1556,35 @@ a.contacts-page__caption {
     align-items: center;
   }
 
+  .swiper-button-prev {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      transform: scale(1, -1);
+    }
+  }
+
+  .swiper-button-prev {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    transform: scale(1, -1);
+  }
   .swiper-button-next {
     position: relative;
     top: auto;
@@ -1576,6 +1595,7 @@ a.contacts-page__caption {
     height: 48px;
     display: flex;
     align-items: center;
+    z-index: 2;
   }
 }
 
@@ -1631,6 +1651,7 @@ a.contacts-page__caption {
     border: solid 4px $colorBlue;
     @include border-radius(60px);
     overflow: hidden;
+    @include invisLink;
     position: absolute;
     top: 0;
     background-color: $colorWhite;
@@ -1717,12 +1738,26 @@ a.contacts-page__caption {
     color: $colorBlue;
   }
 
+  .swiper-button-prev {
+    svg {
+      transform: scale(-1, 1);
+      path {
+        stroke: $colorBlue;
+      }
+    }
+  }
   .swiper-button-next {
     svg {
       path {
         stroke: $colorBlue;
       }
     }
+  }
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    opacity: 0 !important;
+    pointer-events: none;
+    display: none;
   }
 
   .swiper-pagination-current:before {
@@ -1736,7 +1771,6 @@ a.contacts-page__caption {
 
 .other-letters {
   color: $colorBlue;
-  padding: 200px 0;
 }
 
 .other-letters__list {
@@ -2289,7 +2323,6 @@ a.contacts-page__caption {
 
 .other-projects {
   color: $colorBlue;
-  padding-top: 150px;
 
   .swiper-pagination {
     justify-content: flex-start;
@@ -2299,7 +2332,6 @@ a.contacts-page__caption {
 
 .other-projects__slider {
   border-bottom: solid 4px $colorBlue;
-  padding-bottom: 200px;
   padding-top: 120px;
   position: relative;
 
@@ -2425,7 +2457,8 @@ a.contacts-page__caption {
   flex-direction: column;
   color: $colorBlue;
   position: relative;
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 
   .caption {
     max-width: 50%;
@@ -2533,11 +2566,25 @@ a.contacts-page__caption {
   left: 0;
   background-color: $colorWhite;
   z-index: 10;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .invis-anchor {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
   &.fixed {
     .invis-anchor {
       padding-top: 10px;
       padding-bottom: 10px;
+      justify-content: center;
+    }
+
+    .tabs-link {
+      padding: 15px 30px;
+      font-size: 16px;
+      line-height: 18px;
     }
   }
 }
@@ -2588,7 +2635,6 @@ a.contacts-page__caption {
 
 .current-business {
   color: $colorBlue;
-  padding: 200px 0;
 }
 
 .services-head {
@@ -2860,7 +2906,6 @@ a.contacts-page__caption {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 150px;
 
   @include before {
     left: 0;
@@ -2940,7 +2985,6 @@ a.contacts-page__caption {
 .service-content__slider {
   width: 100%;
   margin-top: 120px;
-  margin-bottom: 200px;
 }
 
 .service-content__slider .swiper-controls {
@@ -3024,7 +3068,6 @@ a.contacts-page__caption {
   font-size: 18px;
   font-weight: 300;
   line-height: 28px;
-  margin-top: 120px;
 
   li {
     display: flex;
@@ -3040,7 +3083,6 @@ a.contacts-page__caption {
   font-weight: 300;
   line-height: 37px;
   width: 100%;
-  margin-bottom: 200px;
 
   li {
     display: flex;
@@ -3062,7 +3104,6 @@ a.contacts-page__caption {
 
 .our-cases {
   color: $colorBlue;
-  padding: 200px 0;
 }
 
 .our-cases__content {

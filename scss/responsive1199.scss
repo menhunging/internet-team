@@ -4,6 +4,15 @@
   }
 }
 @media (max-width: 1199px) {
+  section {
+    padding: 50px 30px;
+  }
+
+  .service-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .burger {
     display: flex;
 
@@ -83,16 +92,8 @@
     margin-top: 70px;
   }
 
-  .service-section {
-    padding-bottom: 50px;
-  }
-
   .fullpage-grettings::before {
     display: none;
-  }
-
-  .example-section {
-    padding: 50px 30px 0;
   }
 
   .example-section__center {
@@ -218,11 +219,6 @@
 
   .contacts-page__map {
     @include border-radius(36px);
-  }
-
-  .contacts-page {
-    padding-top: 80px;
-    padding-bottom: 80px;
   }
 
   .form-question__content {
@@ -409,10 +405,6 @@
     grid-template-columns: 1fr;
   }
 
-  .other-letters {
-    padding: 100px 0;
-  }
-
   .grettings-state__data {
     font-size: 40px;
     line-height: 40px;
@@ -518,10 +510,6 @@
     top: calc(50% + 62px);
   }
 
-  .scheme-section {
-    padding: 100px 0;
-  }
-
   .current-business {
     padding: 100px 0;
   }
@@ -582,7 +570,6 @@
   }
 
   .text-step {
-    margin-bottom: 100px;
 
     &__text {
       padding: 20px;

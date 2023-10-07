@@ -32,32 +32,17 @@
   }
 
   .service-section {
-    padding: 150px 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 
-  .fullpage-section {
-    .fp-overflow {
-      padding: 0 30px;
-    }
-  }
-
-  .fullpage-grettings {
-    .fp-overflow {
-      padding: 0;
-    }
-
-    .service-section {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
+  section {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .service-item {
     padding: 60px;
-  }
-
-  .example-section {
-    padding-top: 150px;
   }
 
   .example-section__center {
@@ -318,7 +303,8 @@
   }
 
   .service-section {
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .service-item__center a {
@@ -483,11 +469,6 @@
       font-size: 100px;
       line-height: 80px;
     }
-  }
-
-  .contacts-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
   }
 
   .contacts-page__item + .contacts-page__item {
@@ -679,10 +660,6 @@
 
   .other-letters__item {
     gap: 20px;
-  }
-
-  .other-letters {
-    padding: 150px 0;
   }
 
   .selectric-items {
@@ -885,19 +862,19 @@
     padding: 20px;
   }
 
-  .our-cases__content{
+  .our-cases__content {
     align-items: center;
     margin-top: 0;
   }
 
-  
   .our-cases__graf {
     padding: 30px;
     max-width: 675px;
     gap: 30px;
   }
 
-  .our-cases{
+  .our-cases {
     padding: 100px 0;
   }
+
 }

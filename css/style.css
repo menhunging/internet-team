@@ -592,7 +592,8 @@ input {
   margin: 0;
   width: 100%;
   max-width: 100%;
-  padding: 50px 0;
+  padding: 30px 0;
+  max-width: 1025px;
 }
 
 .modal__content {
@@ -621,8 +622,8 @@ input {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   position: absolute;
-  right: 29px;
-  top: 32px;
+  right: 88px;
+  top: 88px;
   display: flex;
   z-index: 10;
   font-weight: 400;
@@ -631,6 +632,9 @@ input {
   color: #292929;
   align-items: center;
   gap: 11px;
+}
+.modal__close svg {
+  pointer-events: none;
 }
 .modal__close:hover {
   opacity: 0.75;
@@ -666,6 +670,67 @@ input {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  border-radius: 50px;
+  padding: 80px 90px;
+}
+.modal__inner .caption {
+  color: rgb(5, 38, 54);
+  max-width: 80%;
+}
+.modal__inner .btn {
+  color: rgb(5, 38, 54);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 30px;
+  line-height: 34px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal__inner .btn:hover svg path {
+  stroke: rgb(255, 255, 255);
+}
+.modal__inner .submit-form__text {
+  color: rgb(5, 38, 54);
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.modal__inner .submit-form__text label {
+  color: rgb(5, 38, 54);
+}
+.modal__inner .input-list {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.modal__inner input {
+  background: transparent;
+}
+.modal__inner .input-row {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.modal__inner .input-row input {
+  color: rgba(5, 38, 54, 0.3);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 60px;
+  width: 100%;
+  border: 0;
+  border-bottom: solid 4px rgb(5, 38, 54);
+  border-radius: 0;
+  text-align: center;
+  flex: 1;
+}
+.modal__inner .text-tow {
+  color: #052636;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 60px;
+  flex: 1;
+  white-space: nowrap;
 }
 
 .micromodal-slide .modal__container,
@@ -900,12 +965,6 @@ input[type=number]:focus {
     transform: rotate(360deg);
   }
 }
-.inner-page footer,
-.inner-page section {
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
 .link-social svg path {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -1135,7 +1194,7 @@ header.fixed .logo-pic--fixed {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 50px 0;
+  padding: 50px 70px;
 }
 .footer .social {
   display: flex;
@@ -1168,40 +1227,8 @@ header.fixed .logo-pic--fixed {
   opacity: 0.3;
 }
 
-.fullpage-section .fp-overflow {
-  padding: 0 70px;
-}
-
-.fullpage-grettings .fp-overflow {
-  padding: 0;
-  width: calc(100% + 17px);
-}
-.fullpage-grettings::before {
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  background-image: url("../img/bg-lines.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgb(5, 38, 54);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.fullpage-grettings .service-section {
-  padding-left: 70px;
-  padding-right: 70px;
-}
-.fullpage-grettings .example-section {
-  background-color: rgb(255, 255, 255);
-  position: relative;
-  padding-bottom: 150px;
-  padding: 0 70px 150px;
-  overflow: hidden;
+section {
+  padding: 100px 70px;
 }
 
 .grettings {
@@ -1213,6 +1240,12 @@ header.fixed .logo-pic--fixed {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-image: url("../img/bg-lines.png");
+  background-color: rgb(5, 38, 54);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 .grettings .caption {
   font-size: 68.386px;
@@ -1386,7 +1419,7 @@ header.fixed .logo-pic--fixed {
   background-color: rgb(255, 255, 255);
   position: relative;
   z-index: 5;
-  padding: 200px 0;
+  padding-top: 200px;
   color: rgb(5, 38, 54);
 }
 
@@ -1463,8 +1496,12 @@ header.fixed .logo-pic--fixed {
   color: rgb(255, 255, 255);
 }
 .service-item.branding .service-item__center a {
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.2);
+}
+.service-item.branding .service-item__center a:hover {
+  color: rgb(255, 255, 255);
+  background-color: #5b717b;
 }
 .service-item.marketing {
   color: rgb(255, 255, 255);
@@ -1477,6 +1514,10 @@ header.fixed .logo-pic--fixed {
 .service-item.marketing .service-item__center a {
   color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.2);
+}
+.service-item.marketing .service-item__center a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .service-item__left {
@@ -1536,10 +1577,10 @@ header.fixed .logo-pic--fixed {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
+  color: rgba(5, 38, 54, 0.8);
 }
 .service-item__center a:hover {
   color: rgb(5, 38, 54);
-  font-weight: 800;
 }
 
 .service-item__right {
@@ -1552,7 +1593,6 @@ header.fixed .logo-pic--fixed {
 }
 
 .example-section {
-  padding-top: 200px;
   color: rgb(5, 38, 54);
 }
 .example-section .section-title {
@@ -1901,6 +1941,9 @@ header.fixed .logo-pic--fixed {
   color: rgb(255, 255, 255);
 }
 
+.brands-section {
+  color: rgb(5, 38, 54);
+}
 .brands-list {
   display: flex;
   flex-wrap: wrap;
@@ -2214,8 +2257,6 @@ header.fixed .logo-pic--fixed {
 }
 
 .contacts-page {
-  padding-top: 150px;
-  padding-bottom: 150px;
   display: flex;
   justify-content: space-between;
 }
@@ -2304,7 +2345,6 @@ a.contacts-page__caption:hover {
   display: flex;
   flex-wrap: wrap;
   color: rgb(5, 38, 54);
-  margin-bottom: 70px;
 }
 .form-question .caption {
   line-height: 90px;
@@ -2385,6 +2425,9 @@ a.contacts-page__caption:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.not-page .marquee-block a:hover {
+  color: rgb(255, 255, 255);
 }
 .not-page .caption {
   width: 100%;
@@ -2535,6 +2578,9 @@ a.contacts-page__caption:hover {
 .about-page .about-main {
   padding-top: 200px;
 }
+.about-page .about-section {
+  padding-top: 0;
+}
 .about-page .state-section {
   padding: 200px 0;
 }
@@ -2672,7 +2718,6 @@ a.contacts-page__caption:hover {
 }
 
 .certificates-section {
-  padding: 200px 0;
   overflow: hidden;
 }
 
@@ -2784,6 +2829,33 @@ a.contacts-page__caption:hover {
   display: flex;
   align-items: center;
 }
+.swiper-controls-fraction .swiper-button-prev {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+.swiper-controls-fraction .swiper-button-prev svg {
+  transform: scale(1, -1);
+}
+.swiper-controls-fraction .swiper-button-prev {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  transform: scale(1, -1);
+}
 .swiper-controls-fraction .swiper-button-next {
   position: relative;
   top: auto;
@@ -2794,6 +2866,7 @@ a.contacts-page__caption:hover {
   height: 48px;
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 
 .letters-client {
@@ -2855,9 +2928,23 @@ a.contacts-page__caption:hover {
   -ms-border-radius: 60px;
   border-radius: 60px;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
   position: absolute;
   top: 0;
   background-color: rgb(255, 255, 255);
+}
+.job-slider__pictures .picture > a {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
 }
 .job-slider__pictures .picture::before {
   content: "";
@@ -2942,8 +3029,20 @@ a.contacts-page__caption:hover {
 .letters-client__controls .swiper-pagination-total {
   color: rgb(5, 38, 54);
 }
+.letters-client__controls .swiper-button-prev svg {
+  transform: scale(-1, 1);
+}
+.letters-client__controls .swiper-button-prev svg path {
+  stroke: rgb(5, 38, 54);
+}
 .letters-client__controls .swiper-button-next svg path {
   stroke: rgb(5, 38, 54);
+}
+.letters-client__controls .swiper-button-next.swiper-button-disabled,
+.letters-client__controls .swiper-button-prev.swiper-button-disabled {
+  opacity: 0 !important;
+  pointer-events: none;
+  display: none;
 }
 .letters-client__controls .swiper-pagination-current:before {
   content: "0";
@@ -2954,7 +3053,6 @@ a.contacts-page__caption:hover {
 
 .other-letters {
   color: rgb(5, 38, 54);
-  padding: 200px 0;
 }
 
 .other-letters__list {
@@ -3519,7 +3617,6 @@ a.contacts-page__caption:hover {
 
 .other-projects {
   color: rgb(5, 38, 54);
-  padding-top: 150px;
 }
 .other-projects .swiper-pagination {
   justify-content: flex-start;
@@ -3528,7 +3625,6 @@ a.contacts-page__caption:hover {
 
 .other-projects__slider {
   border-bottom: solid 4px rgb(5, 38, 54);
-  padding-bottom: 200px;
   padding-top: 120px;
   position: relative;
 }
@@ -3635,7 +3731,8 @@ a.contacts-page__caption:hover {
   flex-direction: column;
   color: rgb(5, 38, 54);
   position: relative;
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .scheme-section .caption {
   max-width: 50%;
@@ -3764,10 +3861,22 @@ a.contacts-page__caption:hover {
   left: 0;
   background-color: rgb(255, 255, 255);
   z-index: 10;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.invis-anchor-section .invis-anchor {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .invis-anchor-section.fixed .invis-anchor {
   padding-top: 10px;
   padding-bottom: 10px;
+  justify-content: center;
+}
+.invis-anchor-section.fixed .tabs-link {
+  padding: 15px 30px;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .invis-anchor {
@@ -3818,7 +3927,6 @@ a.contacts-page__caption:hover {
 
 .current-business {
   color: rgb(5, 38, 54);
-  padding: 200px 0;
 }
 
 .services-head {
@@ -4055,7 +4163,6 @@ a.contacts-page__caption:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 150px;
 }
 .text-step::before {
   content: "";
@@ -4139,7 +4246,6 @@ a.contacts-page__caption:hover {
 .service-content__slider {
   width: 100%;
   margin-top: 120px;
-  margin-bottom: 200px;
 }
 
 .service-content__slider .swiper-controls {
@@ -4211,7 +4317,6 @@ a.contacts-page__caption:hover {
   font-size: 18px;
   font-weight: 300;
   line-height: 28px;
-  margin-top: 120px;
 }
 .whatCanDo li {
   display: flex;
@@ -4226,7 +4331,6 @@ a.contacts-page__caption:hover {
   font-weight: 300;
   line-height: 37px;
   width: 100%;
-  margin-bottom: 200px;
 }
 .result-service li {
   display: flex;
@@ -4245,7 +4349,6 @@ a.contacts-page__caption:hover {
 
 .our-cases {
   color: rgb(5, 38, 54);
-  padding: 200px 0;
 }
 
 .our-cases__content {
@@ -4327,23 +4430,15 @@ a.contacts-page__caption:hover {
     font-size: 20px;
   }
   .service-section {
-    padding: 150px 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
-  .fullpage-section .fp-overflow {
-    padding: 0 30px;
-  }
-  .fullpage-grettings .fp-overflow {
-    padding: 0;
-  }
-  .fullpage-grettings .service-section {
+  section {
     padding-left: 30px;
     padding-right: 30px;
   }
   .service-item {
     padding: 60px;
-  }
-  .example-section {
-    padding-top: 150px;
   }
   .example-section__center {
     margin-left: -250px;
@@ -4547,7 +4642,8 @@ a.contacts-page__caption:hover {
     max-width: 60%;
   }
   .service-section {
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .service-item__center a {
     font-size: 20px;
@@ -4675,10 +4771,6 @@ a.contacts-page__caption:hover {
   .grettings-page .caption {
     font-size: 100px;
     line-height: 80px;
-  }
-  .contacts-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
   }
   .contacts-page__item + .contacts-page__item {
     margin-top: 70px;
@@ -4831,9 +4923,6 @@ a.contacts-page__caption:hover {
   }
   .other-letters__item {
     gap: 20px;
-  }
-  .other-letters {
-    padding: 150px 0;
   }
   .selectric-items {
     padding: 20px;
@@ -5012,6 +5101,13 @@ a.contacts-page__caption:hover {
   }
 }
 @media (max-width: 1199px) {
+  section {
+    padding: 50px 30px;
+  }
+  .service-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .burger {
     display: flex;
   }
@@ -5078,14 +5174,8 @@ a.contacts-page__caption:hover {
   .service-list {
     margin-top: 70px;
   }
-  .service-section {
-    padding-bottom: 50px;
-  }
   .fullpage-grettings::before {
     display: none;
-  }
-  .example-section {
-    padding: 50px 30px 0;
   }
   .example-section__center {
     margin-left: -150px;
@@ -5185,10 +5275,6 @@ a.contacts-page__caption:hover {
     -moz-border-radius: 36px;
     -ms-border-radius: 36px;
     border-radius: 36px;
-  }
-  .contacts-page {
-    padding-top: 80px;
-    padding-bottom: 80px;
   }
   .form-question__content {
     padding: 30px;
@@ -5338,9 +5424,6 @@ a.contacts-page__caption:hover {
   .other-letters__list {
     grid-template-columns: 1fr;
   }
-  .other-letters {
-    padding: 100px 0;
-  }
   .grettings-state__data {
     font-size: 40px;
     line-height: 40px;
@@ -5430,9 +5513,6 @@ a.contacts-page__caption:hover {
   .scheme-section::before {
     top: calc(50% + 62px);
   }
-  .scheme-section {
-    padding: 100px 0;
-  }
   .current-business {
     padding: 100px 0;
   }
@@ -5480,9 +5560,6 @@ a.contacts-page__caption:hover {
   }
   .service-content {
     margin-top: 100px;
-  }
-  .text-step {
-    margin-bottom: 100px;
   }
   .text-step__text {
     padding: 20px;
@@ -5780,10 +5857,6 @@ a.contacts-page__caption:hover {
   }
   .contacts-page__item + .contacts-page__item {
     margin-top: 50px;
-  }
-  .contacts-page {
-    padding-top: 50px;
-    padding-bottom: 100px;
   }
   .contacts-page__caption {
     font-size: 25px;
@@ -6110,7 +6183,6 @@ a.contacts-page__caption:hover {
   }
   .other-projects__slider {
     border-bottom: solid 4px rgb(5, 38, 54);
-    padding-bottom: 200px;
     padding-top: 120px;
     left: -20px;
     width: calc(100% + 40px);
@@ -6333,6 +6405,18 @@ a.contacts-page__caption:hover {
   .whatCanDo {
     margin-top: 0;
   }
+  .modal__inner {
+    padding: 40px;
+  }
+  .modal__inner .input-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .modal__inner .text-tow {
+    white-space: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 @media (max-width: 767px) {
   .header {
@@ -6444,8 +6528,8 @@ a.contacts-page__caption:hover {
   .service-item__center ul {
     gap: 5px;
   }
-  .example-section {
-    padding: 50px 10px 0;
+  section {
+    padding: 50px 10px;
   }
   .example-section__left {
     max-width: 100%;
@@ -6685,6 +6769,9 @@ a.contacts-page__caption:hover {
   }
   .form-question__content {
     padding: 30px 30px 40px;
+  }
+  .form-question {
+    margin-bottom: 0;
   }
   .not-page .caption {
     font-size: 40px;
@@ -7060,9 +7147,6 @@ a.contacts-page__caption:hover {
   .btn--white, .btn--blue {
     font-weight: 300;
   }
-  .projects-page .example-section {
-    padding: 50px 0;
-  }
   .grettings-page__next,
   .grettings-page__prev {
     font-size: 16px;
@@ -7224,7 +7308,6 @@ a.contacts-page__caption:hover {
     width: calc(100% + 20px);
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 50px;
     padding-top: 50px;
   }
   .other-projects {
@@ -7386,9 +7469,6 @@ a.contacts-page__caption:hover {
     width: calc(100% + 20px);
     padding: 0 10px;
   }
-  .text-step {
-    margin-bottom: 50px;
-  }
   .text-step__text {
     padding: 16px;
     font-size: 16px;
@@ -7526,6 +7606,7 @@ a.contacts-page__caption:hover {
     border-color: transparent;
     background-color: transparent;
     font-weight: 300;
+    padding: 15px;
   }
   .invis-anchor .tabs-link.active {
     background: transparent;
@@ -7533,9 +7614,18 @@ a.contacts-page__caption:hover {
     color: rgb(5, 38, 54);
     font-weight: 800;
   }
+  .invis-anchor-section .invis-anchor {
+    padding: 0;
+  }
   .invis-anchor-section.fixed .invis-anchor {
     padding-top: 0;
     padding-bottom: 0;
+    justify-content: flex-start;
+  }
+  .invis-anchor-section.fixed .invis-anchor .tabs-link {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 15px;
   }
   .our-cases__list {
     grid-template-columns: 1fr;
@@ -7564,6 +7654,56 @@ a.contacts-page__caption:hover {
   }
   .menu ul li + li {
     margin-top: 30px;
+  }
+  .modal__inner {
+    padding: 30px;
+    border-radius: 36px;
+  }
+  .modal__container {
+    padding: 30px 10px;
+  }
+  .modal__close {
+    right: 30px;
+    top: 30px;
+    width: 24px;
+    height: 24px;
+  }
+  .modal__inner .input-row input {
+    font-size: 14px;
+    line-height: 16px;
+    border-width: 3px;
+    padding-bottom: 10px;
+  }
+  .modal__inner .input-list {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal__inner .btn {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: right;
+    gap: 14px;
+  }
+  .modal__inner .btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .modal__inner .text-tow {
+    display: none;
+  }
+  .modal__inner .input-row {
+    justify-content: center;
+  }
+  .select-row {
+    order: -1;
+  }
+  .about-main {
+    gap: 40px 0;
+  }
+  .projects-page .example-section {
+    padding: 50px 0;
   }
 }
 @media (max-width: 639px) {

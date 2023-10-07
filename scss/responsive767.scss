@@ -133,8 +133,8 @@
     gap: 5px;
   }
 
-  .example-section {
-    padding: 50px 10px 0;
+  section {
+    padding: 50px 10px;
   }
 
   .example-section__left {
@@ -430,6 +430,10 @@
 
   .form-question__content {
     padding: 30px 30px 40px;
+  }
+
+  .form-question {
+    margin-bottom: 0;
   }
 
   .not-page .caption {
@@ -875,10 +879,6 @@
     }
   }
 
-  .projects-page .example-section {
-    padding: 50px 0;
-  }
-
   .grettings-page__next,
   .grettings-page__prev {
     font-size: 16px;
@@ -1076,7 +1076,6 @@
     width: calc(100% + 20px);
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 50px;
     padding-top: 50px;
   }
 
@@ -1271,8 +1270,6 @@
   }
 
   .text-step {
-    margin-bottom: 50px;
-
     &__text {
       padding: 16px;
       font-size: 16px;
@@ -1442,6 +1439,7 @@
     border-color: transparent;
     background-color: transparent;
     font-weight: 300;
+    padding: 15px;
   }
 
   .invis-anchor .tabs-link.active {
@@ -1451,9 +1449,20 @@
     font-weight: 800;
   }
 
+  .invis-anchor-section .invis-anchor {
+    padding: 0;
+  }
+
   .invis-anchor-section.fixed .invis-anchor {
     padding-top: 0;
     padding-bottom: 0;
+    justify-content: flex-start;
+
+    .tabs-link {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 15px;
+    }
   }
 
   .our-cases__list {
@@ -1490,5 +1499,67 @@
         margin-top: 30px;
       }
     }
+  }
+
+  .modal__inner {
+    padding: 30px;
+    border-radius: 36px;
+  }
+
+  .modal__container {
+    padding: 30px 10px;
+  }
+
+  .modal__close {
+    right: 30px;
+    top: 30px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .modal__inner .input-row input {
+    font-size: 14px;
+    line-height: 16px;
+    border-width: 3px;
+    padding-bottom: 10px;
+  }
+
+  .modal__inner .input-list {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal__inner .btn {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: right;
+    gap: 14px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .modal__inner .text-tow {
+    display: none;
+  }
+
+  .modal__inner .input-row {
+    justify-content: center;
+  }
+
+  .select-row {
+    order: -1;
+  }
+
+  .about-main {
+    gap: 40px 0;
+  }
+
+  .projects-page .example-section {
+    padding: 50px 0;
   }
 }
