@@ -45,22 +45,6 @@
     padding: 60px;
   }
 
-  .example-section__center {
-    margin-left: -250px;
-    width: 600px;
-    top: -190px;
-  }
-
-  .example-section__bottom {
-    margin-top: 100px;
-  }
-
-  .fullpage-section:nth-child(5) .example-section__center,
-  .fullpage-section:nth-child(3) .example-section__center {
-    margin-left: -310px;
-    width: 470px;
-  }
-
   .about-main__right {
     width: 100%;
     max-width: 100%;
@@ -223,6 +207,14 @@
     padding: 50px;
     max-width: 775px;
   }
+
+  .example-section__left {
+    max-width: 405px;
+  }
+
+  .example-section__right {
+    max-width: 255px;
+  }
 }
 
 @media (max-width: 1499px) {
@@ -331,7 +323,7 @@
   }
 
   .example-section__left {
-    max-width: 447px;
+    max-width: 400px;
   }
 
   .example-section .tags a {
@@ -343,24 +335,6 @@
   .example-section__content {
     font-size: 20px;
     line-height: 24px;
-    margin-top: 180px;
-  }
-
-  .example-section__center {
-    margin-left: -220px;
-    width: 500px;
-    top: -90px;
-  }
-
-  .fullpage-section:nth-child(5) .example-section__center {
-    margin-left: -280px;
-    width: 410px;
-    top: -60px;
-  }
-
-  .fullpage-default .about-main {
-    padding-top: 100px;
-    gap: 60px 0;
   }
 
   .about-main .caption {
@@ -877,4 +851,78 @@
     padding: 100px 0;
   }
 
+  .example-section__right {
+    max-width: 285px;
+  }
+
+  .example-block {
+    width: 400px;
+    height: 750px;
+
+    &--artLend {
+      .example-element {
+        &:nth-child(1) {
+          width: 475px;
+          height: 475px;
+          right: -92px;
+          top: -104px;
+        }
+        &:nth-child(2) {
+          width: 480px;
+          height: 470px;
+          bottom: 5px;
+          left: -135px;
+        }
+      }
+    }
+
+    &--Moon {
+      .example-element {
+        &:nth-child(1) {
+          width: 455px;
+          height: 417px;
+          right: -122px;
+          top: -41px;
+        }
+        &:nth-child(2) {
+          width: 509px;
+          height: 313px;
+          bottom: 45px;
+          left: -133px;
+        }
+      }
+    }
+
+    &--BUR {
+      .example-element {
+        &:nth-child(1) {
+          width: 434px;
+          height: 412px;
+          bottom: 2px;
+          left: -120px;
+        }
+        &:nth-child(2) {
+          width: 398px;
+          height: 438px;
+          right: -19px;
+          top: -76px;
+        }
+        &:nth-child(3) {
+          width: 268px;
+          height: 274px;
+          right: -51px;
+          bottom: 120px;
+        }
+      }
+    }
+
+    &--OSQ {
+      .example-element {
+        width: 745px;
+        height: 984px;
+        left: -220px;
+        bottom: -220px;
+      }
+    }
+  }
 }

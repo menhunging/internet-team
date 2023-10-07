@@ -1594,9 +1594,11 @@ section {
 
 .example-section {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 .example-section .section-title {
   width: 100%;
+  margin-bottom: 120px;
 }
 .example-section .tags {
   display: flex;
@@ -1620,13 +1622,12 @@ section {
 
 .example-section__content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   color: rgb(5, 38, 54);
   font-size: 27px;
   font-weight: 300;
   line-height: 30px;
-  margin-top: 360px;
   position: relative;
 }
 
@@ -1664,15 +1665,9 @@ section {
 }
 
 .example-section__center {
-  position: absolute;
-  left: 50%;
-  top: -240px;
-  margin-right: auto;
-  margin-left: -400px;
-}
-.example-section__center img {
-  width: 100%;
-  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .example-section__right {
@@ -1686,7 +1681,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 190px;
+  margin-top: -45px;
 }
 
 .link-review {
@@ -3262,12 +3257,14 @@ a.contacts-page__caption:hover {
 
 .projects-page {
   color: rgb(5, 38, 54);
-  padding-top: 70px;
-  padding-bottom: 70px;
   overflow: hidden;
 }
+.projects-page .example-list {
+  padding: 0;
+}
 .projects-page .example-section {
-  padding: 100px 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .tabs-block .mobile {
@@ -3338,6 +3335,7 @@ a.contacts-page__caption:hover {
 }
 .project-block {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 
 .project-block__head {
@@ -3642,6 +3640,7 @@ a.contacts-page__caption:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 50px;
 }
 .example-small .picture {
   height: 510px;
@@ -3653,16 +3652,76 @@ a.contacts-page__caption:hover {
 .example-small .example-section__center {
   order: -1;
   width: 100%;
-  margin: 0 auto !important;
-  position: relative;
-  right: auto !important;
-  left: auto !important;
-  top: auto !important;
+  justify-content: flex-start;
+  flex: initial;
+}
+.example-small .example-block {
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+  height: 410px;
+  border-radius: 36px;
+  margin-bottom: 0;
+}
+.example-small .example-block--artLend .example-element:nth-child(1) {
+  width: 330px;
+  height: 380px;
+  right: -50px;
+  top: -58px;
+}
+.example-small .example-block--artLend .example-element:nth-child(2) {
+  width: 390px;
+  height: 669px;
+  bottom: -199px;
+  left: -40px;
+}
+.example-small .example-block--Moon .example-element:nth-child(1) {
+  width: 345px;
+  height: 327px;
+  right: -42px;
+  top: -81px;
+}
+.example-small .example-block--Moon .example-element:nth-child(2) {
+  width: 430px;
+  height: 270px;
+  bottom: -25px;
+  left: -70px;
+}
+.example-small .example-block--BUR .example-element:nth-child(1) {
+  width: 264px;
+  height: 232px;
+  bottom: -28px;
+  left: -50px;
+}
+.example-small .example-block--BUR .example-element:nth-child(2) {
+  width: 248px;
+  height: 328px;
+  right: -8px;
+  top: -76px;
+}
+.example-small .example-block--BUR .example-element:nth-child(3) {
+  width: 198px;
+  right: -21px;
+  bottom: -40px;
+  transform: rotate(-35deg);
+  height: 190px;
+}
+.example-small .example-block--OSQ .example-element {
+  width: 620px;
+  height: 730px;
+  left: calc(50% - 320px);
+  bottom: -170px;
 }
 .example-small .example-section__left .caption {
   margin-bottom: 30px;
   font-size: 40px;
   line-height: 40px;
+}
+.example-small .example-section__left ul {
+  margin-top: 20px;
+}
+.example-small .example-section__left li span {
+  margin-bottom: 0;
 }
 .example-small .link-review__text {
   display: none;
@@ -3671,7 +3730,7 @@ a.contacts-page__caption:hover {
   margin-top: 20px;
 }
 .example-small .example-section__bottom {
-  margin-top: 50px;
+  margin-top: 0;
 }
 
 .project-images {
@@ -4403,6 +4462,125 @@ a.contacts-page__caption:hover {
   display: none;
 }
 
+.example-block {
+  border-radius: 60px;
+  width: 573px;
+  height: 960px;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.example-block--artLend {
+  background: linear-gradient(180deg, rgba(217, 213, 219, 0.16) 0%, #d9d5db 100%);
+}
+.example-block--artLend .example-element:nth-child(1) {
+  width: 599px;
+  height: 599px;
+  right: -123px;
+  top: -79px;
+}
+.example-block--artLend .example-element:nth-child(2) {
+  width: 669px;
+  height: 669px;
+  bottom: 15px;
+  left: -174px;
+}
+.example-block--Moon {
+  background: linear-gradient(to bottom, rgb(34, 34, 34) 0%, rgb(34, 34, 34) 50%, rgb(159, 9, 69) 50%, rgb(159, 9, 69) 100%);
+}
+.example-block--Moon .example-element:nth-child(1) {
+  width: 555px;
+  height: 507px;
+  right: -142px;
+  top: -11px;
+}
+.example-block--Moon .example-element:nth-child(2) {
+  width: 709px;
+  height: 463px;
+  bottom: 95px;
+  left: -133px;
+}
+.example-block--BUR {
+  background-color: #292929;
+  background-image: url("../img/bur-logo.png");
+  background-position: center;
+}
+.example-block--BUR .example-element:nth-child(1) {
+  width: 534px;
+  height: 522px;
+  bottom: 2px;
+  left: -140px;
+}
+.example-block--BUR .example-element:nth-child(2) {
+  width: 508px;
+  height: 538px;
+  right: -17px;
+  top: -66px;
+}
+.example-block--BUR .example-element:nth-child(3) {
+  width: 348px;
+  height: 384px;
+  bottom: 132px;
+  right: -101px;
+}
+.example-block--OSQ {
+  background-color: #fbf5f1;
+  background-image: url("../img/svg/logo-osq.svg");
+  background-position: right;
+  background-size: contain;
+}
+.example-block--OSQ .example-element {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 1065px;
+  height: 1164px;
+  left: -320px;
+  bottom: -200px;
+}
+
+.example-element {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+
+.example-list {
+  padding: 0;
+  overflow: hidden;
+}
+.example-list .example-section {
+  overflow: visible;
+}
+.example-list .example-section:nth-child(2n) .example-section__content {
+  flex-direction: row-reverse;
+}
+.example-list .example-section:nth-child(2n) .tags {
+  justify-content: flex-start;
+}
+.example-list .example-section:nth-child(2n) .example-section__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 0;
+  padding-left: 40px;
+}
+.example-list .example-section:nth-child(2n) .example-section__left ul {
+  text-align: right;
+}
+.example-list .example-section:nth-child(2n) .example-section__right {
+  width: 100%;
+}
+
+.other-projects .swiper-pagination {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1799px) {
   .header {
     padding: 30px;
@@ -4439,19 +4617,6 @@ a.contacts-page__caption:hover {
   }
   .service-item {
     padding: 60px;
-  }
-  .example-section__center {
-    margin-left: -250px;
-    width: 600px;
-    top: -190px;
-  }
-  .example-section__bottom {
-    margin-top: 100px;
-  }
-  .fullpage-section:nth-child(5) .example-section__center,
-  .fullpage-section:nth-child(3) .example-section__center {
-    margin-left: -310px;
-    width: 470px;
   }
   .about-main__right {
     width: 100%;
@@ -4579,6 +4744,12 @@ a.contacts-page__caption:hover {
     padding: 50px;
     max-width: 775px;
   }
+  .example-section__left {
+    max-width: 405px;
+  }
+  .example-section__right {
+    max-width: 255px;
+  }
 }
 @media (max-width: 1499px) {
   .header {
@@ -4664,7 +4835,7 @@ a.contacts-page__caption:hover {
     height: 24px;
   }
   .example-section__left {
-    max-width: 447px;
+    max-width: 400px;
   }
   .example-section .tags a {
     font-size: 16px;
@@ -4674,21 +4845,6 @@ a.contacts-page__caption:hover {
   .example-section__content {
     font-size: 20px;
     line-height: 24px;
-    margin-top: 180px;
-  }
-  .example-section__center {
-    margin-left: -220px;
-    width: 500px;
-    top: -90px;
-  }
-  .fullpage-section:nth-child(5) .example-section__center {
-    margin-left: -280px;
-    width: 410px;
-    top: -60px;
-  }
-  .fullpage-default .about-main {
-    padding-top: 100px;
-    gap: 60px 0;
   }
   .about-main .caption {
     line-height: 50px;
@@ -5094,6 +5250,61 @@ a.contacts-page__caption:hover {
   .our-cases {
     padding: 100px 0;
   }
+  .example-section__right {
+    max-width: 285px;
+  }
+  .example-block {
+    width: 400px;
+    height: 750px;
+  }
+  .example-block--artLend .example-element:nth-child(1) {
+    width: 475px;
+    height: 475px;
+    right: -92px;
+    top: -104px;
+  }
+  .example-block--artLend .example-element:nth-child(2) {
+    width: 480px;
+    height: 470px;
+    bottom: 5px;
+    left: -135px;
+  }
+  .example-block--Moon .example-element:nth-child(1) {
+    width: 455px;
+    height: 417px;
+    right: -122px;
+    top: -41px;
+  }
+  .example-block--Moon .example-element:nth-child(2) {
+    width: 509px;
+    height: 313px;
+    bottom: 45px;
+    left: -133px;
+  }
+  .example-block--BUR .example-element:nth-child(1) {
+    width: 434px;
+    height: 412px;
+    bottom: 2px;
+    left: -120px;
+  }
+  .example-block--BUR .example-element:nth-child(2) {
+    width: 398px;
+    height: 438px;
+    right: -19px;
+    top: -76px;
+  }
+  .example-block--BUR .example-element:nth-child(3) {
+    width: 268px;
+    height: 274px;
+    right: -51px;
+    bottom: 120px;
+  }
+  .example-block--OSQ .example-element {
+    width: 745px;
+    height: 984px;
+    left: -220px;
+    bottom: -220px;
+  }
 }
 @media (min-width: 1200px) {
   .menu {
@@ -5177,25 +5388,14 @@ a.contacts-page__caption:hover {
   .fullpage-grettings::before {
     display: none;
   }
-  .example-section__center {
-    margin-left: -150px;
-    width: 350px;
-    top: 50% !important;
-    margin-top: -290px;
-  }
-  .example-section__content {
-    margin-top: 100px;
-  }
   .example-section__left {
-    max-width: 347px;
+    max-width: 245px;
+  }
+  .example-section__right {
+    max-width: 175px;
   }
   .example-section__bottom {
     margin-top: 50px;
-  }
-  .fullpage-section:nth-child(5) .example-section__center,
-  .fullpage-section:nth-child(3) .example-section__center {
-    margin-left: -200px;
-    width: 350px;
   }
   .about-presentation__icon {
     width: 260px;
@@ -5614,6 +5814,10 @@ a.contacts-page__caption:hover {
   .menu-footer ul li + li {
     margin-top: 0 !important;
   }
+  .other-projects .swiper-pagination {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 1023px) {
   .header-link {
@@ -5698,6 +5902,7 @@ a.contacts-page__caption:hover {
   .example-section__left {
     max-width: 50%;
     width: 100%;
+    padding-right: 40px;
   }
   .example-section__left ul {
     margin-top: 20px;
@@ -5705,18 +5910,15 @@ a.contacts-page__caption:hover {
   .example-section__left li + li {
     margin-top: 20px;
   }
+  .example-section__center {
+    width: 50%;
+    flex: initial;
+  }
   .example-section__right {
     display: none;
   }
-  .example-section__center {
-    position: relative;
-    right: auto !important;
-    left: auto !important;
-    top: auto !important;
-    margin: 0 !important;
-  }
   .example-section__bottom {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .fullpage-section:nth-child(5) .example-section__bottom,
   .fullpage-section:nth-child(3) .example-section__bottom {
@@ -6417,6 +6619,64 @@ a.contacts-page__caption:hover {
     font-size: 20px;
     line-height: 24px;
   }
+  .example-block {
+    width: 350px;
+    height: 550px;
+  }
+  .example-block--artLend .example-element:nth-child(1) {
+    width: 375px;
+    height: 365px;
+    right: -72px;
+    top: -68px;
+  }
+  .example-block--artLend .example-element:nth-child(2) {
+    width: 400px;
+    height: 360px;
+    bottom: -5px;
+    left: -125px;
+  }
+  .example-block--Moon .example-element:nth-child(1) {
+    width: 365px;
+    height: 337px;
+    right: -82px;
+    top: -91px;
+  }
+  .example-block--Moon .example-element:nth-child(2) {
+    width: 459px;
+    bottom: 25px;
+    left: -67px;
+    height: 270px;
+  }
+  .example-block--BUR {
+    background-size: 50%;
+  }
+  .example-block--BUR .example-element:nth-child(1) {
+    width: 344px;
+    height: 312px;
+    bottom: 2px;
+    left: -120px;
+  }
+  .example-block--BUR .example-element:nth-child(2) {
+    width: 298px;
+    height: 358px;
+    right: 21px;
+    top: -76px;
+  }
+  .example-block--BUR .example-element:nth-child(3) {
+    width: 208px;
+    height: 214px;
+    right: -21px;
+    bottom: 90px;
+  }
+  .example-block--OSQ .example-element {
+    width: 665px;
+    height: 764px;
+    left: -210px;
+    bottom: -130px;
+  }
+  .example-section .section-title {
+    margin-bottom: 100px;
+  }
 }
 @media (max-width: 767px) {
   .header {
@@ -6534,18 +6794,6 @@ a.contacts-page__caption:hover {
   .example-section__left {
     max-width: 100%;
     width: 100%;
-  }
-  .example-section__center {
-    order: -1;
-    width: 100%;
-    margin: 0 auto !important;
-  }
-  .example-section__center .picture {
-    min-height: 300px;
-    z-index: -1;
-  }
-  .example-section__content {
-    margin-top: 50px;
   }
   h3.caption {
     font-size: 27px;
@@ -7128,10 +7376,6 @@ a.contacts-page__caption:hover {
   .grettings-state {
     display: none;
   }
-  .projects-page {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
   .tabs-mobile-filter {
     display: flex;
     align-items: center;
@@ -7702,8 +7946,86 @@ a.contacts-page__caption:hover {
   .about-main {
     gap: 40px 0;
   }
-  .projects-page .example-section {
-    padding: 50px 0;
+  .example-section__center {
+    order: -1;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .example-block {
+    width: 100%;
+    max-width: 390px;
+    margin: 0;
+    height: 246px;
+    border-radius: 36px;
+    margin-bottom: 30px;
+  }
+  .example-block--artLend .example-element:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    right: -20px;
+    top: -28px;
+  }
+  .example-block--artLend .example-element:nth-child(2) {
+    width: 240px;
+    height: 240px;
+    bottom: -29px;
+    left: -20px;
+  }
+  .example-block--Moon .example-element:nth-child(1) {
+    width: 225px;
+    height: 207px;
+    right: -22px;
+    top: -53px;
+  }
+  .example-block--Moon .example-element:nth-child(2) {
+    width: 310px;
+    height: 180px;
+    bottom: -25px;
+    left: -40px;
+  }
+  .example-block--BUR .example-element:nth-child(1) {
+    width: 234px;
+    height: 172px;
+    bottom: -28px;
+    left: -50px;
+  }
+  .example-block--BUR .example-element:nth-child(2) {
+    width: 168px;
+    height: 208px;
+    right: -10px;
+    top: -46px;
+  }
+  .example-block--BUR .example-element:nth-child(3) {
+    width: 178px;
+    height: 144px;
+    right: -41px;
+    bottom: -30px;
+  }
+  .example-block--OSQ .example-element {
+    width: 410px;
+    height: 430px;
+    left: calc(50% - 237px);
+    bottom: -100px;
+  }
+  .example-section {
+    padding-bottom: 0;
+  }
+  .example-section .section-title {
+    margin-bottom: 50px;
+  }
+  .example-list .example-section:nth-child(2n) .example-section__left {
+    align-items: flex-start;
+    padding-left: 0;
+    text-align: left;
+  }
+  .example-list .example-section:nth-child(2n) .example-section__left ul {
+    text-align: left;
+  }
+  .example-list .btn {
+    margin-top: 40px;
+  }
+  .text-step {
+    padding: 0;
   }
 }
 @media (max-width: 639px) {
@@ -7727,6 +8049,57 @@ a.contacts-page__caption:hover {
   }
   .thanks-block {
     background-position: calc(50% - 150px) center;
+  }
+  .example-small .example-block {
+    height: 215px;
+  }
+  .example-small .example-block--artLend .example-element:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    right: -20px;
+    top: -28px;
+  }
+  .example-small .example-block--artLend .example-element:nth-child(2) {
+    width: 240px;
+    height: 240px;
+    bottom: -29px;
+    left: -50px;
+  }
+  .example-small .example-block--Moon .example-element:nth-child(1) {
+    width: 205px;
+    height: 187px;
+    right: -22px;
+    top: -53px;
+  }
+  .example-small .example-block--Moon .example-element:nth-child(2) {
+    width: 290px;
+    height: 170px;
+    bottom: -25px;
+    left: -34px;
+  }
+  .example-small .example-block--BUR .example-element:nth-child(1) {
+    width: 234px;
+    height: 172px;
+    bottom: -28px;
+    left: -50px;
+  }
+  .example-small .example-block--BUR .example-element:nth-child(2) {
+    width: 168px;
+    height: 208px;
+    right: -10px;
+    top: -66px;
+  }
+  .example-small .example-block--BUR .example-element:nth-child(3) {
+    width: 148px;
+    height: 114px;
+    right: -41px;
+    bottom: -30px;
+  }
+  .example-small .example-block--OSQ .example-element {
+    width: 410px;
+    height: 430px;
+    left: calc(50% - 237px);
+    bottom: -100px;
   }
 }
 @media (max-height: 350px) {

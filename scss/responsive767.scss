@@ -142,21 +142,6 @@
     width: 100%;
   }
 
-  .example-section__center {
-    order: -1;
-    width: 100%;
-    margin: 0 auto !important;
-
-    .picture {
-      min-height: 300px;
-      z-index: -1;
-    }
-  }
-
-  .example-section__content {
-    margin-top: 50px;
-  }
-
   h3.caption {
     font-size: 27px;
     line-height: 30px;
@@ -851,11 +836,6 @@
 
   .grettings-state {
     display: none;
-  }
-
-  .projects-page {
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   .tabs-mobile-filter {
@@ -1559,7 +1539,116 @@
     gap: 40px 0;
   }
 
-  .projects-page .example-section {
-    padding: 50px 0;
+  .example-section__center {
+    order: -1;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .example-block {
+    width: 100%;
+    max-width: 390px;
+    margin: 0;
+    height: 246px;
+    border-radius: 36px;
+    margin-bottom: 30px;
+
+    &--artLend {
+      .example-element {
+        &:nth-child(1) {
+          width: 200px;
+          height: 200px;
+          right: -20px;
+          top: -28px;
+        }
+        &:nth-child(2) {
+          width: 240px;
+          height: 240px;
+          bottom: -29px;
+          left: -20px;
+        }
+      }
+    }
+
+    &--Moon {
+      .example-element {
+        &:nth-child(1) {
+          width: 225px;
+          height: 207px;
+          right: -22px;
+          top: -53px;
+        }
+        &:nth-child(2) {
+          width: 310px;
+          height: 180px;
+          bottom: -25px;
+          left: -40px;
+        }
+      }
+    }
+
+    &--BUR {
+      .example-element {
+        &:nth-child(1) {
+          width: 234px;
+          height: 172px;
+          bottom: -28px;
+          left: -50px;
+        }
+        &:nth-child(2) {
+          width: 168px;
+          height: 208px;
+          right: -10px;
+          top: -46px;
+        }
+        &:nth-child(3) {
+          width: 178px;
+          height: 144px;
+          right: -41px;
+          bottom: -30px;
+        }
+      }
+    }
+
+    &--OSQ {
+      .example-element {
+        width: 410px;
+        height: 430px;
+        left: calc(50% - 237px);
+        bottom: -100px;
+      }
+    }
+  }
+
+  .example-section {
+    padding-bottom: 0;
+
+    .section-title {
+      margin-bottom: 50px;
+    }
+  }
+
+  .example-list {
+    .example-section {
+      &:nth-child(2n) {
+        .example-section__left {
+          align-items: flex-start;
+          padding-left: 0;
+          text-align: left;
+
+          ul {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  .example-list .btn {
+    margin-top: 40px;
+  }
+
+  .text-step {
+    padding: 0;
   }
 }

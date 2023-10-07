@@ -96,29 +96,16 @@
     display: none;
   }
 
-  .example-section__center {
-    margin-left: -150px;
-    width: 350px;
-    top: 50% !important;
-    margin-top: -290px;
-  }
-
-  .example-section__content {
-    margin-top: 100px;
-  }
-
   .example-section__left {
-    max-width: 347px;
+    max-width: 245px;
+  }
+
+  .example-section__right {
+    max-width: 175px;
   }
 
   .example-section__bottom {
     margin-top: 50px;
-  }
-
-  .fullpage-section:nth-child(5) .example-section__center,
-  .fullpage-section:nth-child(3) .example-section__center {
-    margin-left: -200px;
-    width: 350px;
   }
 
   .about-presentation__icon {
@@ -570,7 +557,6 @@
   }
 
   .text-step {
-
     &__text {
       padding: 20px;
       font-size: 20px;
@@ -637,5 +623,10 @@
         margin-top: 0 !important;
       }
     }
+  }
+
+  .other-projects .swiper-pagination {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }

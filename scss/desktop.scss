@@ -329,9 +329,11 @@ section {
 
 .example-section {
   color: $colorBlue;
+  overflow: hidden;
 
   .section-title {
     width: 100%;
+    margin-bottom: 120px;
   }
 
   .caption {
@@ -361,13 +363,12 @@ section {
 
 .example-section__content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   color: $colorBlue;
   font-size: 27px;
   font-weight: 300;
   line-height: 30px;
-  margin-top: 360px;
   position: relative;
 }
 
@@ -404,16 +405,9 @@ section {
 }
 
 .example-section__center {
-  position: absolute;
-  left: 50%;
-  top: -240px;
-  margin-right: auto;
-  margin-left: -400px;
-
-  img {
-    width: 100%;
-    position: relative;
-  }
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .example-section__right {
@@ -427,7 +421,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 190px;
+  margin-top: -45px;
 }
 
 .link-review {
@@ -1943,12 +1937,18 @@ a.contacts-page__caption {
 
 .projects-page {
   color: $colorBlue;
-  padding-top: 70px;
-  padding-bottom: 70px;
   overflow: hidden;
 
   .example-section {
-    padding: 100px 0;
+  }
+
+  .example-list {
+    padding: 0;
+  }
+
+  .example-section {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -2032,6 +2032,7 @@ a.contacts-page__caption {
 
 .project-block {
   color: $colorBlue;
+  overflow: hidden;
 }
 
 .project-block__head {
@@ -2356,6 +2357,7 @@ a.contacts-page__caption {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 50px;
 
   .picture {
     height: 510px;
@@ -2369,11 +2371,84 @@ a.contacts-page__caption {
   .example-section__center {
     order: -1;
     width: 100%;
-    margin: 0 auto !important;
-    position: relative;
-    right: auto !important;
-    left: auto !important;
-    top: auto !important;
+    justify-content: flex-start;
+    flex: initial;
+  }
+
+  .example-block {
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    height: 410px;
+    border-radius: 36px;
+    margin-bottom: 0;
+
+    &--artLend {
+      .example-element {
+        &:nth-child(1) {
+          width: 330px;
+          height: 380px;
+          right: -50px;
+          top: -58px;
+        }
+        &:nth-child(2) {
+          width: 390px;
+          height: 669px;
+          bottom: -199px;
+          left: -40px;
+        }
+      }
+    }
+
+    &--Moon {
+      .example-element {
+        &:nth-child(1) {
+          width: 345px;
+          height: 327px;
+          right: -42px;
+          top: -81px;
+        }
+        &:nth-child(2) {
+          width: 430px;
+          height: 270px;
+          bottom: -25px;
+          left: -70px;
+        }
+      }
+    }
+
+    &--BUR {
+      .example-element {
+        &:nth-child(1) {
+          width: 264px;
+          height: 232px;
+          bottom: -28px;
+          left: -50px;
+        }
+        &:nth-child(2) {
+          width: 248px;
+          height: 328px;
+          right: -8px;
+          top: -76px;
+        }
+        &:nth-child(3) {
+          width: 198px;
+          right: -21px;
+          bottom: -40px;
+          transform: rotate(-35deg);
+          height: 190px;
+        }
+      }
+    }
+
+    &--OSQ {
+      .example-element {
+        width: 620px;
+        height: 730px;
+        left: calc(50% - 320px);
+        bottom: -170px;
+      }
+    }
   }
 
   .example-section__left {
@@ -2381,6 +2456,14 @@ a.contacts-page__caption {
       margin-bottom: 30px;
       font-size: 40px;
       line-height: 40px;
+    }
+
+    ul {
+      margin-top: 20px;
+    }
+
+    li span {
+      margin-bottom: 0;
     }
   }
 
@@ -2393,7 +2476,7 @@ a.contacts-page__caption {
   }
 
   .example-section__bottom {
-    margin-top: 50px;
+    margin-top: 0;
   }
 }
 
@@ -3165,4 +3248,156 @@ a.contacts-page__caption {
 
 .menu-footer {
   display: none;
+}
+
+.example-block {
+  border-radius: 60px;
+  width: 573px;
+  height: 960px;
+  position: relative;
+  background-repeat: no-repeat;
+
+  &--artLend {
+    background: linear-gradient(
+      180deg,
+      rgba(217, 213, 219, 0.16) 0%,
+      #d9d5db 100%
+    );
+
+    .example-element {
+      &:nth-child(1) {
+        width: 599px;
+        height: 599px;
+        right: -123px;
+        top: -79px;
+      }
+      &:nth-child(2) {
+        width: 669px;
+        height: 669px;
+        bottom: 15px;
+        left: -174px;
+      }
+    }
+  }
+
+  &--Moon {
+    background: linear-gradient(
+      to bottom,
+      rgba(34, 34, 34, 1) 0%,
+      rgba(34, 34, 34, 1) 50%,
+      rgba(159, 9, 69, 1) 50%,
+      rgba(159, 9, 69, 1) 100%
+    );
+
+    .example-element {
+      &:nth-child(1) {
+        width: 555px;
+        height: 507px;
+        right: -142px;
+        top: -11px;
+      }
+      &:nth-child(2) {
+        width: 709px;
+        height: 463px;
+        bottom: 95px;
+        left: -133px;
+      }
+    }
+  }
+
+  &--BUR {
+    background-color: #292929;
+    background-image: url("../img/bur-logo.png");
+    background-position: center;
+
+    .example-element {
+      &:nth-child(1) {
+        width: 534px;
+        height: 522px;
+        bottom: 2px;
+        left: -140px;
+      }
+      &:nth-child(2) {
+        width: 508px;
+        height: 538px;
+        right: -17px;
+        top: -66px;
+      }
+      &:nth-child(3) {
+        width: 348px;
+        height: 384px;
+        bottom: 132px;
+        right: -101px;
+      }
+    }
+  }
+
+  &--OSQ {
+    background-color: #fbf5f1;
+    background-image: url("../img/svg/logo-osq.svg");
+    background-position: right;
+    background-size: contain;
+
+    .example-element {
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      width: 1065px;
+      height: 1164px;
+      left: -320px;
+      bottom: -200px;
+    }
+  }
+}
+
+.example-element {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+
+.example-list {
+  padding: 0;
+  overflow: hidden;
+
+  .example-section {
+    overflow: visible;
+    &:nth-child(2n) {
+      .example-section__content {
+        flex-direction: row-reverse;
+      }
+
+      .tags {
+        justify-content: flex-start;
+      }
+
+      .example-section__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 0;
+        padding-left: 40px;
+
+        ul {
+          text-align: right;
+        }
+      }
+
+      .example-section__right {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.other-projects {
+  .swiper-pagination {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }

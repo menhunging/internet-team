@@ -111,6 +111,7 @@
   .example-section__left {
     max-width: 50%;
     width: 100%;
+    padding-right: 40px;
   }
 
   .example-section__left ul {
@@ -121,20 +122,17 @@
     margin-top: 20px;
   }
 
+  .example-section__center {
+    width: 50%;
+    flex: initial;
+  }
+
   .example-section__right {
     display: none;
   }
 
-  .example-section__center {
-    position: relative;
-    right: auto !important;
-    left: auto !important;
-    top: auto !important;
-    margin: 0 !important;
-  }
-
   .example-section__bottom {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .fullpage-section:nth-child(5) .example-section__bottom,
@@ -965,5 +963,81 @@
     white-space: normal;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .example-block {
+    width: 350px;
+    height: 550px;
+
+    &--artLend {
+      .example-element {
+        &:nth-child(1) {
+          width: 375px;
+          height: 365px;
+          right: -72px;
+          top: -68px;
+        }
+        &:nth-child(2) {
+          width: 400px;
+          height: 360px;
+          bottom: -5px;
+          left: -125px;
+        }
+      }
+    }
+
+    &--Moon {
+      .example-element {
+        &:nth-child(1) {
+          width: 365px;
+          height: 337px;
+          right: -82px;
+          top: -91px;
+        }
+        &:nth-child(2) {
+          width: 459px;
+          bottom: 25px;
+          left: -67px;
+          height: 270px;
+        }
+      }
+    }
+
+    &--BUR {
+      background-size: 50%;
+      .example-element {
+        &:nth-child(1) {
+          width: 344px;
+          height: 312px;
+          bottom: 2px;
+          left: -120px;
+        }
+        &:nth-child(2) {
+          width: 298px;
+          height: 358px;
+          right: 21px;
+          top: -76px;
+        }
+        &:nth-child(3) {
+          width: 208px;
+          height: 214px;
+          right: -21px;
+          bottom: 90px;
+        }
+      }
+    }
+
+    &--OSQ {
+      .example-element {
+        width: 665px;
+        height: 764px;
+        left: -210px;
+        bottom: -130px;
+      }
+    }
+  }
+
+  .example-section .section-title {
+    margin-bottom: 100px;
   }
 }

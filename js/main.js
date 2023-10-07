@@ -1,8 +1,4 @@
-addEventListener("scroll", (event) => {
-  let currentScroll = $("#fullpage")?.scrollTop();
-
-  // console.log(currentScroll);
-});
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 let swiperSliders = [];
 let observer = () => {
@@ -76,7 +72,7 @@ $(document).ready(function () {
           spaceBetween: 30,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 50,
         },
         1500: {
@@ -480,6 +476,109 @@ $(document).ready(function () {
         },
       });
     }
+  }
+
+  if ($(".example-section").length > 0) {
+    $(".example-section").map(function () {
+      let block = $(this);
+      let paralax1 = block.find(".example--paralax1") || null;
+      let paralax2 = block.find(".example--paralax2") || null;
+      let paralax3 = block.find(".example--paralax3") || null;
+
+      if ($(window).width() >= 768) {
+        if (paralax1) {
+          gsap.fromTo(
+            paralax1,
+            { y: 0 },
+            {
+              y: -300,
+              scrollTrigger: {
+                trigger: block,
+                start: "-300",
+                scrub: true,
+              },
+            }
+          );
+        }
+
+        if (paralax2) {
+          gsap.fromTo(
+            paralax2,
+            { x: 0, y: 0 },
+            {
+              x: 150,
+              scrollTrigger: {
+                trigger: block,
+                start: "-200",
+                scrub: true,
+              },
+            }
+          );
+        }
+
+        if (paralax3) {
+          gsap.fromTo(
+            paralax3,
+            { x: 0, y: 0 },
+            {
+              x: -100,
+              y: 100,
+              scrollTrigger: {
+                trigger: block,
+                start: "-100",
+                scrub: true,
+              },
+            }
+          );
+        }
+      }else{
+        if (paralax1) {
+          gsap.fromTo(
+            paralax1,
+            { y: 0 },
+            {
+              y: -100,
+              scrollTrigger: {
+                trigger: block,
+                start: "-300",
+                scrub: true,
+              },
+            }
+          );
+        }
+
+        if (paralax2) {
+          gsap.fromTo(
+            paralax2,
+            { x: 0, y: 0 },
+            {
+              x: 50,
+              scrollTrigger: {
+                trigger: block,
+                start: "-200",
+                scrub: true,
+              },
+            }
+          );
+        }
+
+        if (paralax3) {
+          gsap.fromTo(
+            paralax3,
+            { x: 0, y: 0 },
+            {
+              x: -50,
+              y: 50,
+              scrollTrigger: {
+                trigger: block,
+                start: "-100",
+                scrub: true,
+              },
+            }
+          );
+        }
+      }
+    });
   }
 });
 

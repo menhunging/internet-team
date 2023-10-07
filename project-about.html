@@ -20,7 +20,6 @@
     <link rel="stylesheet" type="text/css" href="libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="libs/fancybox/fancybox.css" />
-    <link rel="stylesheet" type="text/css" href="libs/fullpage/fullpage.min.css" />
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -345,9 +344,12 @@
                             <div class="example-small">
 
                                 <div class="example-section__center">
-                                    <picture class="picture">
-                                        <img src="img/exp1-mobile.png" alt="">
-                                    </picture>
+                                    <div class="example-block example-block--artLend">
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/atr-lend-exp1.png)"></span>
+                                        <span class="example-element example--paralax2"
+                                            style="background-image: url(img/atr-lend-exp2.png)"></span>
+                                    </div>
                                 </div>
                                 <div class="example-section__left">
                                     <h3 class="caption">Art-lend</h3>
@@ -394,9 +396,12 @@
                         <div class="swiper-slide">
                             <div class="example-small">
                                 <div class="example-section__center">
-                                    <picture class="picture">
-                                        <img src="img/exp2-mobile.png" alt="">
-                                    </picture>
+                                    <div class="example-block example-block--Moon">
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/moon-exp2.png)"></span>
+                                        <span class="example-element example--paralax2"
+                                            style="background-image: url(img/moon-exp1.png)"></span>
+                                    </div>
                                 </div>
                                 <div class="example-section__left">
                                     <h3 class="caption">Moon</h3>
@@ -441,10 +446,60 @@
                         <div class="swiper-slide">
                             <div class="example-small">
                                 <div class="example-section__center">
-                                    <div class="example-section__center">
-                                        <picture class="picture">
-                                            <img src="img/exp3-mobile.png" alt="">
-                                        </picture>
+                                    <div class="example-block example-block--BUR">
+                                        <span class="example-element example--paralax3"
+                                            style="background-image: url(img/bur-exp1.png)"></span>
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/bur-exp2.png)"></span>
+                                        <span class="example-element example--paralax2"
+                                            style="background-image: url(img/bur-exp3.png)"></span>
+                                    </div>
+                                </div>
+                                <div class="example-section__left">
+                                    <h3 class="caption">Art-lend</h3>
+                                    <p>Буревестник</p>
+                                    <ul>
+                                        <li>
+                                            <span>сфера</span>
+                                            <p>компания по производству бумажной продукции</p>
+                                        </li>
+                                        <li>
+                                            <span>сайт</span>
+                                            <a href="#">artlend-cup.ru</a>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="example-section__bottom">
+
+                                    <a href="#" class="link-review">
+
+                                        <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="2" y="2" width="56" height="56" rx="28" stroke="#052636"
+                                                stroke-width="4"></rect>
+                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636">
+                                            </rect>
+                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636">
+                                            </rect>
+                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636">
+                                            </rect>
+                                        </svg>
+
+
+                                        <span class="link-review__text">Отзыв клиента</span>
+                                    </a>
+
+                                    <a href="#" class="link-site">смотреть кейс</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="example-small">
+                                <div class="example-section__center">
+                                    <div class="example-block example-block--OSQ">
+                                        <span class="example-element example--paralax1" style="background-image: url(img/osq-exp1.png)"></span>
                                     </div>
                                 </div>
                                 <div class="example-section__left">
@@ -578,9 +633,10 @@
     <script src="libs/tabslet/jquery.tabslet.min.js"></script>
     <script src="libs/fancybox/fancybox.umd.js"></script>
     <script src="libs/inputmask/jquery.inputmask.min.js"></script>
-    <script src='libs/fullpage/fullpage.min.js'></script>
-    <script src='libs/fullpage/fullpage.extensions.min.js'></script>
     <script src="libs/marquee/jquery.marquee.min.js"></script>
+    <script src="libs/paralax/gsap.min.js"></script>
+    <script src="libs/paralax/ScrollSmoother.min.js"></script>
+    <script src="libs/paralax/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
