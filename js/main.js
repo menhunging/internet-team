@@ -531,7 +531,7 @@ $(document).ready(function () {
             }
           );
         }
-      }else{
+      } else {
         if (paralax1) {
           gsap.fromTo(
             paralax1,
@@ -578,6 +578,42 @@ $(document).ready(function () {
           );
         }
       }
+    });
+  }
+
+  if ($(".our-cases__list").length > 0) {
+    $(".our-cases__item").on("click", function () {
+      let blockID = $(this).attr("data-active");
+      $(".our-cases__item").stop().removeClass("active");
+      $(this).stop().addClass("active");
+
+      $(".our-cases__graf").map(function () {
+        if ($(this).attr("data-grafID") === blockID) {
+          $(".our-cases__graf").stop().removeClass("active");
+          $(this).stop().addClass("active");
+        }
+      });
+    });
+
+    if ($(window).width() < 768) {
+      const ourCaseMobile = new Swiper(".our-cases__mobileSlider", {
+        slidesPerView: 1,
+        spaceBetween: 12,
+        autoHeight: true,
+        pagination: {
+          el: ".our-cases__mobileSlider .swiper-pagination",
+        },
+      });
+    }
+  }
+
+  if ($("[data-aos]").length > 0) {
+    $("[data-aos]").each((i, el) => {
+      AOS.init({
+        offset: 0,
+        duration: 1500,
+        // once: true,
+      });
     });
   }
 });

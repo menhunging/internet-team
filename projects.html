@@ -14,13 +14,11 @@
     <meta name="msapplication-TileColor" content="#333333">
     <meta name="theme-color" content="#333333">
 
-    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
-
     <link rel="stylesheet" type="text/css" href="libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="libs/fancybox/fancybox.css" />
-
+    <link rel="stylesheet" type="text/css" href="libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -171,7 +169,7 @@
             </section>
 
             <section class="projects-page">
-                <div class="tabs-block">
+                <div class="tabs-block" data-aos="fade-up">
 
                     <svg class="tabs-block__close" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -242,13 +240,8 @@
 
                 <section class="example-list">
                     <section class="example-section">
-                        <div class="section-title">
-                            <h2 class="caption">уже сделали</h2>
-                            <a href="#" class="link-site">смотреть все проекты</a>
-                        </div>
-    
                         <div class="example-section__content">
-                            <div class="example-section__left">
+                            <div class="example-section__left" data-aos="fade-right">
                                 <h3 class="caption">Art-lend</h3>
                                 <p>корпоративный сайт, с современным дизайном, понятной структурой для презентации
                                     продукции компании</p>
@@ -266,7 +259,7 @@
     
                             </div>
     
-                            <div class="example-section__center">
+                            <div class="example-section__center" data-aos="fade-up">
                                 <div class="example-block example-block--artLend">
                                     <span class="example-element example--paralax1"
                                         style="background-image: url(img/atr-lend-exp1.png)"></span>
@@ -275,7 +268,7 @@
                                 </div>
                             </div>
     
-                            <div class="example-section__right">
+                            <div class="example-section__right" data-aos="fade-left">
                                 <ul class="tags">
                                     <li><a href="#">UI/UX дизайн</a></li>
                                     <li><a href="#">брендинг</a></li>
@@ -285,9 +278,9 @@
                                 </ul>
                             </div>
     
-                            <div class="example-section__bottom">
+                            <div class="example-section__bottom" data-aos="fade-up">
     
-                                <a href="#" class="link-review">
+                                <button class="link-review">
     
                                     <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -300,7 +293,26 @@
     
     
                                     <span class="link-review__text">Отзыв клиента</span>
-                                </a>
+    
+                                    <div class="review-client">
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.</p>
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю благодарность
+                                            за проделанную работу по созданию нового сайта всей команде "Internet Team" и в
+                                            частности Никите Пряхину.</p>
+    
+                                        <div class="client">
+                                            <img class="client__img" src="img/client.png" alt="">
+                                            <div class="client_info">
+                                                <span class="client__name">Фамилия Имя Отчество</span>
+                                                <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
     
                                 <a href="#" class="link-site">смотреть кейс</a>
                             </div>
@@ -310,7 +322,7 @@
     
                     <section class="example-section">
                         <div class="example-section__content">
-                            <div class="example-section__left">
+                            <div class="example-section__left" data-aos="fade-left">
                                 <h3 class="caption">Moon</h3>
                                 <p>верстка дизайн макетов Заказчика</p>
                                 <ul>
@@ -327,14 +339,16 @@
     
                             </div>
     
-                            <div class="example-section__center">
+                            <div class="example-section__center" data-aos="fade-up">
                                 <div class="example-block example-block--Moon">
-                                    <span class="example-element example--paralax1" style="background-image: url(img/moon-exp2.png)"></span>
-                                    <span class="example-element example--paralax2" style="background-image: url(img/moon-exp1.png)"></span>
+                                    <span class="example-element example--paralax1"
+                                        style="background-image: url(img/moon-exp2.png)"></span>
+                                    <span class="example-element example--paralax2"
+                                        style="background-image: url(img/moon-exp1.png)"></span>
                                 </div>
                             </div>
     
-                            <div class="example-section__right">
+                            <div class="example-section__right" data-aos="fade-right">
                                 <ul class="tags">
                                     <li><a href="#">UI/UX дизайн</a></li>
                                     <li><a href="#">брендинг</a></li>
@@ -344,9 +358,9 @@
                                 </ul>
                             </div>
     
-                            <div class="example-section__bottom">
+                            <div class="example-section__bottom" data-aos="fade-up">
     
-                                <a href="#" class="link-review">
+                                <button class="link-review">
     
                                     <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -359,7 +373,26 @@
     
     
                                     <span class="link-review__text">Отзыв клиента</span>
-                                </a>
+    
+                                    <div class="review-client">
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.</p>
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю благодарность
+                                            за проделанную работу по созданию нового сайта всей команде "Internet Team" и в
+                                            частности Никите Пряхину.</p>
+    
+                                        <div class="client">
+                                            <img class="client__img" src="img/client.png" alt="">
+                                            <div class="client_info">
+                                                <span class="client__name">Фамилия Имя Отчество</span>
+                                                <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
     
                                 <a href="#" class="link-site">смотреть кейс</a>
                             </div>
@@ -369,7 +402,7 @@
     
                     <section class="example-section">
                         <div class="example-section__content">
-                            <div class="example-section__left">
+                            <div class="example-section__left" data-aos="fade-right">
                                 <h3 class="caption">Буревестник</h3>
                                 <p>корпоративный сайт, с современным дизайном, понятной структурой для презентации
                                     продукции компании</p>
@@ -385,15 +418,18 @@
                                 </ul>
                             </div>
     
-                            <div class="example-section__center">
+                            <div class="example-section__center" data-aos="fade-up">
                                 <div class="example-block example-block--BUR">
-                                    <span class="example-element example--paralax3" style="background-image: url(img/bur-exp1.png)"></span>
-                                    <span class="example-element example--paralax1" style="background-image: url(img/bur-exp2.png)"></span>
-                                    <span class="example-element example--paralax2" style="background-image: url(img/bur-exp3.png)"></span>
+                                    <span class="example-element example--paralax3"
+                                        style="background-image: url(img/bur-exp1.png)"></span>
+                                    <span class="example-element example--paralax1"
+                                        style="background-image: url(img/bur-exp2.png)"></span>
+                                    <span class="example-element example--paralax2"
+                                        style="background-image: url(img/bur-exp3.png)"></span>
                                 </div>
                             </div>
-    
-                            <div class="example-section__right">
+     
+                            <div class="example-section__right" data-aos="fade-left">
                                 <ul class="tags">
                                     <li><a href="#">UI/UX дизайн</a></li>
                                     <li><a href="#">брендинг</a></li>
@@ -403,9 +439,9 @@
                                 </ul>
                             </div>
     
-                            <div class="example-section__bottom">
+                            <div class="example-section__bottom" data-aos="fade-up">
     
-                                <a href="#" class="link-review">
+                                <button class="link-review">
     
                                     <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -418,7 +454,26 @@
     
     
                                     <span class="link-review__text">Отзыв клиента</span>
-                                </a>
+    
+                                    <div class="review-client">
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.</p>
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю благодарность
+                                            за проделанную работу по созданию нового сайта всей команде "Internet Team" и в
+                                            частности Никите Пряхину.</p>
+    
+                                        <div class="client">
+                                            <img class="client__img" src="img/client.png" alt="">
+                                            <div class="client_info">
+                                                <span class="client__name">Фамилия Имя Отчество</span>
+                                                <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
     
                                 <a href="#" class="link-site">смотреть кейс</a>
                             </div>
@@ -428,7 +483,7 @@
     
                     <section class="example-section">
                         <div class="example-section__content">
-                            <div class="example-section__left">
+                            <div class="example-section__left" data-aos="fade-left">
                                 <h3 class="caption">OSQ group</h3>
                                 <p>корпоративный сайт, с современным дизайном, понятной структурой для презентации
                                     продукции компании</p>
@@ -442,16 +497,16 @@
                                         <a href="#">artlend-cup.ru</a>
                                     </li>
                                 </ul>
-    
                             </div>
     
-                            <div class="example-section__center">
+                            <div class="example-section__center" data-aos="fade-up">
                                 <div class="example-block example-block--OSQ">
-                                    <span class="example-element example--paralax1" style="background-image: url(img/osq-exp1.png)"></span>
+                                    <span class="example-element example--paralax1"
+                                        style="background-image: url(img/osq-exp1.png)"></span>
                                 </div>
                             </div>
     
-                            <div class="example-section__right">
+                            <div class="example-section__right" data-aos="fade-right">
                                 <ul class="tags">
                                     <li><a href="#">UI/UX дизайн</a></li>
                                     <li><a href="#">брендинг</a></li>
@@ -461,9 +516,9 @@
                                 </ul>
                             </div>
     
-                            <div class="example-section__bottom">
+                            <div class="example-section__bottom" data-aos="fade-up">
     
-                                <a href="#" class="link-review">
+                                <button class="link-review">
     
                                     <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -476,7 +531,26 @@
     
     
                                     <span class="link-review__text">Отзыв клиента</span>
-                                </a>
+    
+                                    <div class="review-client">
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.</p>
+                                        <p>ООО «Черноголовская типография» выражает искреннюю благодарность за проделанную
+                                            работу по созданию нового сайта всей команде "Internet Team" и в частности
+                                            Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю благодарность
+                                            за проделанную работу по созданию нового сайта всей команде "Internet Team" и в
+                                            частности Никите Пряхину.</p>
+    
+                                        <div class="client">
+                                            <img class="client__img" src="img/client.png" alt="">
+                                            <div class="client_info">
+                                                <span class="client__name">Фамилия Имя Отчество</span>
+                                                <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
     
                                 <a href="#" class="link-site">смотреть кейс</a>
                             </div>
@@ -580,6 +654,7 @@
     <script src="libs/paralax/gsap.min.js"></script>
     <script src="libs/paralax/ScrollSmoother.min.js"></script>
     <script src="libs/paralax/ScrollTrigger.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 

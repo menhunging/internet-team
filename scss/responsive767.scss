@@ -1320,6 +1320,7 @@
       align-items: inherit;
       flex-wrap: nowrap;
       gap: 0;
+      height: auto !important;
     }
 
     .swiper-controls {
@@ -1448,20 +1449,6 @@
   .our-cases__list {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-
-  .our-cases__graf {
-    border-radius: 36px;
-  }
-
-  .our-cases__graf ul {
-    gap: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-
-    li + li {
-      margin: 0;
-    }
   }
 
   .our-cases {
@@ -1650,5 +1637,114 @@
 
   .text-step {
     padding: 0;
+  }
+
+  .our-cases__graf {
+    border-radius: 36px;
+    position: relative;
+    transform: translateX(0);
+    border: 0;
+    padding: 24px;
+
+    ul {
+      gap: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      li + li {
+        margin: 0;
+      }
+    }
+  }
+
+  .our-cases {
+    .example-block--OSQ {
+      .example-element {
+        bottom: -228px;
+        transform: scale(0.7);
+      }
+    }
+  }
+
+  .our-cases__graff--mobile {
+    display: flex;
+  }
+
+  .our-cases__graff--desktop {
+    display: none;
+  }
+
+  .our-cases__list {
+    padding-top: 0;
+    display: flex;
+    gap: 0;
+    flex-wrap: nowrap;
+    align-items: initial;
+    justify-content: initial;
+  }
+
+  .our-cases__item {
+    height: auto;
+    background: transparent;
+    border: solid 3px $colorBlue;
+    border-radius: 36px;
+    padding-bottom: 30px;
+
+    .example-small {
+      height: 220px;
+      left: -3px;
+      position: relative;
+      top: -3px;
+      width: calc(100% + 6px);
+      margin-bottom: -50px;
+
+      .example-block {
+        background-color: $colorRed !important;
+      }
+    }
+  }
+
+  .our-cases__item.active,
+  .our-cases__item:hover {
+    background: transparent;
+  }
+
+  .our-cases__mobileSlider {
+    .swiper-controls {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  .review-client{
+    font-size: 12px;
+    line-height: 14px;
+    width: 282px;
+    padding: 30px;
+    border-radius: 36px 36px 36px 0px;
+    border-width: 3px;
+    left: 17px;
+  }
+
+  .client{
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .client__name{
+    font-size: 14px;
+    display: block;
+  }
+
+  .client__poss{
+    font-size: 12px;
+    display: block;
+  }
+
+  .client__img{
+    width: 45px;
+    height: 45px;
+    padding: 9px;
   }
 }

@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="libs/fancybox/fancybox.css" />
-
+    <link rel="stylesheet" type="text/css" href="libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -162,7 +162,7 @@
 
             <section class="contacts-page">
                 <div class="contacts-page__info">
-                    <div class="contacts-page__list">
+                    <div class="contacts-page__list" data-aos="fade-right">
                         <div class="contacts-page__item">
                             <span class="contacts-page__title">адрес:</span>
 
@@ -227,7 +227,7 @@
                     </div>
                 </div>
 
-                <div class="contacts-page__map">
+                <div class="contacts-page__map" data-aos="fade-left">
                     <div id="map">
                         <iframe
                             src="https://yandex.ru/map-widget/v1/?um=constructor%3A57002edc40259128bf7464c3ce6f38aaf2cb495bc6ffae0eb9d815fc82869372&amp;source=constructor"
@@ -236,7 +236,7 @@
                 </div>
             </section>
 
-            <section class="form-question form-default">
+            <section class="form-question form-default" data-aos="fade-up" >
                 <form class="form-question__inner">
                     <div class="form-question__content">
 
@@ -364,6 +364,7 @@
     <script src="libs/paralax/gsap.min.js"></script>
     <script src="libs/paralax/ScrollSmoother.min.js"></script>
     <script src="libs/paralax/ScrollTrigger.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 

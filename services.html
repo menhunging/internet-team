@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="libs/fancybox/fancybox.css" />
-
+    <link rel="stylesheet" type="text/css" href="libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -164,20 +164,25 @@
 
                 <div class="scheme-section__content">
 
-                    <div class="scheme-section__start">
+                    <div class="scheme-section__start" data-aos="fade-left">
                         <div class="dino"></div>
                         <strong>текущий бизнес с нехваткой заявок <span>(динозавр)</span></strong>
                     </div>
 
                     <div class="scheme-section__list">
-                        <span class="scheme-section__item active">разработка сайта</span>
-                        <span class="scheme-section__item active">seo-оптимизация</span>
-                        <span class="scheme-section__item">поддержка сайта</span>
-                        <span class="scheme-section__item">яндекс директ</span>
-                        <span class="scheme-section__item">CRM система</span>
+                        <a href="#step1" class="scheme-section__item active" data-aos="fade-right"
+                            data-aos-delay="200">разработка сайта</a>
+                        <a href="#step2" class="scheme-section__item active" data-aos="fade-right"
+                            data-aos-delay="400">seo-оптимизация</a>
+                        <a href="#step3" class="scheme-section__item" data-aos="fade-right"
+                            data-aos-delay="600">поддержка сайта</a>
+                        <a href="#step4" class="scheme-section__item" data-aos="fade-right" data-aos-delay="800">яндекс
+                            директ</a>
+                        <a href="#step5" class="scheme-section__item" data-aos="fade-right" data-aos-delay="1000">CRM
+                            система</a>
                     </div>
 
-                    <div class="scheme-section__end">
+                    <div class="scheme-section__end" data-aos="fade-left" data-aos-delay="1200">
                         <div class="butterflies">
                             <div class="butterflie butterflie-1"></div>
                             <div class="butterflie butterflie-2"></div>
@@ -205,12 +210,12 @@
             <section class="current-business">
                 <div class="services-head">
                     <div class="services-head__left">
-                        <h2 class="caption">
+                        <h2 class="caption" data-aos="fade-right">
                             <span>текущий бизнес с нехваткой заявок (динозавр)</span>
                             <img src="img/svg/dino.svg" alt="">
                         </h2>
                     </div>
-                    <div class="services-head__right">
+                    <div class="services-head__right" data-aos="fade-left">
 
                         <svg class="services-head__icon" width="137" height="67" viewBox="0 0 137 67" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -227,7 +232,7 @@
 
                 <div class="serv-slider swiper">
                     <div class="serv-list swiper-wrapper">
-                        <div class="serv-item swiper-slide">
+                        <div class="serv-item swiper-slide" data-aos="fade-up" data-aos-delay="200">
                             <img src="img/svg/ic-1.svg" alt="" class="serv__icon">
 
                             <h3 class="serv__caption">ограниченный охват ЦА</h3>
@@ -236,7 +241,7 @@
                                 аудитории, которая активно использует онлайн-платформы для получения информации и поиска
                                 услуг.</p>
                         </div>
-                        <div class="serv-item swiper-slide">
+                        <div class="serv-item swiper-slide" data-aos="fade-up" data-aos-delay="400">
                             <img src="img/svg/ic-2.svg" alt="" class="serv__icon">
 
                             <h3 class="serv__caption">ограниченный охват ЦА</h3>
@@ -245,7 +250,7 @@
                                 аудитории, которая активно использует онлайн-платформы для получения информации и поиска
                                 услуг.</p>
                         </div>
-                        <div class="serv-item swiper-slide">
+                        <div class="serv-item swiper-slide" data-aos="fade-up" data-aos-delay="600">
                             <img src="img/svg/ic-3.svg" alt="" class="serv__icon">
 
                             <h3 class="serv__caption">ограниченный охват ЦА</h3>
@@ -254,7 +259,7 @@
                                 аудитории, которая активно использует онлайн-платформы для получения информации и поиска
                                 услуг.</p>
                         </div>
-                        <div class="serv-item swiper-slide">
+                        <div class="serv-item swiper-slide" data-aos="fade-up" data-aos-delay="800">
                             <img src="img/svg/ic-4.svg" alt="" class="serv__icon">
 
                             <h3 class="serv__caption">расходы на рекламу</h3>
@@ -264,7 +269,7 @@
                                 оптимизированы
                                 для целевой аудитории.</p>
                         </div>
-                        <div class="serv-item swiper-slide">
+                        <div class="serv-item swiper-slide" data-aos="fade-up" data-aos-delay="1000">
                             <img src="img/svg/ic-5.svg" alt="" class="serv__icon">
 
                             <h3 class="serv__caption">невозможность конкурировать</h3>
@@ -274,7 +279,7 @@
                                 более привлекательные предложения для целевой аудитории, что может привести к потере
                                 клиентской базы.</p>
                         </div>
-                        <div class="serv-item serv-item__big swiper-slide">
+                        <div class="serv-item serv-item__big swiper-slide" data-aos="fade-up" data-aos-delay="1200">
                             <img src="img/svg/ic-0.svg" alt="">
                             <strong>мы поможем оцифровать Ваш бизнес и получать стабильный управляемый поток
                                 лидов</strong>
@@ -302,13 +307,13 @@
 
             <section class="service-step">
                 <div class="services-head">
-                    <div class="services-head__left">
+                    <div class="services-head__left" data-aos="fade-right">
                         <span class="services-head__title">1. разработка сайта</span>
                         <h2 class="caption">
                             разработка сайта на 1С-Битрикс
                         </h2>
                     </div>
-                    <div class="services-head__right">
+                    <div class="services-head__right" data-aos="fade-left">
                         <p>Разработка сайта является неотъемлемой частью современного бизнеса. Сайт является визитной
                             карточкой компании в интернете, где она может представить свои продукты и услуги, привлечь
                             новых клиентов и увеличить свою прибыль.</p>
@@ -324,11 +329,11 @@
                     </div>
                 </div>
                 <div class="service-content">
-                    <h2 class="caption">
+                    <h2 class="caption" data-aos="fade-right">
                         разработка сайта - это сложный процесс, который включает в себя много этапов:
                     </h2>
 
-                    <div class="service-step__links">
+                    <div class="service-step__links" data-aos="fade-up">
                         <a href="#" class="tabs-link">1. анализ</a>
                         <a href="#" class="tabs-link">2. техническое задание</a>
                         <a href="#" class="tabs-link">3. прототипирование</a>
@@ -340,7 +345,7 @@
                         <a href="#" class="tabs-link">9. поддержка и обновление</a>
                     </div>
                 </div>
-                <div class="info-slider swiper">
+                <div class="info-slider swiper" data-aos="fade-up">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="info-slider__content">
@@ -393,7 +398,7 @@
                 </div>
             </section>
 
-            <section class="certificates-section">
+            <section class="certificates-section" data-aos="fade-up">
                 <div class="certificates-section__inner">
                     <h2 class="caption">сертификаты</h2>
                     <div class="certificates-slider swiper">
@@ -490,7 +495,7 @@
                 </div>
             </section>
 
-            <section class="form-question form-default">
+            <section class="form-question form-default" data-aos="fade-up">
                 <form class="form-question__inner">
                     <div class="form-question__content">
 
@@ -531,11 +536,11 @@
 
             <section class="other-projects">
                 <div class="section-title">
-                    <h2 class="caption">другие проекты</h2>
-                    <a href="#" class="link-site">смотреть все проекты</a>
+                    <h2 class="caption" data-aos="fade-right">другие проекты</h2>
+                    <a href="#" class="link-site" data-aos="fade-left">смотреть все проекты</a>
                 </div>
 
-                <div class="other-projects__slider swiper">
+                <div class="other-projects__slider swiper" data-aos="fade-up">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="example-small">
@@ -567,28 +572,49 @@
                                 </div>
                                 <div class="example-section__bottom">
 
-                                    <a href="#" class="link-review">
+                                    <button class="link-review">
 
                                         <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="2" y="2" width="56" height="56" rx="28" stroke="#052636"
-                                                stroke-width="4"></rect>
-                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
+                                                stroke-width="4" />
+                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
                                         </svg>
 
 
                                         <span class="link-review__text">Отзыв клиента</span>
-                                    </a>
+
+                                        <div class="review-client">
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.</p>
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю
+                                                благодарность
+                                                за проделанную работу по созданию нового сайта всей команде "Internet
+                                                Team" и в
+                                                частности Никите Пряхину.</p>
+
+                                            <div class="client">
+                                                <img class="client__img" src="img/client.png" alt="">
+                                                <div class="client_info">
+                                                    <span class="client__name">Фамилия Имя Отчество</span>
+                                                    <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
 
                                     <a href="#" class="link-site">смотреть кейс</a>
                                 </div>
                             </div>
-
                         </div>
                         <div class="swiper-slide">
                             <div class="example-small">
@@ -618,23 +644,45 @@
                                 </div>
                                 <div class="example-section__bottom">
 
-                                    <a href="#" class="link-review">
+                                    <button class="link-review">
 
                                         <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="2" y="2" width="56" height="56" rx="28" stroke="#052636"
-                                                stroke-width="4"></rect>
-                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
+                                                stroke-width="4" />
+                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
                                         </svg>
 
 
                                         <span class="link-review__text">Отзыв клиента</span>
-                                    </a>
+
+                                        <div class="review-client">
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.</p>
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю
+                                                благодарность
+                                                за проделанную работу по созданию нового сайта всей команде "Internet
+                                                Team" и в
+                                                частности Никите Пряхину.</p>
+
+                                            <div class="client">
+                                                <img class="client__img" src="img/client.png" alt="">
+                                                <div class="client_info">
+                                                    <span class="client__name">Фамилия Имя Отчество</span>
+                                                    <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
 
                                     <a href="#" class="link-site">смотреть кейс</a>
                                 </div>
@@ -670,23 +718,45 @@
                                 </div>
                                 <div class="example-section__bottom">
 
-                                    <a href="#" class="link-review">
+                                    <button class="link-review">
 
                                         <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="2" y="2" width="56" height="56" rx="28" stroke="#052636"
-                                                stroke-width="4"></rect>
-                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
+                                                stroke-width="4" />
+                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
                                         </svg>
 
 
                                         <span class="link-review__text">Отзыв клиента</span>
-                                    </a>
+
+                                        <div class="review-client">
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.</p>
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю
+                                                благодарность
+                                                за проделанную работу по созданию нового сайта всей команде "Internet
+                                                Team" и в
+                                                частности Никите Пряхину.</p>
+
+                                            <div class="client">
+                                                <img class="client__img" src="img/client.png" alt="">
+                                                <div class="client_info">
+                                                    <span class="client__name">Фамилия Имя Отчество</span>
+                                                    <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
 
                                     <a href="#" class="link-site">смотреть кейс</a>
                                 </div>
@@ -696,7 +766,8 @@
                             <div class="example-small">
                                 <div class="example-section__center">
                                     <div class="example-block example-block--OSQ">
-                                        <span class="example-element example--paralax1" style="background-image: url(img/osq-exp1.png)"></span>
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/osq-exp1.png)"></span>
                                     </div>
                                 </div>
                                 <div class="example-section__left">
@@ -717,23 +788,45 @@
                                 </div>
                                 <div class="example-section__bottom">
 
-                                    <a href="#" class="link-review">
+                                    <button class="link-review">
 
                                         <svg class="link-review__icon" width="60" height="60" viewBox="0 0 60 60"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="2" y="2" width="56" height="56" rx="28" stroke="#052636"
-                                                stroke-width="4"></rect>
-                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
-                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636">
-                                            </rect>
+                                                stroke-width="4" />
+                                            <rect x="26.0005" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="12.6665" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
+                                            <rect x="39.3333" y="25.9985" width="8" height="8" rx="4" fill="#052636" />
                                         </svg>
 
 
                                         <span class="link-review__text">Отзыв клиента</span>
-                                    </a>
+
+                                        <div class="review-client">
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.</p>
+                                            <p>ООО «Черноголовская типография» выражает искреннюю благодарность за
+                                                проделанную
+                                                работу по созданию нового сайта всей команде "Internet Team" и в
+                                                частности
+                                                Никите Пряхину.ООО «Черноголовская типография» выражает искреннюю
+                                                благодарность
+                                                за проделанную работу по созданию нового сайта всей команде "Internet
+                                                Team" и в
+                                                частности Никите Пряхину.</p>
+
+                                            <div class="client">
+                                                <img class="client__img" src="img/client.png" alt="">
+                                                <div class="client_info">
+                                                    <span class="client__name">Фамилия Имя Отчество</span>
+                                                    <span class="client__poss">Генеральный директор «Art-lend»</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
 
                                     <a href="#" class="link-site">смотреть кейс</a>
                                 </div>
@@ -761,14 +854,14 @@
             <section class="service-step">
                 <div class="services-head">
                     <div class="services-head__left">
-                        <span class="services-head__title">2. поддержка/доработка сайта</span>
-                        <h2 class="caption">
+                        <span class="services-head__title" data-aos="fade-right">2. поддержка/доработка сайта</span>
+                        <h2 class="caption" data-aos="fade-right">
                             поддержка/
                             доработка сайта
                             на 1С-Битрикс
                         </h2>
                     </div>
-                    <div class="services-head__right">
+                    <div class="services-head__right" data-aos="fade-left">
                         <p>Доработки и поддержка сайтов на Битрикс - это необходимый шаг для того, чтобы ваш
                             интернет-ресурс оставался актуальным и конкурентоспособным. Мы предоставляем полный спектр
                             услуг по технической поддержке, доработкам и оптимизации сайтов, нацеленных на повышение его
@@ -788,13 +881,13 @@
                     </div>
                 </div>
                 <div class="service-content">
-                    <h2 class="caption">
+                    <h2 class="caption" data-aos="fade-right">
                         дорабатываем сайт по 5 основным направлениям
                     </h2>
                     <div class="service-content__slider">
                         <div class="service-content__list swiper-wrapper">
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="200">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_265_8103)">
@@ -819,7 +912,8 @@
                                     <h3 class="caption">дизайн</h3>
                                 </div>
 
-                                <p>улучшение дизайна сайта позволяет улучшить его внешний вид и пользовательский
+                                <p data-aos="fade-up" data-aos-delay="300">улучшение дизайна сайта позволяет улучшить
+                                    его внешний вид и пользовательский
                                     интерфейс.
                                     Мы
                                     можем разработать новый дизайн сайта или доработать уже существующий, разработать
@@ -829,7 +923,7 @@
                                     привлечет целевую аудиторию и улучшит поведенческие факторы.</p>
                             </div>
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="400">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_265_8111)">
@@ -859,13 +953,14 @@
                                     <h3 class="caption">функционал</h3>
                                 </div>
 
-                                <p>наша команда может помочь улучшить функциональность вашего сайта, реализуя новые
+                                <p data-aos="fade-up" data-aos-delay="500">наша команда может помочь улучшить
+                                    функциональность вашего сайта, реализуя новые
                                     модули и инструменты. Мы также можем провести обновления системы управления и
                                     исправления ошибок в уже существующей функциональности, что обеспечит более
                                     эффективную работу сайта.</p>
                             </div>
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="600">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -876,12 +971,13 @@
                                     <h3 class="caption">управление</h3>
                                 </div>
 
-                                <p>мы предлагаем услуги по управлению сайтом на Битрикс, в том числе установку и
+                                <p data-aos="fade-up" data-aos-delay="700">мы предлагаем услуги по управлению сайтом на
+                                    Битрикс, в том числе установку и
                                     настройку новых модулей. Мы также можем настроить систему управления контентом,
                                     обеспечивая более удобный и эффективный способ работы с сайтом.</p>
                             </div>
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="800">
                                     <svg class="service-content__icon" width="70" height="72" viewBox="0 0 70 72"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -900,12 +996,13 @@
 
                                     <h3 class="caption">контент</h3>
                                 </div>
-                                <p>мы поможем вам написать и наполнить контент на вашем сайте. Мы можем предложить
+                                <p data-aos="fade-up" data-aos-delay="900">мы поможем вам написать и наполнить контент
+                                    на вашем сайте. Мы можем предложить
                                     качественный и уникальный контент для различных разделов сайта, что способствует
                                     улучшению его позиций в поисковых системах.</p>
                             </div>
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="1000">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -918,7 +1015,8 @@
 
                                     <h3 class="caption">антивирус</h3>
                                 </div>
-                                <p>мы можем установить и настроить необходимые программные средства, чтобы исключить
+                                <p data-aos="fade-up" data-aos-delay="1100">мы можем установить и настроить необходимые
+                                    программные средства, чтобы исключить
                                     возможность атаки на ваш сайт или очистить уже зараженный и предотвратить дальнейшие
                                     взломы.</p>
                             </div>
@@ -928,10 +1026,9 @@
                         </div>
                     </div>
                 </div>
-
             </section>
 
-            <section class="form-question form-default">
+            <section class="form-question form-default" data-aos="fade-up">
                 <form class="form-question__inner">
                     <div class="form-question__content">
 
@@ -986,13 +1083,13 @@
 
             <section class="service-step">
                 <div class="services-head">
-                    <div class="services-head__left">
-                        <span class="services-head__title">3. seo-оптимизация </span>
-                        <h2 class="caption">
+                    <div class="services-head__left" data-aos="fade-right">
+                        <span class="services-head__title" data-aos="fade-left">3. seo-оптимизация </span>
+                        <h2 class="caption" data-aos="fade-left">
                             seo-оптимизация сайта
                         </h2>
                     </div>
-                    <div class="services-head__right">
+                    <div class="services-head__right" data-aos="fade-left">
                         <p>SEO (Search Engine Optimization) - это комплекс мер, направленных на улучшение видимости
                             вашего сайта в поисковых системах, таких как Google, Яндекс и других. Однако SEO - это не
                             просто чисто технический процесс. Это искусство, в котором необходимы опыт и знания для
@@ -1021,7 +1118,7 @@
                                         основные этапы работ
                                     </h2>
                                 </div>
-                                <div class="swiper-slide step-work__item">
+                                <div class="swiper-slide step-work__item" data-aos="fade-up" data-aos-delay="100">
                                     <span class="num">1</span>
                                     <h3 class="caption">первичный аудит сайта</h3>
                                     <p>На этом этапе происходит оценка технических характеристик сайта, анализ
@@ -1029,7 +1126,7 @@
                                         улучшению позиций в поисковой выдаче. Результаты первичного аудита помогают
                                         определить, какую стратегию выбрать для Seo-оптимизации сайта.</p>
                                 </div>
-                                <div class="swiper-slide step-work__item">
+                                <div class="swiper-slide step-work__item" data-aos="fade-up" data-aos-delay="200">
                                     <span class="num">2</span>
                                     <h3 class="caption">cбор семантического ядра</h3>
                                     <p>На этом этапе происходит оценка технических характеристик сайта, анализ
@@ -1037,7 +1134,7 @@
                                         улучшению позиций в поисковой выдаче. Результаты первичного аудита помогают
                                         определить, какую стратегию выбрать для Seo-оптимизации сайта.</p>
                                 </div>
-                                <div class="swiper-slide step-work__item">
+                                <div class="swiper-slide step-work__item" data-aos="fade-up" data-aos-delay="300">
                                     <span class="num">3</span>
                                     <h3 class="caption">техническая оптимизация</h3>
                                     <p>На этом этапе происходит оценка технических характеристик сайта, анализ
@@ -1045,7 +1142,7 @@
                                         улучшению позиций в поисковой выдаче. Результаты первичного аудита помогают
                                         определить, какую стратегию выбрать для Seo-оптимизации сайта.</p>
                                 </div>
-                                <div class="swiper-slide step-work__item">
+                                <div class="swiper-slide step-work__item" data-aos="fade-up" data-aos-delay="400">
                                     <span class="num">4</span>
                                     <h3 class="caption">сбор и внедрение коммерческих факторов</h3>
                                     <p>На этом этапе происходит оценка технических характеристик сайта, анализ
@@ -1053,7 +1150,7 @@
                                         улучшению позиций в поисковой выдаче. Результаты первичного аудита помогают
                                         определить, какую стратегию выбрать для Seo-оптимизации сайта.</p>
                                 </div>
-                                <div class="swiper-slide step-work__item">
+                                <div class="swiper-slide step-work__item" data-aos="fade-up" data-aos-delay="500">
                                     <span class="num">5</span>
                                     <h3 class="caption">составление мета данных и написание текстов</h3>
                                     <p>На этом этапе происходит оценка технических характеристик сайта, анализ
@@ -1061,7 +1158,7 @@
                                         улучшению позиций в поисковой выдаче. Результаты первичного аудита помогают
                                         определить, какую стратегию выбрать для Seo-оптимизации сайта.</p>
                                 </div>
-                                <div class="swiper-slide step-work__item">
+                                <div class="swiper-slide step-work__item" data-aos="fade-up" data-aos-delay="600">
                                     <span class="num">6</span>
                                     <h3 class="caption">ссылочный профиль</h3>
                                     <p>На этом этапе происходит оценка технических характеристик сайта, анализ
@@ -1069,7 +1166,7 @@
                                         улучшению позиций в поисковой выдаче. Результаты первичного аудита помогают
                                         определить, какую стратегию выбрать для Seo-оптимизации сайта.</p>
                                 </div>
-                                <div class="swiper-slide step-work__item">
+                                <div class="swiper-slide step-work__item" data-aos="fade-up" data-aos-delay="700">
                                     <span class="num">7</span>
                                     <h3 class="caption">работа с репутацией</h3>
                                     <p>На этом этапе происходит оценка технических характеристик сайта, анализ
@@ -1089,17 +1186,121 @@
 
             <section class="our-cases">
                 <div class="section-title">
-                    <h2 class="caption">наши кейсы</h2>
+                    <h2 class="caption" data-aos="fade-right">наши кейсы</h2>
                 </div>
 
-                <div class="our-cases__content">
-                    <div class="our-cases__list">
-                        <div class="our-cases__item" style="background-image: url(./img/art1.png)"></div>
-                        <div class="our-cases__item" style="background-image: url(./img/art2.png)"></div>
-                        <div class="our-cases__item" style="background-image: url(./img/art3.png)"></div>
-                        <div class="our-cases__item" style="background-image: url(./img/art4.png)"></div>
+                <div class="our-cases__content our-cases__mobileSlider swiper">
+                    <div class="our-cases__list swiper-wrapper" data-aos="fade-right">
+                        <div class="our-cases__item swiper-slide active" data-active="1">
+                            <div class="example-small">
+                                <div class="example-section__center">
+                                    <div class="example-block example-block--artLend">
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/atr-lend-exp1.png)"></span>
+                                        <span class="example-element example--paralax2"
+                                            style="background-image: url(img/atr-lend-exp2.png)"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="our-cases__graf our-cases__graff--mobile">
+                                <h3 class="caption">ZigZag - Eva коврики</h3>
+                                <img src="img/graf.png" alt="">
+                                <ul>
+                                    <li>
+                                        <h3 class="caption" class="data">75%</h3>
+                                        <p>выведено запросов
+                                            в топ Яндекс</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="caption">+5,5 раз</h3>
+                                        <p>рост поискового трафика</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="our-cases__item swiper-slide" data-active="2">
+                            <div class="example-small">
+                                <div class="example-section__center">
+                                    <div class="example-block example-block--Moon">
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/moon-exp2.png)"></span>
+                                        <span class="example-element example--paralax2"
+                                            style="background-image: url(img/moon-exp1.png)"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="our-cases__graf our-cases__graff--mobile">
+                                <h3 class="caption">ZigZag - Eva коврики 2</h3>
+                                <img src="img/graf.png" alt="">
+                                <ul>
+                                    <li>
+                                        <h3 class="caption" class="data">75%</h3>
+                                        <p>выведено запросов
+                                            в топ Яндекс</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="caption">+5,5 раз</h3>
+                                        <p>рост поискового трафика</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="our-cases__item swiper-slide" data-active="3">
+                            <div class="example-small">
+                                <div class="example-section__center">
+                                    <div class="example-block example-block--BUR">
+                                        <span class="example-element example--paralax3"
+                                            style="background-image: url(img/bur-exp1.png)"></span>
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/bur-exp2.png)"></span>
+                                        <span class="example-element example--paralax2"
+                                            style="background-image: url(img/bur-exp3.png)"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="our-cases__graf our-cases__graff--mobile">
+                                <h3 class="caption">ZigZag - Eva коврики</h3>
+                                <img src="img/graf.png" alt="">
+                                <ul>
+                                    <li>
+                                        <h3 class="caption" class="data">75%</h3>
+                                        <p>выведено запросов
+                                            в топ Яндекс</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="caption">+5,5 раз</h3>
+                                        <p>рост поискового трафика</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="our-cases__item swiper-slide" data-active="4">
+                            <div class="example-small">
+                                <div class="example-section__center">
+                                    <div class="example-block example-block--OSQ">
+                                        <span class="example-element example--paralax1"
+                                            style="background-image: url(img/osq-exp1.png)"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="our-cases__graf our-cases__graff--mobile">
+                                <h3 class="caption">ZigZag - Eva коврики</h3>
+                                <img src="img/graf.png" alt="">
+                                <ul>
+                                    <li>
+                                        <h3 class="caption" class="data">75%</h3>
+                                        <p>выведено запросов
+                                            в топ Яндекс</p>
+                                    </li>
+                                    <li>
+                                        <h3 class="caption">+5,5 раз</h3>
+                                        <p>рост поискового трафика</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="our-cases__graf">
+                    <div class="our-cases__graf our-cases__graff--desktop active" data-grafID="1">
                         <h3 class="caption">ZigZag - Eva коврики</h3>
                         <img src="img/graf.png" alt="">
                         <ul>
@@ -1114,10 +1315,58 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="our-cases__graf our-cases__graff--desktop" data-grafID="2">
+                        <h3 class="caption">ZigZag - Eva коврики 2</h3>
+                        <img src="img/graf.png" alt="">
+                        <ul>
+                            <li>
+                                <h3 class="caption" class="data">75%</h3>
+                                <p>выведено запросов
+                                    в топ Яндекс</p>
+                            </li>
+                            <li>
+                                <h3 class="caption">+5,5 раз</h3>
+                                <p>рост поискового трафика</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="our-cases__graf our-cases__graff--desktop" data-grafID="3">
+                        <h3 class="caption">ZigZag - Eva коврики</h3>
+                        <img src="img/graf.png" alt="">
+                        <ul>
+                            <li>
+                                <h3 class="caption" class="data">75%</h3>
+                                <p>выведено запросов
+                                    в топ Яндекс</p>
+                            </li>
+                            <li>
+                                <h3 class="caption">+5,5 раз</h3>
+                                <p>рост поискового трафика</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="our-cases__graf our-cases__graff--desktop" data-grafID="4">
+                        <h3 class="caption">ZigZag - Eva коврики</h3>
+                        <img src="img/graf.png" alt="">
+                        <ul>
+                            <li>
+                                <h3 class="caption" class="data">75%</h3>
+                                <p>выведено запросов
+                                    в топ Яндекс</p>
+                            </li>
+                            <li>
+                                <h3 class="caption">+5,5 раз</h3>
+                                <p>рост поискового трафика</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-controls">
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </section>
 
-            <section class="form-question form-default">
+            <section class="form-question form-default" data-aos="fade-up">
                 <form class="form-question__inner">
                     <div class="form-question__content">
 
@@ -1174,13 +1423,13 @@
 
             <section class="service-step">
                 <div class="services-head">
-                    <div class="services-head__left">
-                        <span class="services-head__title">4. яндекс директ</span>
-                        <h2 class="caption">
+                    <div class="services-head__left" data-aos="fade-right">
+                        <span class="services-head__title" data-aos="fade-right">4. яндекс директ</span>
+                        <h2 class="caption" data-aos="fade-right">
                             контекстная реклама Яндекс Директ
                         </h2>
                     </div>
-                    <div class="services-head__right">
+                    <div class="services-head__right" data-aos="fade-left">
                         <p>Доработки и поддержка сайтов на Битрикс - это необходимый шаг для того, чтобы ваш
                             интернет-ресурс оставался актуальным и конкурентоспособным. Мы предоставляем полный спектр
                             услуг по технической поддержке, доработкам и оптимизации сайтов, нацеленных на повышение его
@@ -1211,7 +1460,7 @@
                         <div class="service-content__list swiper-wrapper">
                             <div class="service-content__item swiper-slide">
 
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="100">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_265_8148)">
@@ -1241,12 +1490,13 @@
 
                                     <h3 class="caption">сертификация</h3>
                                 </div>
-                                <p>Все наши специалисты по Яндекс Директ проходят ежегодно сертификацию в Яндексе, с
+                                <p data-aos="fade-up" data-aos-delay="100">Все наши специалисты по Яндекс Директ
+                                    проходят ежегодно сертификацию в Яндексе, с
                                     сдачей экзаменов</p>
                             </div>
                             <div class="service-content__item swiper-slide">
 
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="100">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -1258,13 +1508,14 @@
                                     </svg>
                                     <h3 class="caption">опыт и экспертиза</h3>
                                 </div>
-                                <p>Наше агентство имеет многолетний опыт в разработке и проведении эффективных рекламных
+                                <p data-aos="fade-up" data-aos-delay="100">Наше агентство имеет многолетний опыт в
+                                    разработке и проведении эффективных рекламных
                                     кампаний в директе. Мы знаем все тонкости и секреты этого канала продвижения, и
                                     готовы поделиться своими знаниями на Ваших проектах</p>
                             </div>
                             <div class="service-content__item swiper-slide">
 
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="100">
 
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1282,13 +1533,14 @@
 
                                     <h3 class="caption">индивидуальные стратегии</h3>
                                 </div>
-                                <p>У нас нет универсальных решений – мы разрабатываем рекламные кампании, учитывая
+                                <p data-aos="fade-up" data-aos-delay="100">У нас нет универсальных решений – мы
+                                    разрабатываем рекламные кампании, учитывая
                                     особенности вашего бизнеса и вашу целевую аудиторию. Мы тщательно анализируем
                                     данные, чтобы максимально эффективно использовать бюджет и достигнуть поставленных
                                     целей</p>
                             </div>
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="100">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_265_8158)">
@@ -1313,12 +1565,13 @@
                                     <h3 class="caption">качество работы</h3>
                                 </div>
 
-                                <p>Мы гарантируем высокое качество всех наших услуг – от разработки стратегии и
+                                <p data-aos="fade-up" data-aos-delay="100">Мы гарантируем высокое качество всех наших
+                                    услуг – от разработки стратегии и
                                     настройки кампаний до анализа результатов и оптимизации. Мы используем только
                                     проверенные инструменты и методы, чтобы достичь максимальной эффективности</p>
                             </div>
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="100">
                                     <svg class="service-content__icon" width="70" height="70" viewBox="0 0 70 70"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_265_8178)">
@@ -1340,13 +1593,14 @@
                                     <h3 class="caption">открытость и прозрачность</h3>
                                 </div>
 
-                                <p>Мы всегда предоставляем нашим клиентам полный доступ к отчетам и статистике, чтобы
+                                <p data-aos="fade-up" data-aos-delay="100">Мы всегда предоставляем нашим клиентам полный
+                                    доступ к отчетам и статистике, чтобы
                                     они могли отслеживать эффективность рекламных кампаний и принимать обоснованные
                                     решения</p>
                             </div>
 
                             <div class="service-content__item swiper-slide">
-                                <div class="service-content__head">
+                                <div class="service-content__head" data-aos="fade-up" data-aos-delay="100">
                                     <svg class="service-content__icon" width="65" height="65" viewBox="0 0 65 65"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_265_8185)">
@@ -1375,7 +1629,8 @@
 
                                     <h3 class="caption">результаты</h3>
                                 </div>
-                                <p>Наша главная цель – достижение максимальных результатов для наших клиентов. Мы готовы
+                                <p data-aos="fade-up" data-aos-delay="100">Наша главная цель – достижение максимальных
+                                    результатов для наших клиентов. Мы готовы
                                     работать на результат и гарантируем увеличение посещаемости и конверсии на вашем
                                     сайте</p>
                             </div>
@@ -1388,7 +1643,7 @@
 
             </section>
 
-            <section class="form-question form-default">
+            <section class="form-question form-default" data-aos="fade-up">
                 <form class="form-question__inner">
                     <div class="form-question__content">
 
@@ -1443,12 +1698,12 @@
             <section class="service-step">
                 <div class="services-head">
                     <div class="services-head__left">
-                        <span class="services-head__title">5. CRM-система</span>
-                        <h2 class="caption">
+                        <span class="services-head__title" data-aos="fade-right">5. CRM-система</span>
+                        <h2 class="caption" data-aos="fade-right">
                             внедрение CRM-системы Битрикс24
                         </h2>
                     </div>
-                    <div class="services-head__right">
+                    <div class="services-head__right" data-aos="fade-left">
                         <p>CRM (Customer Relationship Management) система является необходимой для того, чтобы
                             организовать взаимодействие компании с ее клиентами. Она помогает повысить эффективность
                             работы с клиентами, улучшить управление продажами, ускорить цикл продаж и улучшить качество
@@ -1463,12 +1718,12 @@
                     </div>
                 </div>
                 <div class="service-content">
-                    <h2 class="caption">
+                    <h2 class="caption" data-aos="fade-right">
                         что мы умеем
                     </h2>
                     <div class="service-content__slider swiper">
                         <ul class="whatCanDo swiper-wrapper">
-                            <li class="swiper-slide">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
                                 <svg width="131" height="100" viewBox="0 0 131 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1513,7 +1768,7 @@
                                     и облачной версии Битрикс24
                                     для автоматизации процессов компаний наших клиентов</p>
                             </li>
-                            <li class="swiper-slide">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
                                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1542,7 +1797,7 @@
 
                                 <p>программируем модули, бизнес-процессы, не стандартные отчеты</p>
                             </li>
-                            <li class="swiper-slide">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="600">
                                 <svg width="87" height="100" viewBox="0 0 87 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1577,7 +1832,7 @@
 
                                 <p>настраиваем документооборот, работу подразделений, интеграцию с 1С, обмен данными</p>
                             </li>
-                            <li class="swiper-slide">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="800">
                                 <svg width="90" height="90" viewBox="0 0 90 90" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_265_8220)">
@@ -1611,7 +1866,7 @@
                                     автоматическая маршрутизация колл-центра
                                 </p>
                             </li>
-                            <li class="swiper-slide">
+                            <li class="swiper-slide" data-aos="fade-up" data-aos-delay="1000">
                                 <svg width="90" height="90" viewBox="0 0 90 90" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_265_8212)">
@@ -1656,7 +1911,7 @@
                 </div>
             </section>
 
-            <section class="certificates-section">
+            <section class="certificates-section" data-aos="fade-up">
                 <div class="certificates-section__inner">
                     <h2 class="caption">сертификаты</h2>
                     <div class="certificates-slider swiper">
@@ -1756,13 +2011,13 @@
             <section class="service-step" id="step6">
                 <div class="services-head">
                     <div class="services-head__left">
-                        <span class="services-head__title">результат</span>
-                        <h2 class="caption">
+                        <span class="services-head__title" data-aos="fade-right">результат</span>
+                        <h2 class="caption" data-aos="fade-right">
                             оцифрованный
                             растущий бизнес
                         </h2>
                     </div>
-                    <div class="services-head__right">
+                    <div class="services-head__right" data-aos="fade-left">
                         <ul class="result-service">
                             <li>
                                 <svg width="70" height="71" viewBox="0 0 70 71" fill="none"
@@ -1834,7 +2089,7 @@
                 </div>
             </section>
 
-            <section class="form-question form-default">
+            <section class="form-question form-default" data-aos="fade-up">
                 <form class="form-question__inner">
                     <div class="form-question__content">
 
@@ -1962,6 +2217,7 @@
     <script src="libs/paralax/gsap.min.js"></script>
     <script src="libs/paralax/ScrollSmoother.min.js"></script>
     <script src="libs/paralax/ScrollTrigger.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 

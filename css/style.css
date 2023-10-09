@@ -203,6 +203,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: #333333;
+  cursor: url("../img/svg/bg-cursor.svg"), auto;
 }
 body.hidden {
   overflow: hidden;
@@ -1421,6 +1422,7 @@ section {
   z-index: 5;
   padding-top: 200px;
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 
 .link-site {
@@ -1691,6 +1693,7 @@ section {
   color: rgb(5, 38, 54);
   font-size: 18px;
   font-weight: 800;
+  position: relative;
 }
 
 .link-review__icon {
@@ -1744,6 +1747,7 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 120px 0;
+  overflow: hidden;
 }
 .about-main .section-title {
   width: 100%;
@@ -2254,6 +2258,7 @@ section {
 .contacts-page {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .contacts-page__list {
@@ -2569,6 +2574,7 @@ a.contacts-page__caption:hover {
 
 .about-page {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 .about-page .about-main {
   padding-top: 200px;
@@ -2677,6 +2683,8 @@ a.contacts-page__caption:hover {
   font-size: 27px;
   font-weight: 900;
   line-height: 27px;
+  position: relative;
+  display: block;
 }
 
 .structure-company__caption {
@@ -2866,6 +2874,7 @@ a.contacts-page__caption:hover {
 
 .letters-client {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 .letters-client .caption:not(.job-name) {
   width: 100%;
@@ -3016,7 +3025,7 @@ a.contacts-page__caption:hover {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -172px;
+  margin-left: -222px;
 }
 .letters-client__controls .swiper-pagination-current {
   color: rgb(5, 38, 54);
@@ -3055,7 +3064,6 @@ a.contacts-page__caption:hover {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   height: 923px;
-  overflow: auto;
   width: 100%;
   scrollbar-color: rgb(5, 38, 54) #e6e9eb;
   scrollbar-width: thin;
@@ -3615,6 +3623,7 @@ a.contacts-page__caption:hover {
 
 .other-projects {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 .other-projects .swiper-pagination {
   justify-content: flex-start;
@@ -3662,6 +3671,7 @@ a.contacts-page__caption:hover {
   height: 410px;
   border-radius: 36px;
   margin-bottom: 0;
+  pointer-events: none;
 }
 .example-small .example-block--artLend .example-element:nth-child(1) {
   width: 330px;
@@ -3792,6 +3802,7 @@ a.contacts-page__caption:hover {
   position: relative;
   padding-top: 120px;
   padding-bottom: 120px;
+  overflow: hidden;
 }
 .scheme-section .caption {
   max-width: 50%;
@@ -3986,6 +3997,7 @@ a.contacts-page__caption:hover {
 
 .current-business {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 
 .services-head {
@@ -4079,6 +4091,7 @@ a.contacts-page__caption:hover {
 
 .service-step {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 .service-step .services-head {
   align-items: flex-start;
@@ -4408,6 +4421,7 @@ a.contacts-page__caption:hover {
 
 .our-cases {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 
 .our-cases__content {
@@ -4415,23 +4429,44 @@ a.contacts-page__caption:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 120px;
+  position: relative;
+  overflow: visible;
 }
 
 .our-cases__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 29px;
-  width: 40%;
+  width: calc(50% - 15px);
 }
 
 .our-cases__item {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  overflow: hidden;
   border-radius: 60px;
   width: 100%;
   height: 345px;
+  background-color: #e6e9eb;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.our-cases__item.active, .our-cases__item:hover {
+  background-color: rgb(225, 48, 63);
+}
+.our-cases__item .example-small {
+  height: 100%;
+}
+.our-cases__item .example-section__center {
+  height: 100%;
+}
+.our-cases__item .example-block {
+  height: 100%;
+  background: transparent !important;
+  transition: all 0.3s;
+}
+.our-cases__item .example-element {
+  transform: scale(0.85);
 }
 
 .our-cases__graf {
@@ -4443,7 +4478,15 @@ a.contacts-page__caption:hover {
   border: solid 4px rgb(5, 38, 54);
   border-radius: 60px;
   padding: 70px;
-  max-width: 875px;
+  width: calc(50% - 15px);
+  transition: transform 1s 0.3s;
+  transform: translateX(150%);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.our-cases__graf.active {
+  transform: translateX(0);
 }
 .our-cases__graf ul {
   display: flex;
@@ -4468,6 +4511,7 @@ a.contacts-page__caption:hover {
   height: 960px;
   position: relative;
   background-repeat: no-repeat;
+  pointer-events: none;
 }
 .example-block--artLend {
   background: linear-gradient(180deg, rgba(217, 213, 219, 0.16) 0%, #d9d5db 100%);
@@ -4579,6 +4623,79 @@ a.contacts-page__caption:hover {
 .other-projects .swiper-pagination {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.our-cases__graff--mobile {
+  display: none;
+}
+
+.our-cases__mobileSlider .swiper-controls {
+  display: none;
+}
+
+.link-review__icon {
+  transition: all 0.3s;
+}
+.link-review__icon rect {
+  transition: all 0.3s;
+}
+
+.link-review:hover .link-review__icon {
+  fill: rgb(5, 38, 54);
+}
+.link-review:hover .link-review__icon rect:nth-child(2), .link-review:hover .link-review__icon rect:nth-child(3), .link-review:hover .link-review__icon rect:nth-child(4) {
+  fill: rgb(255, 255, 255);
+}
+.link-review:hover .review-client {
+  transform: scale(1);
+}
+
+.review-client {
+  cursor: initial;
+  color: #052636;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 60px;
+  border-radius: 60px 60px 60px 0px;
+  border: 4px solid rgb(5, 38, 54);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 50%;
+  left: 26px;
+  width: 551px;
+  transition: transform 0.3s;
+  transform-origin: left bottom;
+  text-align: left;
+  transform: scale(0);
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.client__img {
+  border-radius: 80px;
+  background-color: #e1e9ed;
+  width: 90px;
+  height: 90px;
+  padding: 19px;
+}
+
+.client__name {
+  color: rgb(5, 38, 54);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.client__poss {
+  color: rgb(5, 38, 54);
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.5;
 }
 
 @media (max-width: 1799px) {
@@ -4742,7 +4859,8 @@ a.contacts-page__caption:hover {
   }
   .our-cases__graf {
     padding: 50px;
-    max-width: 775px;
+    max-width: 50%;
+    width: calc(50% - 15px);
   }
   .example-section__left {
     max-width: 405px;
@@ -5305,6 +5423,25 @@ a.contacts-page__caption:hover {
     left: -220px;
     bottom: -220px;
   }
+  .our-cases__graf {
+    top: 40px;
+  }
+  .our-cases__list {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-top: 650px;
+  }
+  .our-cases .example-small .example-block {
+    max-width: 100%;
+  }
+  .our-cases__graf {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .menu {
@@ -5813,10 +5950,6 @@ a.contacts-page__caption:hover {
   }
   .menu-footer ul li + li {
     margin-top: 0 !important;
-  }
-  .other-projects .swiper-pagination {
-    margin-top: 30px;
-    margin-bottom: 30px;
   }
 }
 @media (max-width: 1023px) {
@@ -6676,6 +6809,9 @@ a.contacts-page__caption:hover {
   }
   .example-section .section-title {
     margin-bottom: 100px;
+  }
+  .our-cases__list {
+    padding-top: 600px;
   }
 }
 @media (max-width: 767px) {
@@ -7769,6 +7905,7 @@ a.contacts-page__caption:hover {
     align-items: inherit;
     flex-wrap: nowrap;
     gap: 0;
+    height: auto !important;
   }
   .step-work__slider .swiper-controls {
     margin-top: 40px;
@@ -7874,17 +8011,6 @@ a.contacts-page__caption:hover {
   .our-cases__list {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-  .our-cases__graf {
-    border-radius: 36px;
-  }
-  .our-cases__graf ul {
-    gap: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .our-cases__graf ul li + li {
-    margin: 0;
   }
   .our-cases {
     padding: 50px 0;
@@ -8026,6 +8152,92 @@ a.contacts-page__caption:hover {
   }
   .text-step {
     padding: 0;
+  }
+  .our-cases__graf {
+    border-radius: 36px;
+    position: relative;
+    transform: translateX(0);
+    border: 0;
+    padding: 24px;
+  }
+  .our-cases__graf ul {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .our-cases__graf ul li + li {
+    margin: 0;
+  }
+  .our-cases .example-block--OSQ .example-element {
+    bottom: -228px;
+    transform: scale(0.7);
+  }
+  .our-cases__graff--mobile {
+    display: flex;
+  }
+  .our-cases__graff--desktop {
+    display: none;
+  }
+  .our-cases__list {
+    padding-top: 0;
+    display: flex;
+    gap: 0;
+    flex-wrap: nowrap;
+    align-items: initial;
+    justify-content: initial;
+  }
+  .our-cases__item {
+    height: auto;
+    background: transparent;
+    border: solid 3px rgb(5, 38, 54);
+    border-radius: 36px;
+    padding-bottom: 30px;
+  }
+  .our-cases__item .example-small {
+    height: 220px;
+    left: -3px;
+    position: relative;
+    top: -3px;
+    width: calc(100% + 6px);
+    margin-bottom: -50px;
+  }
+  .our-cases__item .example-small .example-block {
+    background-color: rgb(225, 48, 63) !important;
+  }
+  .our-cases__item.active,
+  .our-cases__item:hover {
+    background: transparent;
+  }
+  .our-cases__mobileSlider .swiper-controls {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
+  .review-client {
+    font-size: 12px;
+    line-height: 14px;
+    width: 282px;
+    padding: 30px;
+    border-radius: 36px 36px 36px 0px;
+    border-width: 3px;
+    left: 17px;
+  }
+  .client {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .client__name {
+    font-size: 14px;
+    display: block;
+  }
+  .client__poss {
+    font-size: 12px;
+    display: block;
+  }
+  .client__img {
+    width: 45px;
+    height: 45px;
+    padding: 9px;
   }
 }
 @media (max-width: 639px) {

@@ -205,7 +205,8 @@
 
   .our-cases__graf {
     padding: 50px;
-    max-width: 775px;
+    max-width: 50%;
+    width: calc(50% - 15px);
   }
 
   .example-section__left {
@@ -924,5 +925,30 @@
         bottom: -220px;
       }
     }
+  }
+
+  .our-cases__graf {
+    top: 40px;
+  }
+
+  .our-cases__list {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-top: 650px;
+  }
+
+  .our-cases {
+    .example-small .example-block {
+      max-width: 100%;
+    }
+  }
+
+  .our-cases__graf {
+    width: 100%;
+    max-width: 100%;
   }
 }

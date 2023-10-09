@@ -8,6 +8,8 @@ body {
   &.hidden {
     overflow: hidden;
   }
+
+  cursor: url("../img/svg/bg-cursor.svg"), auto;
 }
 
 .container {
