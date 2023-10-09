@@ -627,6 +627,11 @@ section {
 }
 
 .state-section {
+  &.aos-animate {
+    .state-section__item {
+      transform: translateX(0) !important;
+    }
+  }
 }
 
 .state-section__slider {
@@ -647,7 +652,23 @@ section {
   gap: 30px;
   padding: 60px;
   border: solid 4px $colorBlue;
+  background-color: $colorWhite;
   @include border-radius(60px);
+  transition: transform 1.5s;
+  z-index: 3;
+
+  &:nth-child(2) {
+    transform: translateX(-95%);
+    z-index: -1;
+  }
+  &:nth-child(3) {
+    transform: translateX(-190%);
+    z-index: -2;
+  }
+  &:nth-child(4) {
+    transform: translateX(-285%);
+    z-index: -3;
+  }
 }
 
 .state-section__num {
@@ -1418,7 +1439,7 @@ a.contacts-page__caption {
   font-weight: 900;
   line-height: 27px;
   position: relative;
-    display: block;
+  display: block;
 }
 
 .structure-company__name {
@@ -1773,6 +1794,7 @@ a.contacts-page__caption {
 
 .other-letters {
   color: $colorBlue;
+  overflow: hidden;
 }
 
 .other-letters__list {
@@ -1784,6 +1806,7 @@ a.contacts-page__caption {
   scrollbar-color: $colorBlue #e6e9eb;
   scrollbar-width: thin;
   padding: 120px 0;
+  overflow: auto;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -3536,4 +3559,43 @@ a.contacts-page__caption {
   font-size: 16px;
   font-weight: 400;
   opacity: 0.5;
+}
+
+.btn-step-prev {
+  background-color: #052636;
+  border-radius: 0px 30px 0px 0px;
+  position: fixed;
+  right: -92px;
+  bottom: 190px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $colorWhite;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+  writing-mode: sideways-lr;
+
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  svg {
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
 }

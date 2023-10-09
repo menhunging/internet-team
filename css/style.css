@@ -1899,6 +1899,10 @@ section {
   padding-top: 200px;
 }
 
+.state-section.aos-animate .state-section__item {
+  transform: translateX(0) !important;
+}
+
 .state-section__slider .swiper-wrapper {
   align-items: center;
 }
@@ -1913,10 +1917,25 @@ section {
   gap: 30px;
   padding: 60px;
   border: solid 4px rgb(5, 38, 54);
+  background-color: rgb(255, 255, 255);
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   -ms-border-radius: 60px;
   border-radius: 60px;
+  transition: transform 1.5s;
+  z-index: 3;
+}
+.state-section__item:nth-child(2) {
+  transform: translateX(-95%);
+  z-index: -1;
+}
+.state-section__item:nth-child(3) {
+  transform: translateX(-190%);
+  z-index: -2;
+}
+.state-section__item:nth-child(4) {
+  transform: translateX(-285%);
+  z-index: -3;
 }
 
 .state-section__num {
@@ -3057,6 +3076,7 @@ a.contacts-page__caption:hover {
 
 .other-letters {
   color: rgb(5, 38, 54);
+  overflow: hidden;
 }
 
 .other-letters__list {
@@ -3068,6 +3088,7 @@ a.contacts-page__caption:hover {
   scrollbar-color: rgb(5, 38, 54) #e6e9eb;
   scrollbar-width: thin;
   padding: 120px 0;
+  overflow: auto;
 }
 .other-letters__list::-webkit-scrollbar {
   width: 5px;
@@ -4696,6 +4717,41 @@ a.contacts-page__caption:hover {
   font-size: 16px;
   font-weight: 400;
   opacity: 0.5;
+}
+
+.btn-step-prev {
+  background-color: #052636;
+  border-radius: 0px 30px 0px 0px;
+  position: fixed;
+  right: -92px;
+  bottom: 190px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+  writing-mode: sideways-lr;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.btn-step-prev svg {
+  transform: rotate(90deg);
+}
+.btn-step-prev:hover {
+  opacity: 0.75;
 }
 
 @media (max-width: 1799px) {

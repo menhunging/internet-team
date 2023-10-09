@@ -399,6 +399,23 @@ $(document).ready(function () {
 
   if ($(".invis-anchor-section").length > 0) {
     let blockPosition = $(".invis-anchor-section").offset().top;
+    let sections = $(".step-start");
+    let posSection = [];
+
+    sections.each(function (i, el) {
+      posSection.push({ id: $(el).attr("id"), pos: $(el).offset().top - 150 });
+    });
+
+    console.log(posSection);
+
+    $(".invis-anchor a").on("click", function (event) {
+      event.preventDefault();
+
+      let id = $(this).attr("href");
+      let top = $(id).offset().top - 140;
+
+      $("body,html").animate({ scrollTop: top }, 300);
+    });
 
     $(window).scroll(function () {
       let windowPostition = $(window).scrollTop();
@@ -407,6 +424,30 @@ $(document).ready(function () {
         $(".invis-anchor-section").addClass("fixed");
       } else {
         $(".invis-anchor-section").removeClass("fixed");
+      }
+
+      sections.each(function (i, el) {
+        let top = $(el).offset().top - 150;
+        let bottom = top + $(el).height();
+        let scroll = $(window).scrollTop();
+        let id = $(el).attr("id");
+
+        if (scroll > top && scroll < bottom) {
+          $(".invis-anchor a.active").removeClass("active");
+          $('.invis-anchor a[href="#' + id + '"]').addClass("active");
+        }
+      });
+    });
+
+    $(".btn-step-prev").on("click", function () {
+      let current = $(".invis-anchor .tabs-link.active").attr("href");
+
+      const count = posSection.findIndex(
+        (element, index) => `#${element.id}` === current
+      );
+
+      if (count - 1 >= 0) {
+        $("body,html").animate({ scrollTop: posSection[count - 1].pos }, 300);
       }
     });
   }
