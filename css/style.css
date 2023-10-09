@@ -1484,7 +1484,7 @@ section {
   align-items: center;
 }
 .service-item .caption {
-  line-height: 70px;
+  line-height: 95px;
   letter-spacing: -0.6px;
 }
 .service-item + .service-item {
@@ -4752,6 +4752,11 @@ a.contacts-page__caption:hover {
 }
 .btn-step-prev:hover {
   opacity: 0.75;
+}
+
+.other-projects .swiper-pagination {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 1799px) {
