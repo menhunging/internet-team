@@ -1717,7 +1717,7 @@
     }
   }
 
-  .review-client{
+  .review-client {
     font-size: 12px;
     line-height: 14px;
     width: 282px;
@@ -1727,24 +1727,29 @@
     left: 17px;
   }
 
-  .client{
+  .client {
     gap: 10px;
     margin-top: 20px;
   }
 
-  .client__name{
+  .client__name {
     font-size: 14px;
     display: block;
   }
 
-  .client__poss{
+  .client__poss {
     font-size: 12px;
     display: block;
   }
 
-  .client__img{
+  .client__img {
     width: 45px;
     height: 45px;
     padding: 9px;
+  }
+
+  .modal-simple-text {
+    gap: 10px;
+    font-size: 14px;
   }
 }

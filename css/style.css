@@ -4759,6 +4759,15 @@ a.contacts-page__caption:hover {
   margin-bottom: 100px;
 }
 
+.modal-simple-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
 @media (max-width: 1799px) {
   .header {
     padding: 30px;
@@ -8299,6 +8308,10 @@ a.contacts-page__caption:hover {
     width: 45px;
     height: 45px;
     padding: 9px;
+  }
+  .modal-simple-text {
+    gap: 10px;
+    font-size: 14px;
   }
 }
 @media (max-width: 639px) {

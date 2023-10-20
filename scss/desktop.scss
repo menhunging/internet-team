@@ -3600,8 +3600,16 @@ a.contacts-page__caption {
   }
 }
 
-
-.other-projects .swiper-pagination{
+.other-projects .swiper-pagination {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.modal-simple-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  text-align: center;
 }
