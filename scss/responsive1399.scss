@@ -933,6 +933,37 @@
         bottom: -220px;
       }
     }
+
+    &--veza {
+      .example-element {
+        &:nth-child(1) {
+          width: 352px;
+          height: 271px;
+        }
+        &:nth-child(2) {
+          width: 546px;
+          height: 420px;
+        }
+      }
+    }
+
+    &--kino {
+      .example-element {
+        &:nth-child(1) {
+          width: 441px;
+          height: 548px;
+          right: -70px;
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          width: 536px;
+          height: 430px;
+          bottom: -55px;
+          left: -174px;
+        }
+      }
+    }
   }
 
   .our-cases__list {

@@ -625,7 +625,15 @@
     }
   }
 
+  .example-block--veza .example-element:nth-child(2) {
+    width: 416px;
+    height: 310px;
+  }
 
-
-
+  .example-block--veza .example-element:nth-child(1) {
+    width: 312px;
+    height: 241px;
+    right: -33px;
+    top: 70px;
+  }
 }

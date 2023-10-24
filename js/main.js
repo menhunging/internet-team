@@ -382,6 +382,14 @@ $(document).ready(function () {
         nextEl: ".info-slider .swiper-button-next",
       },
     });
+
+    if ($(".service-step__links").length > 0) {
+      $(".service-step__links .tabs-link").on("click", function (e) {
+        e.preventDefault();
+        console.log($(this).index());
+        infoSwiper.slideTo($(this).index());
+      });
+    }
   }
 
   if ($(".invis-anchor-section").length > 0) {

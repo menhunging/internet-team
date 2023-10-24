@@ -3456,6 +3456,46 @@ a.contacts-page__caption {
       bottom: -200px;
     }
   }
+
+  &--veza {
+    background: linear-gradient(180deg, #2373c3 0%, #0b3d7b 100%);
+
+    .example-element {
+      &:nth-child(1) {
+        width: 472px;
+        height: 351px;
+        right: -73px;
+        top: 70px;
+      }
+      &:nth-child(2) {
+        width: 756px;
+        height: 600px;
+        bottom: 15px;
+        left: -174px;
+      }
+    }
+  }
+
+  &--kino {
+    background-image: url("../img/back-kino.png");
+    background-position: center;
+    background-size: cover;
+
+    .example-element {
+      &:nth-child(1) {
+        width: 501px;
+        height: 578px;
+        right: -70px;
+        top: 50px;
+      }
+      &:nth-child(2) {
+        width: 756px;
+        height: 640px;
+        bottom: -75px;
+        left: -174px;
+      }
+    }
+  }
 }
 
 .example-element {
