@@ -343,13 +343,21 @@
     width: 12px;
     height: 12px;
     min-width: 12px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .submit-form__text label::after {
     width: 4px;
     height: 4px;
     min-width: 4px;
-    margin-right: -18px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .submit-form__text label {
+    padding-left: 20px;
   }
 
   .form-question__bottom {
@@ -1043,5 +1051,17 @@
 
   .our-cases__list {
     padding-top: 600px;
+  }
+
+  .other-projects__slider {
+    .swiper-slide {
+      &:nth-child(2n) {
+        .link-review .review-client {
+          bottom: 50%;
+          top: auto;
+          border-radius: 60px 60px 60px 0px;
+        }
+      }
+    }
   }
 }

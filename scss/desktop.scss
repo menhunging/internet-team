@@ -79,6 +79,12 @@ section {
     transition: all 0.3s ease;
     animation: rotate 10s linear infinite;
   }
+
+  &--dark {
+    &::before {
+      filter: invert(1);
+    }
+  }
 }
 
 .grettings__content {
@@ -322,6 +328,11 @@ section {
 }
 
 .service-item__logo {
+  position: relative;
+  right: auto !important;
+  top: auto !important;
+  width: auto;
+  display: table;
 }
 
 .service-list {
@@ -409,6 +420,7 @@ section {
   flex: 1;
   display: flex;
   justify-content: center;
+  @include invisLink;
 }
 
 .example-section__right {
@@ -433,6 +445,7 @@ section {
   font-size: 18px;
   font-weight: 800;
   position: relative;
+  z-index: 10;
 }
 
 .link-review__icon {
@@ -914,10 +927,8 @@ section {
   label {
     cursor: pointer;
     position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     @include transition(color 0.3s);
+    padding-left: 30px;
 
     @include before {
       width: 24px;
@@ -925,6 +936,9 @@ section {
       @include border-radius(50%);
       position: relative;
       border: solid 2px $colorBlue;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     @include after {
@@ -934,8 +948,19 @@ section {
       position: relative;
       background-color: $colorBlue;
       order: -1;
-      margin-right: -27px;
       opacity: 0;
+      position: absolute;
+      left: 7px;
+      top: 7px;
+    }
+
+    a {
+      text-decoration: underline;
+      transition: text-decoration 0.3s;
+
+      &:hover {
+        text-decoration-color: transparent;
+      }
     }
   }
 
@@ -1332,7 +1357,7 @@ a.contacts-page__caption {
   overflow: hidden;
 
   .about-main {
-    padding-top: 200px;
+    padding-top: 100px;
   }
 
   .about-section {
@@ -1835,12 +1860,12 @@ a.contacts-page__caption {
   line-height: 26px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   align-items: flex-start;
   width: calc(100% - 272px - 49px);
 
   p {
-    height: 77px;
+    height: 183px;
     overflow: hidden;
   }
 }
@@ -2068,7 +2093,7 @@ a.contacts-page__caption {
 .project-block__head {
   display: flex;
   justify-content: space-between;
-  padding: 90px 0;
+  padding-bottom: 90px;
 
   .caption {
     font-size: 140px;
@@ -2279,7 +2304,7 @@ a.contacts-page__caption {
 .thanks-block {
   position: relative;
   left: -70px;
-  width: calc(100% + 70px);
+  width: calc(100% + 140px);
   color: $colorWhite;
   font-size: 40px;
   font-weight: 300;
@@ -2379,6 +2404,12 @@ a.contacts-page__caption {
         .example-section__bottom {
           order: 2;
         }
+      }
+
+      .link-review .review-client {
+        bottom: auto;
+        top: 50%;
+        border-radius: 0px 60px 60px 60px;
       }
     }
   }
@@ -2654,6 +2685,7 @@ a.contacts-page__caption {
   text-align: center;
   border: solid 4px $colorBlue;
   position: relative;
+  // transition: all 0.3s !important;
 
   @include before {
     background-image: url("../img/svg/arrow-scheme.svg");
@@ -2666,6 +2698,7 @@ a.contacts-page__caption {
     @include transform(translateY(-50%));
   }
 
+  &:hover,
   &.active {
     background-color: $colorRed;
   }
@@ -3167,7 +3200,7 @@ a.contacts-page__caption {
 
   p {
     margin-top: 70px;
-    height: 77px;
+    height: 73px;
     overflow: hidden;
   }
 }
@@ -3572,7 +3605,7 @@ a.contacts-page__caption {
   font-weight: 700;
   line-height: 18px;
   color: $colorWhite;
-  z-index: 9;
+  z-index: 10;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -3610,6 +3643,6 @@ a.contacts-page__caption {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:20px;
+  gap: 20px;
   text-align: center;
 }

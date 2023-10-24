@@ -216,6 +216,10 @@
   .example-section__right {
     max-width: 255px;
   }
+
+  .invis-anchor-section.fixed .invis-anchor {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 1499px) {
@@ -844,8 +848,12 @@
 
   .our-cases__graf {
     padding: 30px;
-    max-width: 675px;
     gap: 30px;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .our-cases {
@@ -927,10 +935,6 @@
     }
   }
 
-  .our-cases__graf {
-    top: 40px;
-  }
-
   .our-cases__list {
     width: 100%;
     justify-content: center;
@@ -947,8 +951,7 @@
     }
   }
 
-  .our-cases__graf {
-    width: 100%;
-    max-width: 100%;
+  .other-letters__content p {
+    height: 190px;
   }
 }

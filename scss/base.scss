@@ -4,6 +4,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: $colorSimple;
+  transition: all 0s !important;
 
   &.hidden {
     overflow: hidden;
@@ -291,7 +292,9 @@ input {
 
   &.selectric-above {
     .selectric-items {
-      border: solid 1px $colorBlue;
+      // border: solid 1px $colorBlue;
+      top: auto;
+      bottom: calc(100% + 15px);
     }
 
     .selectric-scroll ul {
@@ -510,6 +513,11 @@ input {
     gap: 30px;
     align-items: center;
 
+    .selectric-wrapper {
+      max-width: 500px;
+      width: 100%;
+    }
+
     input {
       color: rgba(5, 38, 54, 0.3);
       font-size: 27px;
@@ -539,6 +547,10 @@ input {
   will-change: inherit;
 }
 
+.modal__overlay {
+  width: 100vw;
+}
+
 .selectric-open {
   z-index: 4;
 }
@@ -564,7 +576,7 @@ div {
 
 @media (min-width: 1200px) {
   _:-webkit-any-link,
-  :root .modal-open {
+  :root body.modal-open {
     padding-right: 17px;
 
     .header {

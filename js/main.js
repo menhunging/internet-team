@@ -14,9 +14,11 @@ $(document).ready(function () {
   if ($(".burger").length > 0) {
     let menu = $(".menu");
     let burger = $(".burger");
+    let body = $("body");
 
     burger.on("click", function () {
       burger.toggleClass("burger--opened");
+      body.toggleClass("hidden");
       menu.stop().slideToggle();
     });
   }
@@ -243,26 +245,7 @@ $(document).ready(function () {
   }
 
   if ($(".modal").length > 0) {
-    MicroModal.init({
-      openTrigger: "data-modal",
-      disableScroll: true,
-      awaitOpenAnimation: true,
-      awaitCloseAnimation: true,
-
-      onShow: () => {
-        $("body").addClass("modal-open");
-      },
-
-      onClose: () => {
-        setTimeout(() => {
-          $("body").removeClass("modal-open");
-        }, 300);
-      },
-    });
-
-    $("[data-modal]").map(function () {
-      $(this).click((e) => e.preventDefault());
-    });
+    initialModal();
   }
 
   if ($(".marquee").length > 0) {
@@ -283,6 +266,10 @@ $(document).ready(function () {
       direction: "left",
       duplicated: true,
     });
+
+    setTimeout(function () {
+      initialModal();
+    }, 300);
   }
 
   if ($(".marquee-page-error").length > 0) {
@@ -667,6 +654,27 @@ $(window).on("resize", function () {
   }
 });
 
+function initialModal() {
+  MicroModal.init({
+    openTrigger: "data-modal",
+    disableScroll: true,
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true,
+
+    onShow: () => {
+      $("body").addClass("modal-open");
+    },
+
+    onClose: () => {
+      $("body").removeClass("modal-open");
+    },
+  });
+
+  $("[data-modal]").map(function () {
+    $(this).click((e) => e.preventDefault());
+  });
+}
+
 function openModal(modal) {
   MicroModal.show(modal);
   $(".modal__close").on("click", function () {
@@ -677,9 +685,7 @@ function openModal(modal) {
 
 function closeModal(modal) {
   MicroModal.close(modal);
-  setTimeout(() => {
-    $("body").removeClass("modal-open");
-  }, 300);
+  $("body").removeClass("modal-open");
 }
 
 function setStylesHeader(window) {

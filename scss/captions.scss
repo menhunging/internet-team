@@ -1,11 +1,14 @@
 .caption {
   font-weight: 500;
+  display: inline-block;
 
   strong {
     font-weight: 900;
   }
 }
 
+h2,
+.caption,
 h2.caption {
   font-size: 90px;
   font-weight: 900;
@@ -13,8 +16,19 @@ h2.caption {
   letter-spacing: -3.6px;
 }
 
+h3,
+.caption,
 h3.caption {
   font-size: 60px;
   font-weight: 900;
   line-height: 79px;
+}
+
+a.caption {
+  transition: all 0.3s !important;
+  text-decoration: none !important;
+
+  &:hover {
+    color: $colorRed;
+  }
 }

@@ -55,7 +55,7 @@
       height: 115px;
       background-size: contain;
       margin-left: -58px;
-      margin-top: -56px;
+      margin-top: -57px;
     }
   }
 
@@ -101,7 +101,7 @@
   }
 
   .service-item__logo {
-    width: 100px;
+    width: 90px;
   }
 
   .service-item .caption {
@@ -244,10 +244,6 @@
     padding: 25px;
   }
 
-  .state-section__item {
-    @include border-radius(36px);
-  }
-
   .state-section__num {
     font-size: 65px;
     line-height: 75px;
@@ -256,6 +252,12 @@
   .state-section__item {
     font-size: 16px;
     line-height: 20px;
+    @include border-radius(36px);
+    height: auto;
+  }
+
+  .state-section__slider .swiper-wrapper {
+    align-items: initial;
   }
 
   .state-section__text {
@@ -711,7 +713,7 @@
     gap: 0;
 
     p {
-      height: 41px;
+      height: auto;
     }
   }
 
@@ -1751,5 +1753,22 @@
   .modal-simple-text {
     gap: 10px;
     font-size: 14px;
+  }
+
+  .modal__inner {
+    .input-row {
+      .selectric-wrapper {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .service-step__links .tabs-link {
+    margin-bottom: 10px;
+  }
+
+  .btn-step-prev {
+    display: none;
   }
 }
