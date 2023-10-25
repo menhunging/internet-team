@@ -393,8 +393,9 @@ $(document).ready(function () {
   }
 
   if ($(".invis-anchor-section").length > 0) {
-    let blockPosition = $(".invis-anchor-section").offset().top;
     let sections = $(".step-start");
+    let blockPosition = sections.offset().top;
+
     let posSection = [];
 
     sections.each(function (i, el) {
@@ -415,7 +416,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
       let windowPostition = $(window).scrollTop();
 
-      if (windowPostition >= blockPosition - 120) {
+      if (windowPostition >= blockPosition) {
         $(".invis-anchor-section").addClass("fixed");
       } else {
         $(".invis-anchor-section").removeClass("fixed");

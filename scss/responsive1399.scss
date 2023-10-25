@@ -217,7 +217,7 @@
     max-width: 255px;
   }
 
-  .invis-anchor-section.fixed .invis-anchor {
+  .invis-anchor-section .invis-anchor {
     justify-content: flex-start;
   }
 }
@@ -824,7 +824,7 @@
     margin-top: 100px;
   }
 
-  .invis-anchor-section {
+  .invis-anchor-section.fixed {
     top: 70px;
   }
 
@@ -985,5 +985,14 @@
 
   .other-letters__content p {
     height: 190px;
+  }
+
+  .other-projects .swiper-pagination {
+    display: flex;
+  }
+
+  .about-page {
+    font-size: 16px;
+    line-height: 24px;
   }
 }

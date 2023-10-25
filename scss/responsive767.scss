@@ -1193,10 +1193,6 @@
     padding: 20px 0 0;
   }
 
-  .invis-anchor-section {
-    top: 75px;
-  }
-
   .serv-list {
     margin-top: 40px;
   }
@@ -1403,7 +1399,7 @@
     }
   }
 
-  .invis-anchor-section {
+  .invis-anchor-section.fixed {
     top: 70px;
     background-color: #fdfdfd;
   }
@@ -1434,10 +1430,6 @@
   }
 
   .invis-anchor-section .invis-anchor {
-    padding: 0;
-  }
-
-  .invis-anchor-section.fixed .invis-anchor {
     padding-top: 0;
     padding-bottom: 0;
     justify-content: flex-start;
@@ -1807,5 +1799,37 @@
 
   .btn-step-prev {
     display: none;
+  }
+
+  .logo-bittix {
+    &--bitrix {
+      &::before {
+        animation: none;
+        background-position: 10px -25px;
+        width: 130px;
+        height: 130px;
+      }
+    }
+
+    &--yandex {
+      &::before {
+        animation: none;
+        background-position: 0px 0;
+      }
+    }
+
+    &--partner {
+      &::before {
+        animation: none;
+        background-position: -12px -19px;
+        width: 145px;
+        height: 145px;
+      }
+    }
+  }
+
+  .about-page {
+    font-size: 14px;
+    line-height: 22px;
   }
 }

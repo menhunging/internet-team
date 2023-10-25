@@ -1346,8 +1346,20 @@ section {
   transition: all 0.3s ease;
   animation: rotate 10s linear infinite;
 }
-.logo-bittix--dark::before {
-  filter: invert(1);
+.logo-bittix--bitrix::before {
+  background-image: url(../img/svg/logo-bitix-bitrix.svg);
+  background-repeat: no-repeat;
+  background-position: 11px -30px;
+}
+.logo-bittix--yandex::before {
+  background-image: url(../img/svg/logo-bitix-yandex.svg);
+  background-repeat: no-repeat;
+  background-position: 0px -4px;
+}
+.logo-bittix--partner::before {
+  background-image: url(../img/svg/logo-bitix-partner.svg);
+  background-repeat: no-repeat;
+  background-position: -12px -20px;
 }
 
 .grettings__content {
@@ -2652,6 +2664,9 @@ a.contacts-page__caption:hover {
 .about-page {
   color: rgb(5, 38, 54);
   overflow: hidden;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
 }
 .about-page .about-main {
   padding-top: 100px;
@@ -4010,27 +4025,28 @@ a.contacts-page__caption:hover {
 }
 
 .invis-anchor-section {
-  position: sticky;
-  top: 100px;
+  position: fixed;
+  top: -500px;
   left: 0;
   background-color: rgb(255, 255, 255);
   z-index: 10;
   padding-top: 0;
   padding-bottom: 0;
+  transition: all 0.3s;
+  width: 100%;
 }
 .invis-anchor-section .invis-anchor {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.invis-anchor-section.fixed .invis-anchor {
   padding-top: 10px;
   padding-bottom: 10px;
   justify-content: center;
 }
-.invis-anchor-section.fixed .tabs-link {
+.invis-anchor-section .tabs-link {
   padding: 15px 30px;
   font-size: 16px;
   line-height: 18px;
+}
+.invis-anchor-section.fixed {
+  top: 100px;
 }
 
 .invis-anchor {
@@ -4863,6 +4879,18 @@ a.contacts-page__caption:hover {
   text-align: center;
 }
 
+.other-letters .other-letters__caption {
+  font-size: 35px;
+  line-height: 40px;
+  max-width: 100%;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.other-projects .swiper-pagination {
+  display: none;
+}
+
 @media (max-width: 1799px) {
   .header {
     padding: 30px;
@@ -5033,7 +5061,7 @@ a.contacts-page__caption:hover {
   .example-section__right {
     max-width: 255px;
   }
-  .invis-anchor-section.fixed .invis-anchor {
+  .invis-anchor-section .invis-anchor {
     justify-content: flex-start;
   }
 }
@@ -5510,7 +5538,7 @@ a.contacts-page__caption:hover {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 100px;
   }
-  .invis-anchor-section {
+  .invis-anchor-section.fixed {
     top: 70px;
   }
   .invis-anchor {
@@ -5630,6 +5658,13 @@ a.contacts-page__caption:hover {
   }
   .other-letters__content p {
     height: 190px;
+  }
+  .other-projects .swiper-pagination {
+    display: flex;
+  }
+  .about-page {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 @media (min-width: 1200px) {
@@ -6150,6 +6185,10 @@ a.contacts-page__caption:hover {
     height: 241px;
     right: -33px;
     top: 70px;
+  }
+  .other-letters .other-letters__caption {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 @media (max-width: 1023px) {
@@ -8011,9 +8050,6 @@ a.contacts-page__caption:hover {
   .invis-anchor {
     padding: 20px 0 0;
   }
-  .invis-anchor-section {
-    top: 75px;
-  }
   .serv-list {
     margin-top: 40px;
   }
@@ -8185,7 +8221,7 @@ a.contacts-page__caption:hover {
     width: 50px;
     height: 50px;
   }
-  .invis-anchor-section {
+  .invis-anchor-section.fixed {
     top: 70px;
     background-color: #fdfdfd;
   }
@@ -8212,14 +8248,11 @@ a.contacts-page__caption:hover {
     font-weight: 800;
   }
   .invis-anchor-section .invis-anchor {
-    padding: 0;
-  }
-  .invis-anchor-section.fixed .invis-anchor {
     padding-top: 0;
     padding-bottom: 0;
     justify-content: flex-start;
   }
-  .invis-anchor-section.fixed .invis-anchor .tabs-link {
+  .invis-anchor-section .invis-anchor .tabs-link {
     font-size: 14px;
     line-height: 16px;
     padding: 15px;
@@ -8492,6 +8525,26 @@ a.contacts-page__caption:hover {
   }
   .btn-step-prev {
     display: none;
+  }
+  .logo-bittix--bitrix::before {
+    animation: none;
+    background-position: 10px -25px;
+    width: 130px;
+    height: 130px;
+  }
+  .logo-bittix--yandex::before {
+    animation: none;
+    background-position: 0px 0;
+  }
+  .logo-bittix--partner::before {
+    animation: none;
+    background-position: -12px -19px;
+    width: 145px;
+    height: 145px;
+  }
+  .about-page {
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 @media (max-width: 639px) {

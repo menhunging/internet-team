@@ -80,9 +80,27 @@ section {
     animation: rotate 10s linear infinite;
   }
 
-  &--dark {
+  &--bitrix {
     &::before {
-      filter: invert(1);
+      background-image: url(../img/svg/logo-bitix-bitrix.svg);
+      background-repeat: no-repeat;
+      background-position: 11px -30px;
+    }
+  }
+
+  &--yandex {
+    &::before {
+      background-image: url(../img/svg/logo-bitix-yandex.svg);
+      background-repeat: no-repeat;
+      background-position: 0px -4px;
+    }
+  }
+
+  &--partner {
+    &::before {
+      background-image: url(../img/svg/logo-bitix-partner.svg);
+      background-repeat: no-repeat;
+      background-position: -12px -20px;
     }
   }
 }
@@ -1355,6 +1373,9 @@ a.contacts-page__caption {
 .about-page {
   color: $colorBlue;
   overflow: hidden;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
 
   .about-main {
     padding-top: 100px;
@@ -2710,31 +2731,30 @@ a.contacts-page__caption {
 }
 
 .invis-anchor-section {
-  position: sticky;
-  top: 100px;
+  position: fixed;
+  top: -500px;
   left: 0;
   background-color: $colorWhite;
   z-index: 10;
   padding-top: 0;
   padding-bottom: 0;
+  transition: all 0.3s;
+  width: 100%;
 
   .invis-anchor {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+
+  .tabs-link {
+    padding: 15px 30px;
+    font-size: 16px;
+    line-height: 18px;
   }
 
   &.fixed {
-    .invis-anchor {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      justify-content: center;
-    }
-
-    .tabs-link {
-      padding: 15px 30px;
-      font-size: 16px;
-      line-height: 18px;
-    }
+    top: 100px;
   }
 }
 
@@ -3685,4 +3705,16 @@ a.contacts-page__caption {
   justify-content: center;
   gap: 20px;
   text-align: center;
+}
+
+.other-letters .other-letters__caption {
+  font-size: 35px;
+  line-height: 40px;
+  max-width: 100%;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.other-projects .swiper-pagination {
+  display: none;
 }
