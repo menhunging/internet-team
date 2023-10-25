@@ -1061,7 +1061,7 @@ input[type=number]:focus {
 }
 
 h2,
-.caption,
+a.caption,
 h2.caption {
   font-size: 90px;
   font-weight: 900;
@@ -1070,7 +1070,6 @@ h2.caption {
 }
 
 h3,
-.caption,
 h3.caption {
   font-size: 60px;
   font-weight: 900;
@@ -5089,6 +5088,7 @@ a.contacts-page__caption:hover {
   .grettings-btn__next {
     display: none;
   }
+  a.caption,
   h2.caption {
     font-size: 70px;
     line-height: 75px;
@@ -5704,6 +5704,7 @@ a.contacts-page__caption:hover {
   .logo-bittix {
     top: 60px;
   }
+  a.caption,
   h2.caption {
     font-size: 60px;
     line-height: 65px;
@@ -6186,6 +6187,7 @@ a.contacts-page__caption:hover {
   .marquee-list {
     gap: 120px;
   }
+  a.caption,
   h2.caption {
     font-size: 50px;
     line-height: 60px;
@@ -7093,6 +7095,7 @@ a.contacts-page__caption:hover {
     padding-left: 10px;
     padding-right: 10px;
   }
+  a.caption,
   h2.caption {
     font-size: 32px;
     line-height: 34px;
