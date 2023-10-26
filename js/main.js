@@ -653,6 +653,30 @@ $(document).ready(function () {
       });
     });
   }
+
+  if ($(".fileLoad").length > 0) {
+    $(".fileLoad input").on("change", function () {
+      let parents = $(this).parents(".fileLoad");
+      let text = parents.find(".fileLoad__text span");
+      let input = $(this);
+
+      let file = input[0].files[0];
+      parents.addClass("load");
+      text.text(file.name);
+      // size.text(`${(file.size / 1024 / 1000).toFixed(2)}`);
+    });
+
+    $(".fileLoad__delete").on("click", function (event) {
+      event.preventDefault()
+      let parents = $(this).parents(".fileLoad");
+      let input = parents.find("input");
+      let text = parents.find(".fileLoad__text span");
+
+      input[0].value = null;
+      text.text("");
+      parents.removeClass("load");
+    });
+  }
 });
 
 $(window).on("resize", function () {

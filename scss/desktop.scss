@@ -750,6 +750,10 @@ section {
   align-items: center;
   justify-content: center;
   display: flex;
+
+  img{
+    max-height: 69px;
+  }
 }
 
 .brands-more {
@@ -889,6 +893,19 @@ section {
     gap: 20px;
     @include text-decoration-hover($colorWhite);
   }
+
+  &.load{
+    .fileLoad__delete{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .fileLoad__delete{
+    display: none;
+  }
 }
 
 .fileLoad__text {
@@ -900,6 +917,8 @@ section {
   display: block;
   width: 100%;
   max-width: 368px;
+  display: flex;
+  align-items: center;
 }
 
 .submit-form {

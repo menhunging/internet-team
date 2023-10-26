@@ -1065,4 +1065,10 @@
       }
     }
   }
+
+  .fileLoad__delete svg {
+    path {
+      stroke: $colorBlue;
+    }
+  }
 }

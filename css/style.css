@@ -2056,6 +2056,9 @@ section {
   text-indent: 200%;
   white-space: nowrap;
 }
+.brands-item img {
+  max-height: 69px;
+}
 
 .brands-more {
   padding: 30px 40px;
@@ -2188,6 +2191,15 @@ section {
 .fileLoad label:hover {
   text-decoration-color: rgb(255, 255, 255);
 }
+.fileLoad.load .fileLoad__delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.fileLoad .fileLoad__delete {
+  display: none;
+}
 
 .fileLoad__text {
   font-size: 18px;
@@ -2198,6 +2210,8 @@ section {
   display: block;
   width: 100%;
   max-width: 368px;
+  display: flex;
+  align-items: center;
 }
 
 .submit-form {
@@ -7064,6 +7078,9 @@ a.contacts-page__caption:hover {
     bottom: 50%;
     top: auto;
     border-radius: 60px 60px 60px 0px;
+  }
+  .fileLoad__delete svg path {
+    stroke: rgb(5, 38, 54);
   }
 }
 @media (max-width: 767px) {
