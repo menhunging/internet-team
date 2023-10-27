@@ -752,17 +752,18 @@ section {
   display: flex;
 
   img{
-    max-height: 69px;
+    max-height: 89px;
   }
 }
 
 .brands-more {
-  padding: 30px 40px;
+  padding: 20px 20px;
   background-color: rgba(5, 38, 54, 0.05);
   width: 100%;
   display: block;
   @include border-radius(90px);
   text-align: center;
+  font-size: 18px
 }
 
 .contact-form {

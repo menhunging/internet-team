@@ -2057,11 +2057,11 @@ section {
   white-space: nowrap;
 }
 .brands-item img {
-  max-height: 69px;
+  max-height: 89px;
 }
 
 .brands-more {
-  padding: 30px 40px;
+  padding: 20px 20px;
   background-color: rgba(5, 38, 54, 0.05);
   width: 100%;
   display: block;
@@ -2070,6 +2070,7 @@ section {
   -ms-border-radius: 90px;
   border-radius: 90px;
   text-align: center;
+  font-size: 18px;
 }
 
 .contact-form__block {
@@ -8562,6 +8563,10 @@ a.contacts-page__caption:hover {
   .about-page {
     font-size: 14px;
     line-height: 22px;
+  }
+  .other-projects .swiper-pagination {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 639px) {
