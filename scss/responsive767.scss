@@ -1607,14 +1607,14 @@
           width: 222px;
           height: 141px;
           right: -23px;
-          top: 10px;
+          top: -40px;
         }
 
         &:nth-child(2) {
-          width: 266px;
-          height: 210px;
-          left: -50px;
-          bottom: -15px;
+          width: 256px;
+          height: 190px;
+          left: -17px;
+          bottom: -17px;
         }
       }
     }
@@ -1622,17 +1622,17 @@
     &--kino {
       .example-element {
         &:nth-child(1) {
-          width: 271px;
+          width: 251px;
           height: 308px;
-          right: -70px;
-          top: -50px;
+          right: -66px;
+          top: -90px;
         }
 
         &:nth-child(2) {
           width: 286px;
           height: 220px;
           bottom: -55px;
-          left: -54px;
+          left: -37px;
         }
       }
     }
