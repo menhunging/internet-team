@@ -408,6 +408,9 @@ section {
 
   .caption {
     margin-bottom: 50px;
+    max-width: 100%;
+    width: 100%;
+    word-break: break-all;
   }
 
   ul {
@@ -751,7 +754,7 @@ section {
   justify-content: center;
   display: flex;
 
-  img{
+  img {
     max-height: 89px;
   }
 }
@@ -763,7 +766,7 @@ section {
   display: block;
   @include border-radius(90px);
   text-align: center;
-  font-size: 18px
+  font-size: 18px;
 }
 
 .contact-form {
@@ -895,8 +898,8 @@ section {
     @include text-decoration-hover($colorWhite);
   }
 
-  &.load{
-    .fileLoad__delete{
+  &.load {
+    .fileLoad__delete {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -904,7 +907,7 @@ section {
     }
   }
 
-  .fileLoad__delete{
+  .fileLoad__delete {
     display: none;
   }
 }
@@ -2451,6 +2454,7 @@ a.contacts-page__caption {
         bottom: auto;
         top: 50%;
         border-radius: 0px 60px 60px 60px;
+        transform-origin: left top;
       }
     }
   }
@@ -2486,6 +2490,24 @@ a.contacts-page__caption {
     border-radius: 36px;
     margin-bottom: 0;
     pointer-events: none;
+
+    &--default{
+      .example-element {
+        &:nth-child(1) {
+          width: 455px;
+          height: 435px;
+          right: -72px;
+          top: -108px;
+        }
+        &:nth-child(2) {
+          width: 480px;
+          height: 340px;
+          bottom: -105px;
+          left: -105px;
+        }
+      }
+    }
+
 
     &--artLend {
       .example-element {
@@ -3403,6 +3425,45 @@ a.contacts-page__caption {
   background-repeat: no-repeat;
   pointer-events: none;
 
+  &--default {
+    .example-element {
+      &:nth-child(1) {
+        width: 599px;
+        height: 599px;
+        right: -123px;
+        top: -79px;
+      }
+      &:nth-child(2) {
+        width: 669px;
+        height: 669px;
+        bottom: 15px;
+        left: -174px;
+      }
+    }
+  }
+
+  &--ural {
+    background-image: url(../img/bg-ural.jpg);
+  }
+
+  &--watt {
+    background-color: #0b0b0b;
+    background-image: url(../img/bg-watt.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--nort {
+    background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 20.52%),
+      url(<path-to-image>),
+      lightgray -477.83px -276.394px / 362.782% 151.854% no-repeat;
+
+      .example--paralax1{
+        background-size: 70%;
+      }
+  }
+
   &--artLend {
     background: linear-gradient(
       180deg,
@@ -3737,4 +3798,10 @@ a.contacts-page__caption {
 
 .other-projects .swiper-pagination {
   display: none;
+}
+
+.other-projects {
+  .other-projects__slider {
+    padding-bottom: 150px;
+  }
 }

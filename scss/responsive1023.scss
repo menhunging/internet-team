@@ -978,6 +978,23 @@
     width: 350px;
     height: 550px;
 
+    &--default{
+      .example-element {
+        &:nth-child(1) {
+          width: 375px;
+          height: 365px;
+          right: -72px;
+          top: -68px;
+        }
+        &:nth-child(2) {
+          width: 400px;
+          height: 360px;
+          bottom: -5px;
+          left: -125px;
+        }
+      }
+    }
+
     &--artLend {
       .example-element {
         &:nth-child(1) {

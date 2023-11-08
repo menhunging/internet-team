@@ -1535,6 +1535,29 @@
     border-radius: 36px;
     margin-bottom: 30px;
 
+    &--default{
+      .example-element {
+        &:nth-child(1) {
+          width: 305px;
+          height: 205px;
+          right: -72px;
+          top: -58px;
+        }
+        &:nth-child(2) {
+          width: 370px;
+          height: 210px;
+          bottom: -45px;
+          left: -95px;
+        }
+      }
+    }
+
+    &--nort {
+        .example--paralax1{
+          background-size: 50%;
+        }
+    }
+
     &--artLend {
       .example-element {
         &:nth-child(1) {
@@ -1837,4 +1860,5 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  
 }

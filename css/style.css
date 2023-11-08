@@ -1066,7 +1066,7 @@ h2.caption {
   font-size: 90px;
   font-weight: 900;
   line-height: 90px;
-  letter-spacing: -3.6px;
+  letter-spacing: 0px;
 }
 
 h3,
@@ -1684,6 +1684,9 @@ section {
 }
 .example-section__left .caption {
   margin-bottom: 50px;
+  max-width: 100%;
+  width: 100%;
+  word-break: break-all;
 }
 .example-section__left ul {
   margin-top: 40px;
@@ -3757,6 +3760,7 @@ a.contacts-page__caption:hover {
   bottom: auto;
   top: 50%;
   border-radius: 0px 60px 60px 60px;
+  transform-origin: left top;
 }
 
 .example-small {
@@ -3786,6 +3790,18 @@ a.contacts-page__caption:hover {
   border-radius: 36px;
   margin-bottom: 0;
   pointer-events: none;
+}
+.example-small .example-block--default .example-element:nth-child(1) {
+  width: 455px;
+  height: 435px;
+  right: -72px;
+  top: -108px;
+}
+.example-small .example-block--default .example-element:nth-child(2) {
+  width: 480px;
+  height: 340px;
+  bottom: -105px;
+  left: -105px;
 }
 .example-small .example-block--artLend .example-element:nth-child(1) {
   width: 330px;
@@ -4628,6 +4644,34 @@ a.contacts-page__caption:hover {
   background-repeat: no-repeat;
   pointer-events: none;
 }
+.example-block--default .example-element:nth-child(1) {
+  width: 599px;
+  height: 599px;
+  right: -123px;
+  top: -79px;
+}
+.example-block--default .example-element:nth-child(2) {
+  width: 669px;
+  height: 669px;
+  bottom: 15px;
+  left: -174px;
+}
+.example-block--ural {
+  background-image: url(../img/bg-ural.jpg);
+}
+.example-block--watt {
+  background-color: #0b0b0b;
+  background-image: url(../img/bg-watt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.example-block--nort {
+  background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 20.52%), url(<path-to-image>), lightgray -477.83px -276.394px/362.782% 151.854% no-repeat;
+}
+.example-block--nort .example--paralax1 {
+  background-size: 70%;
+}
 .example-block--artLend {
   background: linear-gradient(180deg, rgba(217, 213, 219, 0.16) 0%, #d9d5db 100%);
 }
@@ -4904,6 +4948,10 @@ a.contacts-page__caption:hover {
 
 .other-projects .swiper-pagination {
   display: none;
+}
+
+.other-projects .other-projects__slider {
+  padding-bottom: 150px;
 }
 
 @media (max-width: 1799px) {
@@ -5591,6 +5639,18 @@ a.contacts-page__caption:hover {
     width: 400px;
     height: 750px;
   }
+  .example-block--default .example-element:nth-child(1) {
+    width: 475px;
+    height: 475px;
+    right: -92px;
+    top: -104px;
+  }
+  .example-block--default .example-element:nth-child(2) {
+    width: 480px;
+    height: 470px;
+    bottom: 5px;
+    left: -135px;
+  }
   .example-block--artLend .example-element:nth-child(1) {
     width: 475px;
     height: 475px;
@@ -6204,6 +6264,9 @@ a.contacts-page__caption:hover {
   .other-letters .other-letters__caption {
     font-size: 24px;
     line-height: 32px;
+  }
+  .other-projects .other-projects__slider {
+    padding-bottom: 0;
   }
 }
 @media (max-width: 1023px) {
@@ -7017,6 +7080,18 @@ a.contacts-page__caption:hover {
   .example-block {
     width: 350px;
     height: 550px;
+  }
+  .example-block--default .example-element:nth-child(1) {
+    width: 375px;
+    height: 365px;
+    right: -72px;
+    top: -68px;
+  }
+  .example-block--default .example-element:nth-child(2) {
+    width: 400px;
+    height: 360px;
+    bottom: -5px;
+    left: -125px;
   }
   .example-block--artLend .example-element:nth-child(1) {
     width: 375px;
@@ -8352,6 +8427,21 @@ a.contacts-page__caption:hover {
     border-radius: 36px;
     margin-bottom: 30px;
   }
+  .example-block--default .example-element:nth-child(1) {
+    width: 305px;
+    height: 205px;
+    right: -72px;
+    top: -58px;
+  }
+  .example-block--default .example-element:nth-child(2) {
+    width: 370px;
+    height: 210px;
+    bottom: -45px;
+    left: -95px;
+  }
+  .example-block--nort .example--paralax1 {
+    background-size: 50%;
+  }
   .example-block--artLend .example-element:nth-child(1) {
     width: 200px;
     height: 200px;
@@ -8593,6 +8683,18 @@ a.contacts-page__caption:hover {
   }
   .example-small .example-block {
     height: 215px;
+  }
+  .example-small .example-block--default .example-element:nth-child(1) {
+    width: 160px;
+    height: 180px;
+    right: -20px;
+    top: -48px;
+  }
+  .example-small .example-block--default .example-element:nth-child(2) {
+    width: 210px;
+    height: 210px;
+    bottom: -39px;
+    left: -30px;
   }
   .example-small .example-block--artLend .example-element:nth-child(1) {
     width: 200px;
