@@ -348,11 +348,13 @@ $(document).ready(function () {
 
   if ($(".js-open-filter").length > 0) {
     $(".js-open-filter").on("click", function () {
+      $("body").addClass("hidden");
       $(".tabs-block").addClass("opened");
     });
 
     $(".tabs-block__close").on("click", function () {
       $(".tabs-block").removeClass("opened");
+      $("body").removeClass("hidden");
     });
   }
 
@@ -629,6 +631,16 @@ $(document).ready(function () {
       input[0].value = null;
       text.text("");
       parents.removeClass("load");
+    });
+  }
+
+  if ($(".b24-widget-button-shadow").length > 0) {
+    $(".b24-widget-button-inner-container").on("click", function (e) {
+      e.preventDefault();
+    });
+
+    $(".b24-widget-button-shadow").on("click", function (e) {
+      e.preventDefault();
     });
   }
 });
