@@ -4656,11 +4656,38 @@ a.contacts-page__caption:hover {
   bottom: 15px;
   left: -174px;
 }
+.example-block--mkm {
+  background-color: #181b20;
+  background-image: url("../img/bg-mkm.png");
+  background-position: center;
+}
 .example-block--expo {
   background-color: #1c1b1a;
   background-image: url("../img/bgexcpo.png");
   background-position: center;
   background-size: 70%;
+}
+.example-block--stroy {
+  background-color: #dbdbde;
+}
+.example-block--vgd {
+  background-color: #003869;
+  background-position: right;
+}
+.example-block--vgd::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg-vgd.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity: 0.1;
 }
 .example-block--opendoor {
   background: rgb(233, 171, 26);
@@ -4669,7 +4696,7 @@ a.contacts-page__caption:hover {
 .example-block--hanzaki {
   background-image: url(../img/bg-hanzaki.png);
   background-position: right;
-  background-color: #232C2E;
+  background-color: #232c2e;
 }
 .example-block--ural {
   background-image: url(../img/bg-ural.jpg);
@@ -8465,14 +8492,14 @@ a.contacts-page__caption:hover {
   }
   .example-block--default .example-element:nth-child(1) {
     width: 305px;
-    height: 205px;
-    right: -72px;
-    top: -58px;
+    height: 175px;
+    right: -82px;
+    top: -48px;
   }
   .example-block--default .example-element:nth-child(2) {
-    width: 370px;
-    height: 210px;
-    bottom: -45px;
+    width: 350px;
+    height: 160px;
+    bottom: -25px;
     left: -95px;
   }
   .example-block--nort .example--paralax1 {
