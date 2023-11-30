@@ -1552,6 +1552,14 @@
       }
     }
 
+    &--mon{
+      background-color: #FFE3EF;
+      
+      &::before{
+        display: none;
+      }
+    }
+  
     &--nort {
         .example--paralax1{
           background-size: 50%;

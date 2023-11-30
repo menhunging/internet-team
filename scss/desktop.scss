@@ -3441,6 +3441,25 @@ a.contacts-page__caption {
     }
   }
 
+  &--mon{
+    position: relative;
+
+    @include before{
+      background-image: url("../img/mon-bg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: calc(100% + 150px);
+      height: calc(100% + 150px);
+      top: -75px;
+      left: -75px;
+    }
+  }
+
+  &--kristal{
+    background-color: #003869;
+  }
+
   &--mkm {
     background-color: #181b20;
     background-image: url("../img/bg-mkm.png");

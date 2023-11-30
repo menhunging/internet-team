@@ -4656,6 +4656,28 @@ a.contacts-page__caption:hover {
   bottom: 15px;
   left: -174px;
 }
+.example-block--mon {
+  position: relative;
+}
+.example-block--mon::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-image: url("../img/mon-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: calc(100% + 150px);
+  height: calc(100% + 150px);
+  top: -75px;
+  left: -75px;
+}
+.example-block--kristal {
+  background-color: #003869;
+}
 .example-block--mkm {
   background-color: #181b20;
   background-image: url("../img/bg-mkm.png");
@@ -8501,6 +8523,12 @@ a.contacts-page__caption:hover {
     height: 160px;
     bottom: -25px;
     left: -95px;
+  }
+  .example-block--mon {
+    background-color: #FFE3EF;
+  }
+  .example-block--mon::before {
+    display: none;
   }
   .example-block--nort .example--paralax1 {
     background-size: 50%;
