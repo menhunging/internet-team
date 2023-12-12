@@ -1552,6 +1552,12 @@
       }
     }
 
+    &--akb{
+      &::before{
+        background-size: contain;
+      }
+    }
+
     &--mon{
       background-color: #FFE3EF;
       

@@ -3456,6 +3456,21 @@ a.contacts-page__caption {
     }
   }
 
+  &--akb{
+    background-color: #3C5BA6;
+
+    @include before{
+      width: 100%;
+      height: 100%;
+      opacity: .2;
+      background-image: url("../img/bg-akb.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      left:0;
+      top:0;
+    }
+  }
+
   &--kristal{
     background-color: #003869;
   }
