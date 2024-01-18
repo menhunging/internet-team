@@ -3441,10 +3441,40 @@ a.contacts-page__caption {
     }
   }
 
-  &--mon{
+  &--pallet {
+    background-color: #2d2d2d;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background-image: url("../img/pallet-logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &--super {
+    background-color: #A81D3C;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      // opacity: 0.2;
+      background-image: url("../img/super-bg.png");
+      background-position:  calc(100% - 30px) calc(100% - 30px);
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &--mon {
     position: relative;
 
-    @include before{
+    @include before {
       background-image: url("../img/mon-bg.png");
       background-size: contain;
       background-repeat: no-repeat;
@@ -3456,22 +3486,22 @@ a.contacts-page__caption {
     }
   }
 
-  &--akb{
-    background-color: #3C5BA6;
+  &--akb {
+    background-color: #3c5ba6;
 
-    @include before{
+    @include before {
       width: 100%;
       height: 100%;
-      opacity: .2;
+      opacity: 0.2;
       background-image: url("../img/bg-akb.png");
       background-position: center;
       background-repeat: no-repeat;
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
     }
   }
 
-  &--kristal{
+  &--kristal {
     background-color: #003869;
   }
 
@@ -3496,14 +3526,14 @@ a.contacts-page__caption {
     background-color: #003869;
     background-position: right;
 
-    @include before{
+    @include before {
       right: 0;
       width: 100%;
       height: 100%;
       background-image: url("../img/bg-vgd.png");
       background-position: right;
       background-repeat: no-repeat;
-      opacity: .1;
+      opacity: 0.1;
     }
   }
 

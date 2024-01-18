@@ -1535,7 +1535,7 @@
     border-radius: 36px;
     margin-bottom: 30px;
 
-    &--default{
+    &--default {
       .example-element {
         &:nth-child(1) {
           width: 305px;
@@ -1552,24 +1552,37 @@
       }
     }
 
-    &--akb{
-      &::before{
+    &--pallet {
+      @include before {
         background-size: contain;
       }
     }
 
-    &--mon{
-      background-color: #FFE3EF;
-      
-      &::before{
+    &--super {
+      @include before {
+        background-size: contain;
+        background-position: center;
+      }
+    }
+
+    &--akb {
+      &::before {
+        background-size: contain;
+      }
+    }
+
+    &--mon {
+      background-color: #ffe3ef;
+
+      &::before {
         display: none;
       }
     }
-  
+
     &--nort {
-        .example--paralax1{
-          background-size: 50%;
-        }
+      .example--paralax1 {
+        background-size: 50%;
+      }
     }
 
     &--artLend {
@@ -1878,6 +1891,5 @@
   .example-section__content .caption {
     font-size: 32px;
     line-height: 34px;
-}
-  
+  }
 }
