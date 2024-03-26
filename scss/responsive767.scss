@@ -1892,4 +1892,88 @@
     font-size: 32px;
     line-height: 34px;
   }
+
+  .example-block--ave::before {
+    background-position: center;
+    background-size: 50%;
+  }
+
+  .example-block--ave .example-element:nth-child(1) {
+    left: -72px;
+    width: 265px;
+    height: 145px;
+    top: -58px;
+
+  }
+
+  .example-block--ave .example-element:nth-child(2) {
+    bottom: -75px;
+    right: -65px;
+    left: auto;
+    width: 220px;
+    height: 260px;
+  }
+
+
+  .example-block--stroy::before {
+    background-position: center calc(50% - 35px);
+    background-size: 50%;
+  }
+
+  .example-block--stroy .example-element:nth-child(1) {
+    left: -72px;
+    width: 265px;
+    height: 145px;
+    top: -58px;
+
+  }
+
+  .example-block--stroy .example-element:nth-child(2) {
+    bottom: -25px;
+    right: -75px;
+    left: auto;
+    width: 360px;
+    height: 140px;
+  }
+
+  .example-block--tiokraft::before {
+    background-position: calc(50% - 45px);
+    background-size: contain;
+  }
+
+  .example-block--tiokraft .example-element:nth-child(1) {
+    left: -72px;
+    top: -58px;
+  }
+
+  .example-block--tiokraft .example-element:nth-child(2) {
+    bottom: -25px;
+    right: -75px;
+    left: auto;
+    width: 340px;
+    height: 260px;
+  }
+
+  .example-block--implus::before {
+    border-radius: 40px;
+    background-position: calc(100% - 16px) calc(50% - 81px);
+    background-size: 40%;
+  }
+
+  .example-block--implus .example-element:nth-child(1) {
+    left: -72px;
+    top: -58px;
+  }
+
+  .example-block--implus .example-element:nth-child(2) {
+    bottom: -45px;
+    right: -95px;
+    left: auto;
+  }
+
+  .example-block--film::before {
+    border-radius: 40px;
+    opacity: 1;
+    background-position: top;
+  }
 }

@@ -410,6 +410,7 @@ section {
     margin-bottom: 50px;
     max-width: 100%;
     width: 100%;
+    word-break: break-all;
   }
 
   ul {
@@ -3441,6 +3442,111 @@ a.contacts-page__caption {
     }
   }
 
+  &--ave {
+    background-image: url(../img/ave-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      right: 0;
+      top: 0;
+      background-image: url("../img/ave-logo.png");
+      border-radius: 60px;
+      background-position: center calc(50% - 95px);
+      background-size: 70%;
+    }
+
+    .example-element:nth-child(1) {
+      width: 439px;
+      height: 479px;
+    }
+
+    .example-element:nth-child(2) {
+      bottom: -125px;
+    }
+  }
+
+  &--stroy {
+    background-image: url(../img/stroy-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      right: 0;
+      top: 0;
+      background-image: url("../img/stroy-logo.png");
+      border-radius: 60px;
+      background-position: center calc(50% - 95px);
+      background-size: 70%;
+    }
+  }
+
+  &--tiokraft {
+    background-image: url(../img/tiokraft-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      right: 0;
+      top: 0;
+      background-image: url("../img/tiokraft-logo.png");
+      border-radius: 60px;
+      background-position: 15px calc(100% - 75px);
+    }
+  }
+
+  &--implus {
+    background-image: url(../img/impuls-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      right: 0;
+      top: 0;
+      background-image: url("../img/impuls-logo.png");
+      background-position: center calc(50% + -105px);
+      background-size: 80%;
+      background-color: rgba(75, 73, 78, 0.5);
+      border-radius: 60px;
+    }
+  }
+
+  &--film {
+    background-color: #050505;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      max-height: 805px;
+      opacity: 0.8;
+      background-image: url("../img/film-bg.png");
+      background-position: right;
+      background-repeat: no-repeat;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #050505;
+      border-radius: 60px;
+      background-size: cover;
+    }
+  }
+
   &--pallet {
     background-color: #2d2d2d;
 
@@ -3457,14 +3563,14 @@ a.contacts-page__caption {
   }
 
   &--super {
-    background-color: #A81D3C;
+    background-color: #a81d3c;
 
     @include before {
       width: 100%;
       height: 100%;
       // opacity: 0.2;
       background-image: url("../img/super-bg.png");
-      background-position:  calc(100% - 30px) calc(100% - 30px);
+      background-position: calc(100% - 30px) calc(100% - 30px);
       background-repeat: no-repeat;
       left: 0;
       top: 0;

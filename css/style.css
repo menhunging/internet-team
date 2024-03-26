@@ -1686,6 +1686,7 @@ section {
   margin-bottom: 50px;
   max-width: 100%;
   width: 100%;
+  word-break: break-all;
 }
 .example-section__left ul {
   margin-top: 40px;
@@ -4656,6 +4657,129 @@ a.contacts-page__caption:hover {
   bottom: 15px;
   left: -174px;
 }
+.example-block--ave {
+  background-image: url(../img/ave-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.example-block--ave::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  background-image: url("../img/ave-logo.png");
+  border-radius: 60px;
+  background-position: center calc(50% - 95px);
+  background-size: 70%;
+}
+.example-block--ave .example-element:nth-child(1) {
+  width: 439px;
+  height: 479px;
+}
+.example-block--ave .example-element:nth-child(2) {
+  bottom: -125px;
+}
+.example-block--stroy {
+  background-image: url(../img/stroy-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.example-block--stroy::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  background-image: url("../img/stroy-logo.png");
+  border-radius: 60px;
+  background-position: center calc(50% - 95px);
+  background-size: 70%;
+}
+.example-block--tiokraft {
+  background-image: url(../img/tiokraft-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.example-block--tiokraft::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  background-image: url("../img/tiokraft-logo.png");
+  border-radius: 60px;
+  background-position: 15px calc(100% - 75px);
+}
+.example-block--implus {
+  background-image: url(../img/impuls-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.example-block--implus::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  background-image: url("../img/impuls-logo.png");
+  background-position: center calc(50% - 105px);
+  background-size: 80%;
+  background-color: rgba(75, 73, 78, 0.5);
+  border-radius: 60px;
+}
+.example-block--film {
+  background-color: #050505;
+}
+.example-block--film::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  max-height: 805px;
+  opacity: 0.8;
+  background-image: url("../img/film-bg.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #050505;
+  border-radius: 60px;
+  background-size: cover;
+}
 .example-block--pallet {
   background-color: #2d2d2d;
 }
@@ -4676,7 +4800,7 @@ a.contacts-page__caption:hover {
   top: 0;
 }
 .example-block--super {
-  background-color: #A81D3C;
+  background-color: #a81d3c;
 }
 .example-block--super::before {
   content: "";
@@ -8830,6 +8954,74 @@ a.contacts-page__caption:hover {
   .example-section__content .caption {
     font-size: 32px;
     line-height: 34px;
+  }
+  .example-block--ave::before {
+    background-position: center;
+    background-size: 50%;
+  }
+  .example-block--ave .example-element:nth-child(1) {
+    left: -72px;
+    width: 265px;
+    height: 145px;
+    top: -58px;
+  }
+  .example-block--ave .example-element:nth-child(2) {
+    bottom: -75px;
+    right: -65px;
+    left: auto;
+    width: 220px;
+    height: 260px;
+  }
+  .example-block--stroy::before {
+    background-position: center calc(50% - 35px);
+    background-size: 50%;
+  }
+  .example-block--stroy .example-element:nth-child(1) {
+    left: -72px;
+    width: 265px;
+    height: 145px;
+    top: -58px;
+  }
+  .example-block--stroy .example-element:nth-child(2) {
+    bottom: -25px;
+    right: -75px;
+    left: auto;
+    width: 360px;
+    height: 140px;
+  }
+  .example-block--tiokraft::before {
+    background-position: calc(50% - 45px);
+    background-size: contain;
+  }
+  .example-block--tiokraft .example-element:nth-child(1) {
+    left: -72px;
+    top: -58px;
+  }
+  .example-block--tiokraft .example-element:nth-child(2) {
+    bottom: -25px;
+    right: -75px;
+    left: auto;
+    width: 340px;
+    height: 260px;
+  }
+  .example-block--implus::before {
+    border-radius: 40px;
+    background-position: calc(100% - 16px) calc(50% - 81px);
+    background-size: 40%;
+  }
+  .example-block--implus .example-element:nth-child(1) {
+    left: -72px;
+    top: -58px;
+  }
+  .example-block--implus .example-element:nth-child(2) {
+    bottom: -45px;
+    right: -95px;
+    left: auto;
+  }
+  .example-block--film::before {
+    border-radius: 40px;
+    opacity: 1;
+    background-position: top;
   }
 }
 @media (max-width: 639px) {
