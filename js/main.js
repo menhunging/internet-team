@@ -643,6 +643,104 @@ $(document).ready(function () {
       e.preventDefault();
     });
   }
+
+  if ($(".sliderPrices").length > 0) {
+    if ($(window).width() < 1024) {
+      const pricesSwiper = new Swiper(".sliderPrices", {
+        slidesPerView: 1.15,
+        spaceBetween: 12,
+        autoHeight: true,
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.01,
+            spaceBetween: 5,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+        },
+      });
+    }
+  }
+
+  if ($(".advNewBlock__slider").length > 0) {
+    let pagination = null;
+    const isMobile = $(window).width() < 768;
+
+    if (isMobile) {
+      pagination = {
+        el: ".mobile-pagination .swiper-pagination",
+        clickable: true,
+        type: "bullets",
+      };
+    } else {
+      pagination = {
+        el: ".advNewBlock__fraction .swiper-pagination",
+        type: "fraction",
+
+        formatFractionCurrent: function (number, total) {
+          if (number >= 10) {
+            return number;
+          } else {
+            return "0" + number;
+          }
+        },
+
+        formatFractionTotal: function (number, total) {
+          return number;
+        },
+      };
+    }
+
+    const advSwiper = new Swiper(".advNewBlock__slider", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      autoHeight: true,
+      navigation: {
+        nextEl: ".advNewBlock__fraction .swiper-button-next",
+        // prevEl: ".swiper-button-prev",
+      },
+
+      pagination: pagination,
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1.05,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
+
+  if ($(".colPrices").length > 0) {
+    $(".colPrices .count ").map(function () {
+      let attr = $(this).attr("data-price");
+
+      if (attr) {
+        $(this).on("click", function () {
+          $(".colPrices .count").removeClass("active");
+          $(this).addClass("active");
+          $(this).parents(".colPrices").find(".price .cur").text(attr);
+        });
+      }
+    });
+  }
 });
 
 $(window).on("resize", function () {

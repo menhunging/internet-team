@@ -646,4 +646,50 @@
   .other-projects .other-projects__slider {
     padding-bottom: 0;
   }
+
+  .pricesBlock__col {
+    width: 100%;
+    max-width: 100%;
+
+    & + .pricesBlock__col {
+      margin-top: 30px;
+    }
+  }
+
+  .pricesBlock__controls {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .sliderPrices .colPrices .btn {
+    justify-content: center;
+  }
+
+  .sliderPrices .colPrices .line:nth-child(1) {
+    min-height: initial;
+  }
+
+  .invisTitle {
+    padding-top: 22px;
+  }
+
+  .invisTitle .title {
+    margin-bottom: 35px;
+  }
+
+  .invisTitle .name {
+    font-size: 14px;
+  }
+
+  .invisTitle .invistTitleDiv + .invistTitleDiv {
+    margin-top: 90px;
+  }
+
+  .advNewBlock__slider {
+    margin-top: 30px;
+  }
+
+  .advNewBlock__slider .swiper-wrapper {
+    align-items: flex-start;
+  }
 }

@@ -978,7 +978,7 @@
     width: 350px;
     height: 550px;
 
-    &--default{
+    &--default {
       .example-element {
         &:nth-child(1) {
           width: 375px;
@@ -1092,5 +1092,62 @@
   .example-section__content .caption {
     font-size: 50px;
     line-height: 60px;
-}
+  }
+
+  .invisTitle .title {
+    font-size: 18px;
+  }
+
+  .sliderPrices {
+    max-width: 100%;
+    border: 0;
+    border-radius: 0;
+    right: -20px;
+    padding-right: 20px;
+
+    .swiper-slide {
+      border: solid 3px rgb(5, 38, 54);
+      border-radius: 50px;
+      overflow: hidden;
+    }
+  }
+
+  .invisTitle {
+    width: 180px;
+  }
+
+  .advNewBlock__fraction {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .advNewBlock__fraction .next {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .advNewBlock__slider .swiper-slide {
+    padding: 20px;
+  }
+
+  .advNewBlock__head {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+
+    svg {
+      width: 50px;
+    }
+  }
+
+  .advNewBlock__slider .swiper-slide {
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 32px;
+  }
 }

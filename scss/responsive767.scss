@@ -1903,7 +1903,6 @@
     width: 265px;
     height: 145px;
     top: -58px;
-
   }
 
   .example-block--ave .example-element:nth-child(2) {
@@ -1913,7 +1912,6 @@
     width: 220px;
     height: 260px;
   }
-
 
   .example-block--stroy::before {
     background-position: center calc(50% - 35px);
@@ -1925,7 +1923,6 @@
     width: 265px;
     height: 145px;
     top: -58px;
-
   }
 
   .example-block--stroy .example-element:nth-child(2) {
@@ -1975,5 +1972,24 @@
     border-radius: 40px;
     opacity: 1;
     background-position: top;
+  }
+
+  .advNewBlock__fraction {
+    display: none;
+  }
+
+  .mobile-pagination {
+    display: block;
+  }
+
+  .advNewBlock__head {
+    font-size: 16px;
+    line-height: 20px;
+    gap: 15;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
   }
 }

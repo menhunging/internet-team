@@ -3873,6 +3873,75 @@ a.contacts-page__caption:hover {
 .example-small .example-section__bottom {
   margin-top: 0;
 }
+.example-small .example-block--mon::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.example-small .example-block--default .example-element:nth-child(1) {
+  right: -102px;
+  top: -138px;
+  transform: scale(0.8);
+}
+.example-small .example-block--default .example-element:nth-child(2) {
+  bottom: -55px;
+  left: -155px;
+}
+.example-small .example-block--super .example-element:nth-child(2) {
+  bottom: -95px;
+  left: -155px;
+  transform: scale(1.5);
+}
+.example-small .example-block--super::before {
+  background-position: center;
+  background-size: contain;
+}
+.example-small .example-block--stroy .example-element:nth-child(1) {
+  transform: scale(0.6);
+}
+.example-small .example-block--stroy .example-element:nth-child(2) {
+  transform: scale(0.8);
+}
+.example-small .example-block--pallet .example-element:nth-child(2) {
+  transform: scale(0.7);
+}
+.example-small .example-block--veza .example-element:nth-child(1) {
+  transform: scale(0.6);
+  right: -133px;
+  top: -120px;
+}
+.example-small .example-block--veza .example-element:nth-child(2) {
+  transform: scale(0.6);
+  bottom: -145px;
+  left: -294px;
+}
+.example-small .example-block--akb::before {
+  background-size: contain;
+  background-position: center;
+}
+.example-small .example-block--ave::before {
+  background-size: 50%;
+  background-position: center;
+}
+.example-small .example-block--stroy::before {
+  background-position: center;
+}
+.example-small .example-block--tiokraft::before {
+  background-size: contain;
+  background-position: center;
+}
+.example-small .example-block--kino .example-element:nth-child(1) {
+  right: -180px;
+  transform: scale(0.8);
+}
+.example-small .example-block--kino .example-element:nth-child(2) {
+  width: 756px;
+  height: 640px;
+  bottom: -25px;
+  left: -244px;
+  transform: scale(0.7);
+}
 
 .project-images {
   display: flex;
@@ -4646,15 +4715,15 @@ a.contacts-page__caption:hover {
   pointer-events: none;
 }
 .example-block--default .example-element:nth-child(1) {
-  width: 599px;
-  height: 599px;
+  width: 559px;
+  height: 459px;
   right: -123px;
-  top: -79px;
+  top: -69px;
 }
 .example-block--default .example-element:nth-child(2) {
-  width: 669px;
-  height: 669px;
-  bottom: 15px;
+  width: 569px;
+  height: 609px;
+  bottom: -45px;
   left: -174px;
 }
 .example-block--ave {
@@ -5213,6 +5282,290 @@ a.contacts-page__caption:hover {
   justify-content: center;
 }
 
+.pricesBlock .caption {
+  max-width: 900px;
+  width: 100%;
+}
+.pricesBlock__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 32px;
+}
+.pricesBlock__col--left {
+  width: 100%;
+  max-width: 754px;
+}
+.pricesBlock__col--right {
+  width: calc(100% - 754px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.pricesBlock .picture {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.pricesBlock .picture img {
+  position: relative;
+}
+.pricesBlock__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 34px;
+}
+.pricesBlock__controls .btn {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.pricesBlock__controls .btn:hover::after {
+  background-image: url(../img/svg/arrow-right-white.svg);
+}
+.invisTitle {
+  padding-top: 40px;
+  padding-right: 50px;
+}
+.invisTitle .title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 65px;
+  display: block;
+}
+.invisTitle .name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  display: block;
+}
+.invisTitle .desc {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  display: block;
+}
+.invisTitle .invistTitleDiv {
+  position: relative;
+  padding-left: 30px;
+}
+.invisTitle .invistTitleDiv svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.invisTitle .invistTitleDiv + .invistTitleDiv {
+  margin-top: 150px;
+}
+
+.sliderPrices {
+  border: solid 3px rgb(5, 38, 54);
+  border-radius: 50px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0;
+}
+.sliderPrices .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.sliderPrices .swiper-slide {
+  width: 33.3333333333%;
+}
+.sliderPrices .colPrices .line {
+  padding: 30px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  position: relative;
+}
+.sliderPrices .colPrices .line:nth-child(1) {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  line-height: 25px;
+  min-height: 110px;
+}
+.sliderPrices .colPrices .line:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgb(225, 48, 63);
+  width: calc(100% + 1px);
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.sliderPrices .colPrices .line:nth-child(2) {
+  padding-left: 0;
+  padding-right: 0;
+}
+.sliderPrices .colPrices .line:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgb(209, 209, 209);
+  height: 1px;
+  width: calc(100% - 40px);
+  bottom: 0;
+  left: 20px;
+}
+.sliderPrices .colPrices .price {
+  font-size: 20px;
+  line-height: 25px;
+  display: block;
+  color: rgb(225, 48, 63);
+  font-weight: 700;
+}
+.sliderPrices .colPrices .desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: rgb(141, 141, 141);
+}
+.sliderPrices .colPrices ul {
+  margin-top: 63px;
+}
+.sliderPrices .colPrices ul li {
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+  opacity: 0.4;
+}
+.sliderPrices .colPrices ul li.active {
+  opacity: 1;
+}
+.sliderPrices .colPrices ul li.active::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  width: 10px;
+  min-width: 10px;
+  height: 7px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 4L4.5 7L10 1' stroke='%23E13040' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e ");
+}
+.sliderPrices .colPrices ul li + li {
+  margin-top: 16px;
+}
+.sliderPrices .colPrices .count {
+  font-size: 16px;
+  line-height: 20px;
+  border: solid 3px transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+}
+.sliderPrices .colPrices .count.active {
+  border-color: rgb(225, 48, 63);
+}
+.sliderPrices .colPrices .btn {
+  font-size: 16px;
+  line-height: 20px;
+  gap: 15px;
+  margin-top: 41px;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-align: center;
+  justify-content: center;
+}
+.sliderPrices .colPrices .btn::after {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+}
+.sliderPrices .colPrices .btn:hover::after {
+  background-image: url(../img/svg/arrow-right-white.svg);
+}
+
+.advNewBlock__head {
+  display: flex;
+  align-items: center;
+  color: rgb(225, 48, 63);
+  font-size: 27px;
+  line-height: 34px;
+  gap: 25px;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+.advNewBlock__head span {
+  max-width: 884px;
+}
+.advNewBlock .swiper-pagination {
+  position: relative;
+  width: auto;
+  top: auto;
+  bottom: auto;
+}
+
+.advNewBlock__slider {
+  margin-top: 90px;
+}
+.advNewBlock__slider .swiper-slide {
+  background-color: rgb(243, 244, 245);
+  border-radius: 50px;
+  padding: 42px 48px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.advNewBlock__slider .swiper-wrapper {
+  align-items: initial;
+}
+
+.advNewBlock__fraction {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.advNewBlock__fraction .next {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-self: unset;
+  margin-left: 30px;
+  position: relative;
+}
+.advNewBlock__fraction .next .certificates-section svg {
+  width: 30px;
+  height: 30px;
+}
+
+.mobile-pagination {
+  display: none;
+}
+
+@media (max-width: 1849px) {
+  .pricesBlock__col--left {
+    max-width: 664px;
+  }
+  .pricesBlock__col--right {
+    width: calc(100% - 664px);
+  }
+}
 @media (max-width: 1799px) {
   .header {
     padding: 30px;
@@ -5385,6 +5738,29 @@ a.contacts-page__caption:hover {
   }
   .invis-anchor-section .invis-anchor {
     justify-content: flex-start;
+  }
+  .pricesBlock__col--left {
+    max-width: 500px;
+  }
+  .pricesBlock__controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .pricesBlock__col--right {
+    width: calc(100% - 500px);
+  }
+  .sliderPrices .colPrices .line {
+    font-size: 14px;
+  }
+  .sliderPrices .colPrices .btn {
+    font-size: 14px;
+    line-height: 18px;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .invisTitle {
+    padding-right: 30px;
   }
 }
 @media (max-width: 1499px) {
@@ -6002,6 +6378,45 @@ a.contacts-page__caption:hover {
     font-size: 16px;
     line-height: 24px;
   }
+  .pricesBlock__col--left {
+    max-width: 350px;
+  }
+  .pricesBlock__col--right {
+    width: calc(100% - 350px);
+  }
+  .sliderPrices .colPrices .line {
+    padding: 20px 10px;
+  }
+  .sliderPrices .colPrices .line:nth-child(1) {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 22px;
+    min-height: 90px;
+  }
+  .sliderPrices .colPrices .count {
+    font-size: 12px;
+  }
+  .sliderPrices .colPrices .line {
+    font-size: 12px;
+  }
+  .sliderPrices .colPrices .price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .sliderPrices .colPrices .desc {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .sliderPrices .colPrices ul {
+    margin-top: 40px;
+  }
+  .invisTitle {
+    padding-right: 10px;
+  }
+  .advNewBlock__head {
+    font-size: 24px;
+    line-height: 26px;
+  }
 }
 @media (min-width: 1200px) {
   .menu {
@@ -6528,6 +6943,41 @@ a.contacts-page__caption:hover {
   }
   .other-projects .other-projects__slider {
     padding-bottom: 0;
+  }
+  .pricesBlock__col {
+    width: 100%;
+    max-width: 100%;
+  }
+  .pricesBlock__col + .pricesBlock__col {
+    margin-top: 30px;
+  }
+  .pricesBlock__controls {
+    flex-direction: row;
+    gap: 0;
+  }
+  .sliderPrices .colPrices .btn {
+    justify-content: center;
+  }
+  .sliderPrices .colPrices .line:nth-child(1) {
+    min-height: initial;
+  }
+  .invisTitle {
+    padding-top: 22px;
+  }
+  .invisTitle .title {
+    margin-bottom: 35px;
+  }
+  .invisTitle .name {
+    font-size: 14px;
+  }
+  .invisTitle .invistTitleDiv + .invistTitleDiv {
+    margin-top: 90px;
+  }
+  .advNewBlock__slider {
+    margin-top: 30px;
+  }
+  .advNewBlock__slider .swiper-wrapper {
+    align-items: flex-start;
   }
 }
 @media (max-width: 1023px) {
@@ -7422,6 +7872,52 @@ a.contacts-page__caption:hover {
   .example-section__content .caption {
     font-size: 50px;
     line-height: 60px;
+  }
+  .invisTitle .title {
+    font-size: 18px;
+  }
+  .sliderPrices {
+    max-width: 100%;
+    border: 0;
+    border-radius: 0;
+    right: -20px;
+    padding-right: 20px;
+  }
+  .sliderPrices .swiper-slide {
+    border: solid 3px rgb(5, 38, 54);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  .invisTitle {
+    width: 180px;
+  }
+  .advNewBlock__fraction {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .advNewBlock__fraction .next {
+    width: 25px;
+    height: 25px;
+  }
+  .advNewBlock__fraction .next svg {
+    width: 25px;
+    height: 25px;
+  }
+  .advNewBlock__slider .swiper-slide {
+    padding: 20px;
+  }
+  .advNewBlock__head {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .advNewBlock__head svg {
+    width: 50px;
+  }
+  .advNewBlock__slider .swiper-slide {
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -9023,6 +9519,21 @@ a.contacts-page__caption:hover {
     opacity: 1;
     background-position: top;
   }
+  .advNewBlock__fraction {
+    display: none;
+  }
+  .mobile-pagination {
+    display: block;
+  }
+  .advNewBlock__head {
+    font-size: 16px;
+    line-height: 20px;
+    gap: 15;
+  }
+  .advNewBlock__head svg {
+    width: 50px;
+    height: 50px;
+  }
 }
 @media (max-width: 639px) {
   .grettings-page .caption {
@@ -9037,6 +9548,71 @@ a.contacts-page__caption:hover {
   }
   .thanks-block {
     background-position: calc(50% - 90px) center;
+  }
+  .sliderPrices .swiper-slide {
+    border-radius: 32px;
+  }
+  .sliderPrices .colPrices .line:nth-child(1) {
+    font-size: 16px;
+    line-height: 20px;
+    min-height: initial;
+  }
+  .invisTitle .name {
+    font-size: 10px;
+  }
+  .invisTitle .desc {
+    font-size: 10px;
+    line-height: 13px;
+    color: rgb(141, 141, 141);
+  }
+  .invisTitle .title {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .invisTitle .invistTitleDiv {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+  .invisTitle .invistTitleDiv + .invistTitleDiv {
+    display: none;
+  }
+  .invisTitle {
+    width: 130px;
+  }
+  .sliderPrices {
+    width: calc(100% + 80px);
+  }
+  .sliderPrices .colPrices ul li + li {
+    margin-top: 14px;
+  }
+  .sliderPrices .colPrices ul {
+    margin-top: 20px;
+  }
+  .sliderPrices .colPrices .line {
+    padding: 10px 5px;
+  }
+  .sliderPrices .colPrices .btn {
+    margin-top: 20px;
+  }
+  .sliderPrices .colPrices .count {
+    padding: 6px;
+  }
+  .sliderPrices .colPrices .price {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .pricesBlock__controls {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+  }
+  .pricesBlock__col {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .pricesBlock {
+    overflow: hidden;
   }
 }
 @media (max-width: 479px) {
