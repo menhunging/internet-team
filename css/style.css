@@ -9534,6 +9534,12 @@ a.contacts-page__caption:hover {
     width: 50px;
     height: 50px;
   }
+  .invisTitle .invistTitleDiv svg {
+    display: none;
+  }
+  .invisTitle .title {
+    margin-bottom: 5px;
+  }
 }
 @media (max-width: 639px) {
   .grettings-page .caption {
@@ -9567,11 +9573,10 @@ a.contacts-page__caption:hover {
   }
   .invisTitle .title {
     font-size: 14px;
-    margin-bottom: 25px;
   }
   .invisTitle .invistTitleDiv {
     padding-left: 0;
-    padding-top: 25px;
+    padding-top: 0;
   }
   .invisTitle .invistTitleDiv + .invistTitleDiv {
     display: none;

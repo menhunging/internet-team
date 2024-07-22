@@ -645,29 +645,52 @@ $(document).ready(function () {
   }
 
   if ($(".sliderPrices").length > 0) {
+    let destroyPrices = () => {};
+
     if ($(window).width() < 1024) {
-      const pricesSwiper = new Swiper(".sliderPrices", {
-        slidesPerView: 1.15,
-        spaceBetween: 12,
-        autoHeight: true,
-        // navigation: {
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1.01,
-            spaceBetween: 5,
+      initSliderPrices();
+    }
+
+    $(window).on("resize", function () {
+      if ($(window).width() < 1024) {
+        initSliderPrices();
+      } else {
+        if ($(".sliderPrices").hasClass("init")) {
+          destroyPrices();
+        }
+      }
+    });
+
+    function initSliderPrices() {
+      if (!$(".sliderPrices").hasClass("init")) {
+        $(".sliderPrices").removeClass("destroy");
+        $(".sliderPrices").addClass("init");
+
+        const pricesSwiper = new Swiper(".sliderPrices", {
+          slidesPerView: 1.15,
+          spaceBetween: 12,
+          autoHeight: true,
+          pagination: {
+            el: ".swiper-pagination",
           },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 12,
+          breakpoints: {
+            0: {
+              slidesPerView: 1.01,
+              spaceBetween: 5,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 12,
+            },
           },
-        },
-      });
+        });
+
+        destroyPrices = () => {
+          $(".sliderPrices").removeClass("init");
+          $(".sliderPrices").addClass("destroy");
+          pricesSwiper.destroy(true, true);
+        };
+      }
     }
   }
 
@@ -794,25 +817,27 @@ function setStylesHeader(window) {
 }
 
 function initServ() {
-  if ($(".serv-slider").hasClass("init-serv")) return false;
+  if ($(".serv-slider").length > 0) {
+    if ($(".serv-slider").hasClass("init-serv")) return false;
 
-  const swiper = new Swiper(".serv-slider", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    autoHeight: true,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+    const swiper = new Swiper(".serv-slider", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      autoHeight: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
 
-  let destroy = () => {
-    $(".serv-slider").removeClass("init-serv");
-  };
+    let destroy = () => {
+      $(".serv-slider").removeClass("init-serv");
+    };
 
-  let swiperElements = {
-    slider: swiper,
-    destroy,
-  };
+    let swiperElements = {
+      slider: swiper,
+      destroy,
+    };
 
-  swiperSliders.push(swiperElements);
+    swiperSliders.push(swiperElements);
+  }
 }
