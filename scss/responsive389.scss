@@ -96,6 +96,14 @@
   .pricesBlock {
     overflow: hidden;
   }
+
+  .invisTitle .invistTitleDiv svg {
+    display: none;
+  }
+
+  .invisTitle .title {
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 479px) {
