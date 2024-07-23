@@ -5540,18 +5540,43 @@ a.contacts-page__caption:hover {
   display: flex;
   align-items: center;
 }
+.advNewBlock__fraction .swiper-pagination {
+  min-width: 65px;
+}
+.advNewBlock__fraction .prev {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  position: relative;
+}
+.advNewBlock__fraction .prev svg {
+  width: 30px;
+  height: 30px;
+}
+.advNewBlock__fraction .prev svg path {
+  width: 30px;
+  height: 30px;
+}
 .advNewBlock__fraction .next {
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
-  justify-self: unset;
-  margin-left: 30px;
+  margin-left: 25px;
   position: relative;
 }
-.advNewBlock__fraction .next .certificates-section svg {
+.advNewBlock__fraction .next svg {
   width: 30px;
   height: 30px;
+}
+.advNewBlock__fraction .next svg path {
+  width: 30px;
+  height: 30px;
+}
+.advNewBlock__fraction .swiper-button-disabled {
+  opacity: 0.25 !important;
 }
 
 .mobile-pagination {
@@ -7895,10 +7920,12 @@ a.contacts-page__caption:hover {
     font-size: 18px;
     line-height: 20px;
   }
+  .advNewBlock__fraction .prev,
   .advNewBlock__fraction .next {
     width: 25px;
     height: 25px;
   }
+  .advNewBlock__fraction .prev svg,
   .advNewBlock__fraction .next svg {
     width: 25px;
     height: 25px;

@@ -728,8 +728,8 @@ $(document).ready(function () {
       spaceBetween: 30,
       autoHeight: true,
       navigation: {
+        prevEl: ".advNewBlock__fraction .swiper-button-prev",
         nextEl: ".advNewBlock__fraction .swiper-button-next",
-        // prevEl: ".swiper-button-prev",
       },
 
       pagination: pagination,

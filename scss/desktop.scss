@@ -4415,19 +4415,50 @@ a.contacts-page__caption {
   display: flex;
   align-items: center;
 
+  .swiper-pagination {
+    min-width: 65px;
+  }
+
+  .prev {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    position: relative;
+
+    svg {
+      width: 30px;
+      height: 30px;
+
+      path {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
   .next {
     width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
-    justify-self: unset;
-    margin-left: 30px;
+    margin-left: 25px;
     position: relative;
 
-    .certificates-section svg {
+    svg {
       width: 30px;
       height: 30px;
+
+      path {
+        width: 30px;
+        height: 30px;
+      }
     }
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.25 !important;
   }
 }
 
